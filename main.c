@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
 		MPI_Request requests[2 * NUMBEROFADJACENT];
 		MPI_Status statuses[2 * NUMBEROFADJACENT];
 		int nreq = 0;
-
+		
 		sendTrigger(rank, adjacentNodes, requests, &nreq);
 
 
@@ -118,11 +118,12 @@ int main(int argc, char *argv[])
 
 		checkForTrigger(recievedNumPast, recievedNumCurrent, adjacentNodes, rank);
 
-		// recievedNumPast = recievedNumCurrent;
+		memcpy(recievedNumPast, recievedNumCurrent, sizeof(int) * 4); 
 		
-		break;
+		// break;
 		// printf("Sleeping for 5 second.\n");
-   		sleep(5);
+   		sleep(2);
+		
 		   
 
 	}
@@ -172,38 +173,38 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 	// printf("----------------\n");
 	// for (int j=0; j<4; j++)
 		// printf("Rank %i : array[%d] = %d\n",rank, j, recievedNumCurrent[j]);
+	printf("PAST : %i : [%i, %i, %i, %i] -> base\n", rank, recievedNumPast[0], recievedNumPast[1], recievedNumPast[2], recievedNumPast[3]);
+	printf("CURRENT : %i : [%i, %i, %i, %i] -> base\n", rank, recievedNumCurrent[0], recievedNumCurrent[1], recievedNumCurrent[2], recievedNumCurrent[3]);
 
+	for (int i=0; i < NUMBEROFADJACENT / 2;i++){
 
-	// for (int i=0; i < NUMBEROFADJACENT / 2;i++){
+		memset(sendArrayLevel2,-1,4*sizeof(int));
 
-	// 	memset(sendArrayLevel2,0,4*sizeof(int));
+		int level2Count = 0;
 
-	// 	int level2Count = 0;
+		for (int j = i + 1; j < NUMBEROFADJACENT; j++){
 
-	// 	for (int j = i + 1; j < NUMBEROFADJACENT; j++){
-
-	// 		if (recievedNumCurrent[i] == recievedNumPast[j] | recievedNumCurrent[i] == recievedNumCurrent[j] ){
-	// 				sendArrayLevel2[i] = 2;
-	// 				sendArrayLevel2[j] = 2;
-
-	// 				level2Count+=1;
-	// 		}
+			if ((recievedNumCurrent[i] == recievedNumPast[j] | recievedNumCurrent[i] == recievedNumCurrent[j]) && recievedNumCurrent[i] != -1){
+					sendArrayLevel2[i] = 2;
+					sendArrayLevel2[j] = 2;
+					level2Count+=1;
+			}
 
 		
-	// 	}
+		}
 
-	// 	if (level2Count >= 3){
-	// 		level2event = 1;
-	// 		break;
-	// 	}
+		if (level2Count >= 3){
+			level2event = 1;
+			break;
+		}
 	
-	// }
-	// printf("%i : [%i, %i, %i, %i] -> base\n", rank, recievedNumCurrent[0], recievedNumCurrent[1], recievedNumCurrent[2], recievedNumCurrent[3]);
+	}
+
 
 
 	for (int i = 0; i < NUMBEROFADJACENT / 2;i++){
 		
-		memset(sendArrayLevel1,0,4*sizeof(int));
+		memset(sendArrayLevel1,-1,4*sizeof(int));
 
 		int level1Count = 1;
 
@@ -234,9 +235,18 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 	// // printf("Level1 : %i\n",level1Count );
 
 
-	if (level1event == 1){
+	if (level1event == 1 || level2event == 1){
+
+		if (level1event == 1){
+			printf("Rank : %i triggered level 1 event\n", rank);
+		}
+
+		if (level2event == 1){
+			printf("Rank : %i triggered level 2 event\n", rank);
+		}
+
 		unsigned long timestamp = time(NULL);
-		
+
 		// Send to base station
 		printf("%lu : %i : [%i, %i, %i, %i] -> base\n", timestamp, rank, sendArrayLevel1[0], sendArrayLevel1[1], sendArrayLevel1[2], sendArrayLevel1[3]);
 
