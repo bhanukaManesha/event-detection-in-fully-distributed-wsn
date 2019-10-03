@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "sstream": "c",
+        "__tuple": "c",
+        "array": "c",
+        "__node_handle": "c",
+        "type_traits": "c",
+        "random": "c",
+        "ios": "c"
+    }
+}
