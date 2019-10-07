@@ -6,6 +6,7 @@
         "__node_handle": "c",
         "type_traits": "c",
         "random": "c",
-        "ios": "c"
+        "ios": "c",
+        "typeinfo": "c"
     }
 }

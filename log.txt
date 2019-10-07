@@ -1,0 +1,515 @@
+------------------------------------------------------
+Time : Mon 2019-10-07 16:50:15
+
+Activated Node
+6		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+5		abcdefghijklmnopq		192.168.255.120		1
+2		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 2
+Communication Time : 0.000320
+------------------------------------------------------
+Time : Mon 2019-10-07 16:50:17
+
+Activated Node
+13		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+14		abcdefghijklmnopq		192.168.255.120		1
+9		abcdefghijklmnopq		192.168.255.120		1
+17		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000071
+------------------------------------------------------
+Time : Mon 2019-10-07 16:50:17
+
+Activated Node
+12		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+13		abcdefghijklmnopq		192.168.255.120		1
+8		abcdefghijklmnopq		192.168.255.120		1
+16		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 1
+Communication Time : 0.000217
+------------------------------------------------------
+Time : Mon 2019-10-07 16:50:19
+
+Activated Node
+13		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+14		abcdefghijklmnopq		192.168.255.120		1
+9		abcdefghijklmnopq		192.168.255.120		1
+17		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 2
+Communication Time : 0.000051
+------------------------------------------------------
+Time : Mon 2019-10-07 16:50:19
+
+Activated Node
+14		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+15		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+18		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 1
+Communication Time : 0.000220
+------------------------------------------------------
+Time : Mon 2019-10-07 16:50:19
+
+Activated Node
+10		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+9		abcdefghijklmnopq		192.168.255.120		1
+6		abcdefghijklmnopq		192.168.255.120		1
+14		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 2
+Communication Time : 0.005556
+------------------------------------------------------
+Time : Mon 2019-10-07 17:06:25
+
+Activated Node
+13		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+14		abcdefghijklmnopq		192.168.255.120		1
+9		abcdefghijklmnopq		192.168.255.120		1
+17		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000516
+------------------------------------------------------
+Time : Mon 2019-10-07 17:06:25
+
+Activated Node
+13		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+14		abcdefghijklmnopq		192.168.255.120		1
+9		abcdefghijklmnopq		192.168.255.120		1
+17		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000627
+------------------------------------------------------
+Time : Mon 2019-10-07 17:06:25
+
+Activated Node
+13		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+14		abcdefghijklmnopq		192.168.255.120		1
+9		abcdefghijklmnopq		192.168.255.120		1
+17		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.005964
+------------------------------------------------------
+Time : Mon 2019-10-07 17:06:25
+
+Activated Node
+13		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+14		abcdefghijklmnopq		192.168.255.120		1
+9		abcdefghijklmnopq		192.168.255.120		1
+17		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.005948
+------------------------------------------------------
+Time : Mon 2019-10-07 17:06:26
+
+Activated Node
+6		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+5		abcdefghijklmnopq		192.168.255.120		1
+2		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 2
+Communication Time : 0.000032
+------------------------------------------------------
+Time : Mon 2019-10-07 17:06:26
+
+Activated Node
+9		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+8		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+5		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 2
+Communication Time : 0.000420
+------------------------------------------------------
+Time : Mon 2019-10-07 17:06:26
+
+Activated Node
+10		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+9		abcdefghijklmnopq		192.168.255.120		1
+11		abcdefghijklmnopq		192.168.255.120		1
+6		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 2
+Communication Time : 0.005630
+------------------------------------------------------
+Time : Mon 2019-10-07 17:06:26
+
+Activated Node
+14		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+13		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+18		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.005709
+------------------------------------------------------
+Time : Mon 2019-10-07 17:06:27
+
+Activated Node
+13		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+12		abcdefghijklmnopq		192.168.255.120		1
+14		abcdefghijklmnopq		192.168.255.120		1
+17		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000040
+------------------------------------------------------
+Time : Mon 2019-10-07 17:22:13
+
+Activated Node
+8		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+9		abcdefghijklmnopq		192.168.255.120		1
+4		abcdefghijklmnopq		192.168.255.120		1
+12		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 1
+Communication Time : 0.000515
+------------------------------------------------------
+Time : Mon 2019-10-07 17:22:55
+
+Activated Node
+14		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+13		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+18		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 2
+Communication Time : 0.000437
+------------------------------------------------------
+Time : Mon 2019-10-07 17:22:55
+
+Activated Node
+15		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+14		abcdefghijklmnopq		192.168.255.120		1
+11		abcdefghijklmnopq		192.168.255.120		1
+19		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 1
+Communication Time : 0.001142
+------------------------------------------------------
+Time : Mon 2019-10-07 17:24:57
+
+Activated Node
+12		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+13		abcdefghijklmnopq		192.168.255.120		1
+8		abcdefghijklmnopq		192.168.255.120		1
+16		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 1
+Communication Time : 0.001106
+------------------------------------------------------
+Time : Mon 2019-10-07 17:24:57
+
+Activated Node
+14		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+15		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+18		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000973
+------------------------------------------------------
+Time : Mon 2019-10-07 17:29:01
+
+Activated Node
+5		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+6		abcdefghijklmnopq		192.168.255.120		1
+1		abcdefghijklmnopq		192.168.255.120		1
+9		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000681
+------------------------------------------------------
+Time : Mon 2019-10-07 17:29:02
+
+Activated Node
+6		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+5		abcdefghijklmnopq		192.168.255.120		1
+2		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000026
+------------------------------------------------------
+Time : Mon 2019-10-07 17:29:04
+
+Activated Node
+10		abcdefghijklmnopq		192.168.255.120
+
+Event Type : Second Level Event
+
+Adjacent Nodes
+9		abcdefghijklmnopq		192.168.255.120		2
+11		abcdefghijklmnopq		192.168.255.120		2
+6		abcdefghijklmnopq		192.168.255.120		1
+14		abcdefghijklmnopq		192.168.255.120		2
+
+
+Triggered Value : 0
+Communication Time : 0.000067
+------------------------------------------------------
+Time : Mon 2019-10-07 17:29:05
+
+Activated Node
+6		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+5		abcdefghijklmnopq		192.168.255.120		1
+2		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 1
+Communication Time : 0.000060
+------------------------------------------------------
+Time : Mon 2019-10-07 17:30:02
+
+Activated Node
+15		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+14		abcdefghijklmnopq		192.168.255.120		1
+11		abcdefghijklmnopq		192.168.255.120		1
+19		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 1
+Communication Time : 0.000362
+------------------------------------------------------
+Time : Mon 2019-10-07 17:30:03
+
+Activated Node
+14		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+15		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+18		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 1
+Communication Time : 0.000020
+------------------------------------------------------
+Time : Mon 2019-10-07 17:30:04
+
+Activated Node
+14		abcdefghijklmnopq		192.168.255.120
+
+Event Type : Second Level Event
+
+Adjacent Nodes
+13		abcdefghijklmnopq		192.168.255.120		2
+15		abcdefghijklmnopq		192.168.255.120		2
+10		abcdefghijklmnopq		192.168.255.120		2
+18		abcdefghijklmnopq		192.168.255.120		2
+
+
+Triggered Value : 1
+Communication Time : 0.000041
+------------------------------------------------------
+Time : Mon 2019-10-07 17:30:04
+
+Activated Node
+9		abcdefghijklmnopq		192.168.255.120
+
+Event Type : Second Level Event
+
+Adjacent Nodes
+8		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		2
+5		abcdefghijklmnopq		192.168.255.120		2
+13		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 1
+Communication Time : 0.000188
+------------------------------------------------------
+Time : Mon 2019-10-07 17:36:19
+
+Activated Node
+14		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+15		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+18		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000286
+------------------------------------------------------
+Time : Mon 2019-10-07 17:36:21
+
+Activated Node
+14		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+13		abcdefghijklmnopq		192.168.255.120		1
+10		abcdefghijklmnopq		192.168.255.120		1
+18		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 2
+Communication Time : 0.000036
+------------------------------------------------------
+Time : Mon 2019-10-07 17:36:21
+
+Activated Node
+13		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+12		abcdefghijklmnopq		192.168.255.120		1
+9		abcdefghijklmnopq		192.168.255.120		1
+17		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000161
+------------------------------------------------------
+Time : Mon 2019-10-07 17:36:23
+
+Activated Node
+15		abcdefghijklmnopq		192.168.255.120
+
+Event Type : First Level Event
+
+Adjacent Nodes
+14		abcdefghijklmnopq		192.168.255.120		1
+11		abcdefghijklmnopq		192.168.255.120		1
+19		abcdefghijklmnopq		192.168.255.120		1
+
+
+Triggered Value : 0
+Communication Time : 0.000043

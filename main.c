@@ -13,71 +13,135 @@
 #include <unistd.h>
 #include <netinet/in.h>
 
-#define MAX_RANDOM 2
-#define WIDTH 4
-#define HEIGHT 5
-#define TOTALNODE WIDTH*HEIGHT
+#define MAX_RANDOM 3
 #define NUMBEROFADJACENT 4
 
+
+// global varaible definition
+int numtasks, rank;
+int baseStation;
+
+int WIDTH;
+int HEIGHT;
+
+int refreshInteval;
+int iterations;
+
+unsigned char* macAddressStorage;
+unsigned char* ipAddressStorage;
+
+MPI_Comm NODE_COMM;
 // --------------------------------------------------------------------------------------------------------------------------------
 // Function Declarations
 
-void node(int rank, int baseStation);
-int recieveTriggerFromAdjacent(int* adjacentNodes,int rank, int* recievedNumCurrent, MPI_Request* req, int* nreq);
-int sendTrigger(int rank, int* adjacentNodes, MPI_Request* req, int* nreq);
-int getRandomNumber(int rank);
-int getAdjacentNodes(int rank, int *ajacentNodesArr);
-int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentNodes,int rank);
+void node();
+int recieveTriggerFromAdjacent(int* adjacentNodes, int* recievedNumCurrent, MPI_Request* req, int* nreq);
+int sendTrigger(int* adjacentNodes, MPI_Request* req, int* nreq);
+int getRandomNumber();
+int getAdjacentNodes(int *ajacentNodesArr, int currentRank);
+int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentNodes);
 void getIPAddress();
 
+void printBanner();
+void initializeSystem();
 
-void initializeBaseStation(unsigned char* macaddressstorage, unsigned char* ipaddressstorage);
-void initializeNodes(int rank, int baseStation);
-void base(int rank);
+void initializeBaseStation();
+void initializeNodes();
+void base();
+void listenToEvents();
 
-
+void logData(unsigned long startTime, int incomingNode, int triggerValue, int* activeNodes);
+void convertToTimeStamp();
 // Main program
 int main(int argc, char *argv[])
  {
-	
-	// Defining the variables to store the number of tasks and rank
-	int numtasks, rank;
-
-
-	int baseStation;
-
 	// Initialize MPI
     MPI_Init(&argc,&argv);
     MPI_Comm_size(MPI_COMM_WORLD,&numtasks);
     MPI_Comm_rank(MPI_COMM_WORLD,&rank);
-	MPI_Status stat;
-	MPI_Comm NODE_COMM;
+
+
+	initializeSystem();
+
 
 	// Initalize the node grid
 	// unsigned char* nodeGrid = (unsigned char*) malloc(TOTALNODE - 1);
 
-	// Initialize base station
-	baseStation = numtasks - 1;
-
 	// Create the new communicator
-	// MPI_Comm_split(MPI_COMM_WORLD, rank == numtasks - 1, 0, &NODE_COMM);
+	MPI_Comm_split(MPI_COMM_WORLD, rank == numtasks - 1, 0, &NODE_COMM);
+
 
 	if (rank == baseStation){
-		base(rank);
+		base();
 	}else{
-		node(rank, baseStation);
+		node();
 	}
 	MPI_Finalize();
 	return 0;
 
  }
+// --------------------------------------------------------------------------------------------------------------------
+
+void initializeSystem(){
+
+	int position = 0;
+	int packsize = (sizeof(int) * 2);
+	unsigned char packbuf[packsize];
+	MPI_Status stat;
+
+	int w;
+	int h;
+
+	// Initialize base station
+	baseStation = numtasks - 1;
+
+	if (rank == baseStation){
+		printBanner();
+
+		printf("What is the shape of the %i node grid ? (width height) : \n", numtasks - 1);
+		fflush(stdin);
+		scanf("%d%d", &WIDTH, &HEIGHT);
+
+		printf("Creating node grid of size (%i,%i) and base station using %i nodes\n\n", WIDTH, HEIGHT, numtasks);
+
+		printf("How many iterations does the nodes search for (interger value, -1 for until \"stop\" is entered)? : \n");
+		fflush(stdin);
+		scanf("%i", &iterations);
+
+
+		printf("How often does each iteration happen (seconds) ? : \n");
+		fflush(stdin);
+		scanf("%i", &refreshInteval);
+
+		// printf("\n");
+
+
+	}
+
+	MPI_Bcast( &WIDTH, 1, MPI_INT, baseStation, MPI_COMM_WORLD );
+	MPI_Bcast( &HEIGHT, 1, MPI_INT, baseStation, MPI_COMM_WORLD );
+
+	MPI_Bcast( &iterations, 1, MPI_INT, baseStation, MPI_COMM_WORLD );
+	MPI_Bcast( &refreshInteval, 1, MPI_INT, baseStation, MPI_COMM_WORLD );
+
+	
+}
+
+void printBanner(){
+	printf(" __          _______ _   _   ________      ________ _   _ _______   _____  ______ _______ ______ _____ _______ _____ ____  _   _ \n");
+	printf(" \\ \\        / / ____| \\ | | |  ____\\ \\    / /  ____| \\ | |__   __| |  __ \\|  ____|__   __|  ____/ ____|__   __|_   _/ __ \\| \\ | |\n");
+	printf("  \\ \\  /\\  / / (___ |  \\| | | |__   \\ \\  / /| |__  |  \\| |  | |    | |  | | |__     | |  | |__ | |       | |    | || |  | |  \\| |\n");
+	printf("   \\ \\/  \\/ / \\___ \\| . ` | |  __|   \\ \\/ / |  __| | . ` |  | |    | |  | |  __|    | |  |  __|| |       | |    | || |  | | . ` |\n");
+	printf("    \\  /\\  /  ____) | |\\  | | |____   \\  /  | |____| |\\  |  | |    | |__| | |____   | |  | |___| |____   | |   _| || |__| | |\\  |\n");
+	printf("     \\/  \\/  |_____/|_| \\_| |______|   \\/   |______|_| \\_|  |_|    |_____/|______|  |_|  |______\\_____|  |_|  |_____\\____/|_| \\_|\n\n");
+}
 
 
 // --------------------------------------------------------------------------------------------------------------------
 
- void node(int rank, int baseStation){
+ void node(){
 
-	initializeNodes(rank, baseStation);
+	initializeNodes();
 
 
 	// Generate the adjacent nodes
@@ -89,7 +153,7 @@ int main(int argc, char *argv[])
 	// printf("LENGTH : %lu\n", sizeof(adjacentNodes)/sizeof(int));
 
 	// Get the adjacent nodes
-	getAdjacentNodes(rank, adjacentNodes);
+	getAdjacentNodes(adjacentNodes, rank);
 
 	// int j;
 	// printf("-----\n");
@@ -99,15 +163,15 @@ int main(int argc, char *argv[])
 	// 	printf("array[%d] = %d\n", j, adjacentNodes[j]);
 
 
-	while (1){
+	while (iterations >= 0){
 		MPI_Request requests[2 * NUMBEROFADJACENT];
 		MPI_Status statuses[2 * NUMBEROFADJACENT];
 		int nreq = 0;
 		
-		sendTrigger(rank, adjacentNodes, requests, &nreq);
+		sendTrigger(adjacentNodes, requests, &nreq);
 
 
-		recieveTriggerFromAdjacent(adjacentNodes,rank, recievedNumCurrent, requests, &nreq);
+		recieveTriggerFromAdjacent(adjacentNodes, recievedNumCurrent, requests, &nreq);
 
 		// printf("rank : %i, nREQ : %i\n", rank, nreq);
 
@@ -116,23 +180,33 @@ int main(int argc, char *argv[])
 		// for (int j=0; j<4; j++)
 		// 	printf("Rank %i : array[%d] = %d\n",rank, j, recievedNumCurrent[j]);
 
-		checkForTrigger(recievedNumPast, recievedNumCurrent, adjacentNodes, rank);
+		checkForTrigger(recievedNumPast, recievedNumCurrent, adjacentNodes);
 
-		memcpy(recievedNumPast, recievedNumCurrent, sizeof(int) * 4); 
+		memcpy(recievedNumPast, recievedNumCurrent, sizeof(int) * 4);
 		
 		// break;
-		// printf("Sleeping for 5 second.\n");
-   		sleep(2);
+   		sleep(refreshInteval);
+
+		iterations -= 1;
 		
 		   
 
 	}
 
+	int stop = -1;
+	int position = 0;
+	int totalChar = 33;
+	int packsize = totalChar * sizeof(unsigned char);
+	unsigned char packbuf[packsize];
+
+	MPI_Pack(&stop, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
+	MPI_Send(packbuf, position, MPI_PACKED, baseStation, 1, MPI_COMM_WORLD);
+
  }
 
 
 
-void initializeNodes(int rank, int baseStation){
+void initializeNodes(){
 
 	int totalChar = 33;
 	int packsize = totalChar * sizeof(unsigned char);
@@ -142,7 +216,7 @@ void initializeNodes(int rank, int baseStation){
 	// unsigned char ip_address[16] = "192.168.255.255";
 
 	unsigned char mac_address[17] = "abcdefghijklmnopq";
-	unsigned char ip_address[16] = "192.168.255.120";
+	unsigned char ip_address[15] = "192.168.255.120";
 
 	// Get ip address
 	// getIPAddress();
@@ -151,14 +225,14 @@ void initializeNodes(int rank, int baseStation){
 	// Pack up the data
 
 	MPI_Pack( &mac_address, 17, MPI_UNSIGNED_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
-	MPI_Pack( &ip_address, 16, MPI_UNSIGNED_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
+	MPI_Pack( &ip_address, 15, MPI_UNSIGNED_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
 
 	MPI_Send(packbuf, position, MPI_PACKED, baseStation, 0, MPI_COMM_WORLD);
 
 	// printf("data sent to %i\n", baseStation);
 }
 
-int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentNodes,int rank){
+int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentNodes){
 
 
 	int sendArrayLevel1[NUMBEROFADJACENT];
@@ -170,11 +244,15 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 	int level1event = 0;
 	int level2event = 0;
 
+
+	int level1match = 0;
+	int level2match = 0;
+
 	// printf("----------------\n");
 	// for (int j=0; j<4; j++)
 		// printf("Rank %i : array[%d] = %d\n",rank, j, recievedNumCurrent[j]);
-	printf("PAST : %i : [%i, %i, %i, %i] -> base\n", rank, recievedNumPast[0], recievedNumPast[1], recievedNumPast[2], recievedNumPast[3]);
-	printf("CURRENT : %i : [%i, %i, %i, %i] -> base\n", rank, recievedNumCurrent[0], recievedNumCurrent[1], recievedNumCurrent[2], recievedNumCurrent[3]);
+	// printf("PAST : %i : [%i, %i, %i, %i] -> base\n", rank, recievedNumPast[0], recievedNumPast[1], recievedNumPast[2], recievedNumPast[3]);
+	// printf("CURRENT : %i : [%i, %i, %i, %i] -> base\n", rank, recievedNumCurrent[0], recievedNumCurrent[1], recievedNumCurrent[2], recievedNumCurrent[3]);
 
 	for (int i=0; i < NUMBEROFADJACENT / 2;i++){
 
@@ -184,13 +262,18 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 
 		for (int j = i + 1; j < NUMBEROFADJACENT; j++){
 
-			if ((recievedNumCurrent[i] == recievedNumPast[j] | recievedNumCurrent[i] == recievedNumCurrent[j]) && recievedNumCurrent[i] != -1){
-					sendArrayLevel2[i] = 2;
-					sendArrayLevel2[j] = 2;
-					level2Count+=1;
+			if (recievedNumCurrent[i] == recievedNumPast[j] && recievedNumCurrent[i] != -1){
+				sendArrayLevel2[i] = 9;
+				sendArrayLevel2[j] = 9;
+				level2match = recievedNumCurrent[i];
+				level2Count+=1;
+			}else if(recievedNumCurrent[i] == recievedNumCurrent[j] && recievedNumCurrent[i] != -1){
+				sendArrayLevel2[i] = 8;
+				sendArrayLevel2[j] = 8;
+				level2match = recievedNumCurrent[i];
+				level2Count+=1;
 			}
 
-		
 		}
 
 		if (level2Count >= 3){
@@ -199,8 +282,6 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 		}
 	
 	}
-
-
 
 	for (int i = 0; i < NUMBEROFADJACENT / 2;i++){
 		
@@ -219,6 +300,8 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 				sendArrayLevel1[i] = 1;
 				sendArrayLevel1[k] = 1;
 
+				level1match = recievedNumCurrent[i];
+
 				level1Count += 1;
 				// printf("L1Count : %i\n", level1Count);
 			}
@@ -236,29 +319,49 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 
 
 	if (level1event == 1 || level2event == 1){
+		
+		int packsize = (sizeof(int) * 5 + sizeof(unsigned long));
+		unsigned char packbuf[packsize];
+
+		
+		int position = 0;
 
 		if (level1event == 1){
-			printf("Rank : %i triggered level 1 event\n", rank);
-		}
+			// printf("Rank : %i triggered level 1 event\n", rank);
+			MPI_Pack( &level1match, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
+			MPI_Pack( &sendArrayLevel1, 4, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
+			
 
-		if (level2event == 1){
-			printf("Rank : %i triggered level 2 event\n", rank);
-		}
+		}else if (level2event == 1){
+			// printf("Rank : %i triggered level 2 event\n", rank);
+			MPI_Pack( &level2match, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
+			MPI_Pack( &sendArrayLevel2, 4, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
+			
 
-		unsigned long timestamp = time(NULL);
+		}
+		
+
+		double timestamp = MPI_Wtime();
 
 		// Send to base station
-		printf("%lu : %i : [%i, %i, %i, %i] -> base\n", timestamp, rank, sendArrayLevel1[0], sendArrayLevel1[1], sendArrayLevel1[2], sendArrayLevel1[3]);
+		// printf("%lu : %i : [%i, %i, %i, %i] -> base\n", timestamp, rank, sendArrayLevel1[0], sendArrayLevel1[1], sendArrayLevel1[2], sendArrayLevel1[3]);
+
+		MPI_Pack( &timestamp, 1, MPI_DOUBLE, packbuf, packsize, &position, MPI_COMM_WORLD );
+		
+		// printf("Send %i : %s\n", rank, &packbuf);
+		
+		MPI_Send(packbuf, position, MPI_PACKED, baseStation, 1, MPI_COMM_WORLD);
+
 
 	}
 	return 0;
 }
 
-int recieveTriggerFromAdjacent(int* adjacentNodes,int rank, int* recievedNumCurrent, MPI_Request* req, int* nreq){
+int recieveTriggerFromAdjacent(int* adjacentNodes, int* recievedNumCurrent, MPI_Request* req, int* nreq){
 
 	for (int index = 0; index < NUMBEROFADJACENT; index++){
 		if (adjacentNodes[index] != -1){
-			MPI_Irecv(&recievedNumCurrent[index], 1, MPI_INT, adjacentNodes[index], 0, MPI_COMM_WORLD, &req[*nreq]);
+			MPI_Irecv(&recievedNumCurrent[index], 1, MPI_INT, adjacentNodes[index], 0, NODE_COMM, &req[*nreq]);
 
 			// printf("Recieving %i -> %i; Value : %i \n",adjacentNodes[index],rank,recievedNumCurrent[index] );
 			*nreq = *nreq + 1;
@@ -272,7 +375,7 @@ int recieveTriggerFromAdjacent(int* adjacentNodes,int rank, int* recievedNumCurr
 
 
 
-int sendTrigger(int rank, int* adjacentNodes, MPI_Request* req, int* nreq){
+int sendTrigger(int* adjacentNodes, MPI_Request* req, int* nreq){
 	int randNum;
 	randNum = getRandomNumber(rank);
 
@@ -285,7 +388,7 @@ int sendTrigger(int rank, int* adjacentNodes, MPI_Request* req, int* nreq){
 		
 		if (adjacentNodes[index] != -1){
 			// printf("Sending %i -> %i : Value : %i; \n", rank,adjacentNodes[index], randNum);
-			MPI_Isend(&randNum, 1, MPI_INT, adjacentNodes[index], 0, MPI_COMM_WORLD, &req[*nreq]);
+			MPI_Isend(&randNum, 1, MPI_INT, adjacentNodes[index], 0, NODE_COMM, &req[*nreq]);
 			*nreq = *nreq + 1;
 		}
 		
@@ -294,7 +397,7 @@ int sendTrigger(int rank, int* adjacentNodes, MPI_Request* req, int* nreq){
 	return 0;
 }
 
-int getRandomNumber(int rank){
+int getRandomNumber(){
 	// Setting the seed
 	srand((int) time(NULL) ^ rank);
 	srand(rand());
@@ -303,13 +406,13 @@ int getRandomNumber(int rank){
 }
 
 
-int getAdjacentNodes(int rank, int *ajacentNodesArr){
+int getAdjacentNodes(int *ajacentNodesArr, int currentRank){
 
 	// for (int j=0; j<4; j++)
 	// 	printf("Rank %i : array[%d] = %d\n",rank, j, ajacentNodesArr[j]);
 
-	int rowIndex = rank / WIDTH;
-	int columnIndex = rank % WIDTH;
+	int rowIndex = currentRank / WIDTH;
+	int columnIndex = currentRank % WIDTH;
 	
 	// Left sibling
 	int leftSiblingcol = columnIndex - 1;
@@ -332,7 +435,6 @@ int getAdjacentNodes(int rank, int *ajacentNodesArr){
 		ajacentNodesArr[2] = topSiblingrow*WIDTH + columnIndex;
 	}
 
-	
 	// Bottom Sibling
 	int bottomSiblingrow = rowIndex + 1;
 
@@ -348,12 +450,15 @@ int getAdjacentNodes(int rank, int *ajacentNodesArr){
 // --------------------------------------------------------------------------------------------------------------------
 
 
-void base(int rank){
+void base(){
 
-	unsigned char* macAddressStorage = (unsigned char*)  malloc(WIDTH * HEIGHT * 17 * sizeof(unsigned char));
-	unsigned char* ipAddressStorage = (unsigned char*) malloc(WIDTH * HEIGHT * 16 * sizeof(unsigned char));
+	macAddressStorage = (unsigned char*)  malloc(WIDTH * HEIGHT * 17 * sizeof(unsigned char));
+	ipAddressStorage = (unsigned char*) malloc(WIDTH * HEIGHT * 15 * sizeof(unsigned char));
 
-	initializeBaseStation(macAddressStorage, ipAddressStorage);
+	initializeBaseStation();
+
+
+	listenToEvents();
 
 	// printf("MACCC : %s\n", &macAddressStorage[0]);
 	// for (int i = 0; i < 20; i++){
@@ -369,8 +474,124 @@ void base(int rank){
 
 }
 
+void listenToEvents(){
+	MPI_Status stat;
+	int packsize = (sizeof(int) * 5 + sizeof(unsigned long));
+	unsigned char packbuf[packsize];
 
- void initializeBaseStation(unsigned char* macaddressstorage, unsigned char* ipaddressstorage){
+
+	int activatedNodes[4];
+	int incomingNode;
+	int matchedValue;
+	double eventTimeStamp;
+	int position;
+
+	int stopCount = 0;
+
+	int adjacentNodes[NUMBEROFADJACENT];
+
+	while (1){
+
+		position = 0;
+
+		MPI_Recv(packbuf, packsize, MPI_PACKED, MPI_ANY_SOURCE , 1, MPI_COMM_WORLD, &stat);
+		
+		incomingNode = stat.MPI_SOURCE;
+		MPI_Unpack(packbuf, packsize, &position, &matchedValue, 1, MPI_INT, MPI_COMM_WORLD);
+
+		// Stopping message
+		if (matchedValue == -1){
+
+			// printf("Incoming %i\n", incomingNode);
+			if (stopCount == (WIDTH * HEIGHT) - 1){
+				break;
+			}
+			stopCount+= 1;
+			continue;
+		}
+
+
+		MPI_Unpack(packbuf, packsize, &position, &activatedNodes, 4, MPI_INT, MPI_COMM_WORLD);
+		MPI_Unpack(packbuf, packsize, &position, &eventTimeStamp, 1, MPI_DOUBLE, MPI_COMM_WORLD);
+
+		char timeInDateTime[80];
+		convertToTimeStamp(timeInDateTime, 80);
+
+		// Get the adjacent nodes
+		getAdjacentNodes(adjacentNodes, incomingNode);
+
+		double commTime = MPI_Wtime() - eventTimeStamp;
+
+		FILE *fp;
+
+        fp = fopen("log.txt", "a+");
+		
+		fprintf (fp, "%s", "------------------------------------------------------\n");
+		fprintf (fp, "Time : %s\n", timeInDateTime);
+
+		fprintf (fp, "%s", "\n");
+
+		fprintf (fp, "%s", "Activated Node\n");
+		fprintf (fp, "%i", incomingNode);
+		fprintf (fp, "%s", "\t\t");
+		fwrite(macAddressStorage + incomingNode*sizeof(unsigned char)*17 , 17 , sizeof(unsigned char) , fp );
+		fprintf (fp, "%s", "\t\t");
+		fwrite(ipAddressStorage + incomingNode*sizeof(unsigned char)*15 , 15 , sizeof(unsigned char) , fp );
+
+		fprintf (fp, "%s", "\n\n");
+
+		int labelFlag = 0;
+
+		for (int i = 0; i < 4; i++){
+			if (activatedNodes[i] != -1){
+				
+				if (labelFlag == 0 && activatedNodes[i] == 1){
+					fprintf (fp, "%s", "Event Type : First Level Event\n\n");
+					fprintf (fp, "%s", "Adjacent Nodes\n");
+					labelFlag = 1;
+				}else if (labelFlag == 0 && activatedNodes[i] > 1){
+					fprintf (fp, "%s", "Event Type : Second Level Event\n\n");
+					fprintf (fp, "%s", "Adjacent Nodes\n");
+					labelFlag = 1;
+				}
+
+				fprintf (fp, "%i", adjacentNodes[i]);
+				fprintf (fp, "%s", "\t\t");
+				fwrite(macAddressStorage + activatedNodes[i]*sizeof(unsigned char)*17 , 17 , sizeof(unsigned char) , fp );
+				fprintf (fp, "%s", "\t\t");
+				fwrite(ipAddressStorage + activatedNodes[i]*sizeof(unsigned char)*15 , 15 , sizeof(unsigned char) , fp );
+				fprintf (fp, "%s", "\t\t");
+
+				if (activatedNodes[i] == 1 || activatedNodes[i] == 8){
+					fprintf (fp, "%i", 1);
+				}else{
+					fprintf (fp, "%i", 2);
+				}
+				fprintf (fp, "%s", "\n");
+				}
+			}
+
+		fprintf (fp, "%s", "\n\n");
+
+		fprintf (fp, "Triggered Value : %i\n", matchedValue);
+		fprintf (fp, "Communication Time : %f\n", commTime);
+
+        fclose(fp);
+
+	}
+
+
+}
+
+// void logData(double startTime, int incomingNode, int triggerValue, int* activeNodes){
+
+// 	// event time
+
+
+// 	// 
+// }
+
+ void initializeBaseStation(){
 
 	MPI_Status stat;
 	int totalChar = 33;
@@ -390,27 +611,12 @@ void base(int rank){
 
 		incoming_rank = stat.MPI_SOURCE;
 		// printf("Rank : %i\n", incoming_rank);
-		MPI_Unpack(packbuf, packsize, &position, macaddressstorage + incoming_rank*sizeof(unsigned char)*17, 17, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
-		MPI_Unpack(packbuf, packsize, &position, ipaddressstorage + incoming_rank*sizeof(unsigned char)*16, 16, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
+		MPI_Unpack(packbuf, packsize, &position, macAddressStorage + incoming_rank*sizeof(unsigned char)*17, 17, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
+		MPI_Unpack(packbuf, packsize, &position, ipAddressStorage + incoming_rank*sizeof(unsigned char)*15, 15, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
 
 		count += 1;
-		
-
-		
-
 
 	}
-
-
-	// for (j=0; j<4; j++)
-	// 	printf("array[%d] = %d\n", j, adjacentNodes[j]);
-	
-
-
-
-	//  printf("Initialized Base\n");
-
-
 
  }
 
@@ -448,3 +654,15 @@ void base(int rank){
 
 //     if (success) memcpy(mac_address, ifr.ifr_hwaddr.sa_data, 6);
 // }
+
+
+void convertToTimeStamp(char* buf, int size){
+	struct tm  ts;
+	time_t     now;
+	time(&now);
+    ts = *localtime(&now);
+    strftime(buf, size, "%a %Y-%m-%d %H:%M:%S", &ts);
+    // year_pr = ts.tm_year;
+    // printf("Local Time %s\n", buf);
+
+}
