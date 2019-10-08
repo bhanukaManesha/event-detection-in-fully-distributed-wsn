@@ -24,13 +24,17 @@ int baseStation;
 int WIDTH;
 int HEIGHT;
 
+double simStartTime;
+
 int refreshInteval;
 int iterations;
+int iterationCount = 1;
 
 unsigned char* macAddressStorage;
 unsigned char* ipAddressStorage;
 
 MPI_Comm NODE_COMM;
+
 // --------------------------------------------------------------------------------------------------------------------------------
 // Function Declarations
 
@@ -63,7 +67,6 @@ int main(int argc, char *argv[])
 
 	initializeSystem();
 
-
 	// Initalize the node grid
 	// unsigned char* nodeGrid = (unsigned char*) malloc(TOTALNODE - 1);
 
@@ -95,7 +98,7 @@ void initializeSystem(){
 	// Initialize base station
 	baseStation = numtasks - 1;
 
-	if (rank == baseStation){
+	if (rank == 0){
 		printBanner();
 
 		printf("What is the shape of the %i node grid ? (width height) : \n", numtasks - 1);
@@ -108,21 +111,24 @@ void initializeSystem(){
 		fflush(stdin);
 		scanf("%i", &iterations);
 
-
 		printf("How often does each iteration happen (seconds) ? : \n");
 		fflush(stdin);
 		scanf("%i", &refreshInteval);
 
-		// printf("\n");
-
-
 	}
 
-	MPI_Bcast( &WIDTH, 1, MPI_INT, baseStation, MPI_COMM_WORLD );
-	MPI_Bcast( &HEIGHT, 1, MPI_INT, baseStation, MPI_COMM_WORLD );
+	simStartTime = MPI_Wtime();
 
-	MPI_Bcast( &iterations, 1, MPI_INT, baseStation, MPI_COMM_WORLD );
-	MPI_Bcast( &refreshInteval, 1, MPI_INT, baseStation, MPI_COMM_WORLD );
+	MPI_Bcast( &WIDTH, 1, MPI_INT, 0, MPI_COMM_WORLD );
+	MPI_Bcast( &HEIGHT, 1, MPI_INT, 0, MPI_COMM_WORLD );
+	MPI_Bcast( &iterations, 1, MPI_INT, 0, MPI_COMM_WORLD );
+	MPI_Bcast( &refreshInteval, 1, MPI_INT, 0, MPI_COMM_WORLD );
+
+	if (rank == 0){
+		MPI_Send(&simStartTime, 1, MPI_DOUBLE, baseStation, 0, MPI_COMM_WORLD);
+	}else if (rank == baseStation){
+		MPI_Recv(&simStartTime, 1, MPI_DOUBLE, 0 , 0, MPI_COMM_WORLD, &stat);
+	}
 
 	
 }
@@ -163,7 +169,7 @@ void printBanner(){
 	// 	printf("array[%d] = %d\n", j, adjacentNodes[j]);
 
 
-	while (iterations >= 0){
+	while (iterationCount <= iterations){
 		MPI_Request requests[2 * NUMBEROFADJACENT];
 		MPI_Status statuses[2 * NUMBEROFADJACENT];
 		int nreq = 0;
@@ -187,7 +193,7 @@ void printBanner(){
 		// break;
    		sleep(refreshInteval);
 
-		iterations -= 1;
+		iterationCount += 1;
 		
 		   
 
@@ -263,13 +269,13 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 		for (int j = i + 1; j < NUMBEROFADJACENT; j++){
 
 			if (recievedNumCurrent[i] == recievedNumPast[j] && recievedNumCurrent[i] != -1){
-				sendArrayLevel2[i] = 9;
-				sendArrayLevel2[j] = 9;
+				sendArrayLevel2[i] = iterationCount - 1;
+				sendArrayLevel2[j] = iterationCount - 1;
 				level2match = recievedNumCurrent[i];
 				level2Count+=1;
 			}else if(recievedNumCurrent[i] == recievedNumCurrent[j] && recievedNumCurrent[i] != -1){
-				sendArrayLevel2[i] = 8;
-				sendArrayLevel2[j] = 8;
+				sendArrayLevel2[i] = iterationCount;
+				sendArrayLevel2[j] = iterationCount;
 				level2match = recievedNumCurrent[i];
 				level2Count+=1;
 			}
@@ -297,8 +303,8 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 
 			if (recievedNumCurrent[i] == recievedNumCurrent[k] & recievedNumCurrent[i] != -1){
 				
-				sendArrayLevel1[i] = 1;
-				sendArrayLevel1[k] = 1;
+				sendArrayLevel1[i] = iterationCount;
+				sendArrayLevel1[k] = iterationCount;
 
 				level1match = recievedNumCurrent[i];
 
@@ -490,12 +496,19 @@ void listenToEvents(){
 
 	int adjacentNodes[NUMBEROFADJACENT];
 
+
+	int totalMessages = 0;
+	int totalActivations = 0;
+
+
 	while (1){
 
 		position = 0;
 
 		MPI_Recv(packbuf, packsize, MPI_PACKED, MPI_ANY_SOURCE , 1, MPI_COMM_WORLD, &stat);
 		
+		totalMessages += 1;
+
 		incomingNode = stat.MPI_SOURCE;
 		MPI_Unpack(packbuf, packsize, &position, &matchedValue, 1, MPI_INT, MPI_COMM_WORLD);
 
@@ -522,10 +535,12 @@ void listenToEvents(){
 
 		double commTime = MPI_Wtime() - eventTimeStamp;
 
-		FILE *fp;
 
-        fp = fopen("log.txt", "a+");
 		
+		
+		FILE *fp;
+		fp = fopen("log.txt", "a+");
+
 		fprintf (fp, "%s", "------------------------------------------------------\n");
 		fprintf (fp, "Time : %s\n", timeInDateTime);
 
@@ -544,15 +559,10 @@ void listenToEvents(){
 
 		for (int i = 0; i < 4; i++){
 			if (activatedNodes[i] != -1){
+				totalActivations+=1;
 				
-				if (labelFlag == 0 && activatedNodes[i] == 1){
-					fprintf (fp, "%s", "Event Type : First Level Event\n\n");
+				if (labelFlag == 0){
 					fprintf (fp, "%s", "Adjacent Nodes\n");
-					labelFlag = 1;
-				}else if (labelFlag == 0 && activatedNodes[i] > 1){
-					fprintf (fp, "%s", "Event Type : Second Level Event\n\n");
-					fprintf (fp, "%s", "Adjacent Nodes\n");
-					labelFlag = 1;
 				}
 
 				fprintf (fp, "%i", adjacentNodes[i]);
@@ -561,25 +571,35 @@ void listenToEvents(){
 				fprintf (fp, "%s", "\t\t");
 				fwrite(ipAddressStorage + activatedNodes[i]*sizeof(unsigned char)*15 , 15 , sizeof(unsigned char) , fp );
 				fprintf (fp, "%s", "\t\t");
-
-				if (activatedNodes[i] == 1 || activatedNodes[i] == 8){
-					fprintf (fp, "%i", 1);
-				}else{
-					fprintf (fp, "%i", 2);
-				}
+				fprintf (fp, "%i", activatedNodes[i]);
 				fprintf (fp, "%s", "\n");
+
 				}
 			}
 
 		fprintf (fp, "%s", "\n\n");
 
 		fprintf (fp, "Triggered Value : %i\n", matchedValue);
-		fprintf (fp, "Communication Time : %f\n", commTime);
+		fprintf (fp, "Communication Time (seconds) : %f\n", commTime);
+		fprintf (fp, "Total Messages : %i\n", totalMessages);
+		fprintf (fp, "Total Activations : %d\n", totalActivations);
 
-        fclose(fp);
+		fclose(fp);
+
 
 	}
 
+	FILE *fp;
+	fp = fopen("log.txt", "a+");
+
+	fprintf (fp, "%s", "\n\n");
+	fprintf (fp, "%s", "------------------------------------------------------\n");
+	fprintf (fp, "%s", "------------------------------------------------------\n");
+	fprintf (fp, "Total Simulation Time (seconds) : %f\n", MPI_Wtime() - simStartTime);
+	fprintf (fp, "Total Messages : %i\n", totalMessages);
+	fprintf (fp, "Total Activations : %d\n", totalActivations);
+
+	fclose(fp);
 
 }
 
