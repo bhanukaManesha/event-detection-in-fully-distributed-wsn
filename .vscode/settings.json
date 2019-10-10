@@ -7,6 +7,10 @@
         "type_traits": "c",
         "random": "c",
         "ios": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "in.h": "c",
+        "if.h": "c",
+        "socket.h": "c",
+        "__locale": "c"
     }
 }
