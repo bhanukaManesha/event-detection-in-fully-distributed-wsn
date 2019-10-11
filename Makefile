@@ -1,10 +1,10 @@
 ALL: main
 
-mandelbrot_parallel_naive : main.c
-	mpicc main.c -o main
+main : main.c
+	~/opt/usr/local/bin/mpicc -fopenmp main.c -o main
 
 run:
-	mpirun -np 21 main
+	~/opt/usr/local/bin/mpirun -np 21 main
 
 clean :
 	/bin/rm -f main *.o

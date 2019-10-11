@@ -419,6 +419,7 @@ static void Cipher(state_t* state, const uint8_t* RoundKey)
   // There will be Nr rounds.
   // The first Nr-1 rounds are identical.
   // These Nr-1 rounds are executed in the loop below.
+  #pragma omp for schedule(static) private(round)
   for (round = 1; round < Nr; ++round)
   {
     SubBytes(state);
@@ -445,6 +446,7 @@ static void InvCipher(state_t* state, const uint8_t* RoundKey)
   // There will be Nr rounds.
   // The first Nr-1 rounds are identical.
   // These Nr-1 rounds are executed in the loop below.
+  #pragma omp for schedule(static) private(round)
   for (round = (Nr - 1); round > 0; --round)
   {
     InvShiftRows(state);
@@ -503,7 +505,7 @@ void AES_CBC_encrypt_buffer(struct AES_ctx *ctx, uint8_t* buf, uint32_t length)
   uintptr_t i;
   uint8_t *Iv = ctx->Iv;
 
-  
+  // #pragma omp for schedule(dynamic) private(i)
   for (i = 0; i < length; i += AES_BLOCKLEN)
   {
     XorWithIv(buf, Iv);
@@ -520,6 +522,8 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf,  uint32_t length)
 {
   uintptr_t i;
   uint8_t storeNextIv[AES_BLOCKLEN];
+
+  // #pragma omp for schedule(dynamic) private(i)
   for (i = 0; i < length; i += AES_BLOCKLEN)
   {
     memcpy(storeNextIv, buf, AES_BLOCKLEN);
@@ -545,6 +549,7 @@ void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
   unsigned i;
   int bi;
 
+  // #pragma omp for schedule(dynamic) private(bi)
   for (i = 0, bi = AES_BLOCKLEN; i < length; ++i, ++bi)
   {
     if (bi == AES_BLOCKLEN) /* we need to regen xor compliment in buffer */
@@ -552,7 +557,6 @@ void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
       
       memcpy(buffer, ctx->Iv, AES_BLOCKLEN);
       Cipher((state_t*)buffer,ctx->RoundKey);
-
 
       /* Increment Iv and handle overflow */
       for (bi = (AES_BLOCKLEN - 1); bi >= 0; --bi)

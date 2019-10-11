@@ -11,6 +11,8 @@
         "in.h": "c",
         "if.h": "c",
         "socket.h": "c",
-        "__locale": "c"
+        "__locale": "c",
+        "stdio.h": "c",
+        "mpi.h": "c"
     }
 }
