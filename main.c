@@ -21,7 +21,7 @@
 #define ECB 1
 
 
-#define packsize 48000
+#define packsize 16000
 #include "AES/aes.h"
 #include "AES/aes.c"
 
@@ -198,7 +198,11 @@ void initializeSystem(){
 	if (iterations == -1 && rank == baseStation){
 		pthread_t stopThread;
 		pthread_create(&stopThread, NULL, checkStop, NULL);
+	}else if (rank == baseStation){
+		printf("Running %i iterations at %i intervals\n", iterations, refreshInteval);
 	}
+
+	
 
 	
 }
@@ -433,7 +437,7 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 		FILE* fp;
 		char path[20];
 		sprintf(path, "./nodes/%d.txt", rank);
-		printf("%s\n", path);
+		// printf("%s\n", path);
 		fp = fopen(path, "a+");
 		fprintf (fp, "%s", "------------------------------------------------------\n");
 		
@@ -475,13 +479,14 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 			convertToTimeStamp(timestamp, 100);
 			MPI_Pack( timestamp, 100, MPI_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
 			
-			fprintf(fp, "Original Message : \n");
+			// fprintf(fp, "Original Message : \n");
 
 
-			fwrite(&packbuf , packsize , sizeof(char) , fp );
+			// fwrite(&packbuf , packsize , sizeof(char) , fp );
 
 
 			double encyptStartTime = MPI_Wtime();
+
 			if (ENCRYPT_COMM == 1){
 				AES_init_ctx_iv(&ctx, key, iv);
 				AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
@@ -494,10 +499,9 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 
 			fprintf(fp, "Encryption Time : %f\n", encyptionTime);
 
-			fprintf(fp, "Encrypted Message : \n");
-
-
-			fwrite(&packbuf , packsize , sizeof(char) , fp );
+			
+			// fprintf(fp, "Encrypted Message : \n");
+			// fwrite(&packbuf , packsize , sizeof(char) , fp );
 
 			fclose(fp);
 
@@ -518,17 +522,6 @@ int recieveTriggerFromAdjacent(int* adjacentNodes, uint8_t* recievePackBuffer, M
 			
 			// MPI_Recv(packbuf, packsize, MPI_PACKED, 0 , 0, MPI_COMM_WORLD, &stat);
 			MPI_Irecv((recievePackBuffer + (packsize * index)), packsize, MPI_PACKED, adjacentNodes[index], 0, MPI_COMM_WORLD, &req[*nreq]);
-
-			// if (ENCRYPT_COMM == 1){
-			// 	AES_init_ctx_iv(&ctx, key, iv);
-			// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
-			// }
-
-			
-			// MPI_Unpack(rcpackbuf, packsize, &position, &recievedNumCurrent[index], 1, MPI_INT, MPI_COMM_WORLD);
-			// printf("tt\n\n");
-
-			
 
 			// printf("Recieving %i -> %i; Value : %i \n",adjacentNodes[index],rank,recievedNumCurrent[index] );
 			*nreq = *nreq + 1;
