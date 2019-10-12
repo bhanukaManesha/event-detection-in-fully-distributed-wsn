@@ -11,15 +11,17 @@
 // #include "getMACAddress.c"
 #include "getIPAddress.c"
 
-#define MAX_RANDOM 3
+#define MAX_RANDOM 5
 #define NUMBEROFADJACENT 4
 
 #define ENCRYPT_COMM 1
-#define ENCRYPT_DEMO 1
 
 #define CBC 1
 #define CTR 1
 #define ECB 1
+
+
+#define packsize 48000
 #include "AES/aes.h"
 #include "AES/aes.c"
 
@@ -37,7 +39,7 @@ struct AES_ctx ctx;
 uint8_t key[] = "hanhrithuqwedjkl";
 uint8_t iv[]  = { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
 
-uint32_t packsize = 16000 * sizeof(char);
+
 
 int refreshInteval;
 int iterations;
@@ -58,11 +60,11 @@ int userstop = 0;
 // Function Declarations
 
 void node();
-int recieveTriggerFromAdjacent(int* adjacentNodes, int* recievedNumCurrent, MPI_Request* req, int* nreq);
+int recieveTriggerFromAdjacent(int* adjacentNodes, uint8_t* recievePackBuffer, MPI_Request* req, int* nreq);
 int sendTrigger(int* adjacentNodes, MPI_Request* req, int* nreq);
 int getRandomNumber();
 int getAdjacentNodes(int *ajacentNodesArr, int currentRank);
-int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentNodes);
+int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent);
 
 void printBanner();
 void initializeSystem();
@@ -76,8 +78,6 @@ void * checkStop(void * arg);
 
 void logData(unsigned long startTime, int incomingNode, int triggerValue, int* activeNodes);
 void convertToTimeStamp();
-
-
 
 
 // Main program
@@ -102,13 +102,15 @@ int main(int argc, char *argv[])
 	}else{
 		node();
 	}
+	
+	if (rank == baseStation){
+		free(ipAddressStorage);
+		free(macAddressStorage);
+	}
 
+	// printf("test\n\n");
 
-
-
-
-	free(ipAddressStorage);
-	free(macAddressStorage);
+	MPI_Barrier(MPI_COMM_WORLD);
 	MPI_Finalize();
 	return 0;
 
@@ -147,8 +149,6 @@ void initializeSystem(){
 
 
 	}
-
-	// AES_init_ctx_iv(&ctx, key, iv);
 	
 	simStartTime = MPI_Wtime();
 
@@ -193,19 +193,6 @@ void initializeSystem(){
 		MPI_Unpack(packbuf, packsize, &position, &iterations, 1, MPI_INT, MPI_COMM_WORLD);
 		MPI_Unpack(packbuf, packsize, &position, &refreshInteval, 1, MPI_INT, MPI_COMM_WORLD);
 	}
-	
-	// MPI_Bcast( &packbuf, packsize, MPI_PACKED, 0, MPI_COMM_WORLD );
-
-
-
-
-	// printf("rank : %i; h : %i, w : %i, iter : %i, ref : %i\n\n", rank, HEIGHT, WIDTH, iterations, refreshInteval);
-
-
-	// MPI_Bcast( &WIDTH, 1, MPI_INT, 0, MPI_COMM_WORLD );
-	// MPI_Bcast( &HEIGHT, 1, MPI_INT, 0, MPI_COMM_WORLD );
-	// MPI_Bcast( &iterations, 1, MPI_INT, 0, MPI_COMM_WORLD );
-	// MPI_Bcast( &refreshInteval, 1, MPI_INT, 0, MPI_COMM_WORLD );
 
 	// Create Pthread
 	if (iterations == -1 && rank == baseStation){
@@ -234,9 +221,12 @@ void printBanner(){
 
 
 	// Generate the adjacent nodes
-	int adjacentNodes[NUMBEROFADJACENT] = {-1, -1, -1, -1};
-	int recievedNumPast[NUMBEROFADJACENT] = {-1, -1, -1, -1};
-	int recievedNumCurrent[NUMBEROFADJACENT] = {-1, -1, -1, -1};
+	int adjacentNodes[NUMBEROFADJACENT] = {-1,-1, -1, -1};
+	int recievedNumPast[NUMBEROFADJACENT] = {MAX_RANDOM, MAX_RANDOM, MAX_RANDOM, MAX_RANDOM};
+	int recievedNumCurrent[NUMBEROFADJACENT] = {MAX_RANDOM, MAX_RANDOM, MAX_RANDOM, MAX_RANDOM};
+
+	uint8_t recievePackBuffer[packsize * NUMBEROFADJACENT];
+	memset(recievePackBuffer, 0, packsize * NUMBEROFADJACENT);
 
 	// Get the adjacent nodes
 	getAdjacentNodes(adjacentNodes, rank);
@@ -259,12 +249,24 @@ void printBanner(){
 		sendTrigger(adjacentNodes, requests, &nreq);
 
 
-		recieveTriggerFromAdjacent(adjacentNodes, recievedNumCurrent, requests, &nreq);
+		recieveTriggerFromAdjacent(adjacentNodes, recievePackBuffer, requests, &nreq);
 
 
 		MPI_Waitall(nreq , requests, statuses);
 
-		checkForTrigger(recievedNumPast, recievedNumCurrent, adjacentNodes);
+
+		
+		for (int index = 0; index < NUMBEROFADJACENT; index++){
+			int position = 0;
+			if (adjacentNodes[index] != -1){
+				MPI_Unpack((recievePackBuffer + (packsize * index)), packsize, &position, &recievedNumCurrent[index], 1, MPI_INT, MPI_COMM_WORLD);
+			}
+			
+
+			// printf("Recieving %i; Value : %i \n",rank,recievedNumCurrent[index] );
+		}
+
+		checkForTrigger(recievedNumPast, recievedNumCurrent);
 
 		memcpy(recievedNumPast, recievedNumCurrent, sizeof(int) * 4);
 
@@ -272,7 +274,7 @@ void printBanner(){
 
 		MPI_Test(&temp_req, &usflag, &temp_stat);
 		
-		MPI_Test(&temp_req, &usflag, &temp_stat);		
+		// MPI_Test(&temp_req, &usflag, &temp_stat);		
 
 		if (iterations != -1){
 			if (iterationCount > iterations){
@@ -291,9 +293,9 @@ void printBanner(){
 	int stop = MAX_RANDOM + 2;
 	int position = 0;
 
-	if (ENCRYPT_DEMO == 0){
-		packsize = (sizeof(int) * 5 + sizeof(double) + (100 * sizeof(char)));
-	}
+	// if (ENCRYPT_DEMO == 0){
+	// 	packsize = (sizeof(int) * 5 + sizeof(double) + (100 * sizeof(char)));
+	// }
 	
 	uint8_t packbuf[packsize];
 	memset(packbuf, 0, packsize);
@@ -306,15 +308,6 @@ void printBanner(){
 		// Initialize Encyption
 		AES_init_ctx_iv(&ctx, key, iv);
 		AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
-
-		// AES_init_ctx(&ctx, key);
-
-		// for (int i = 0; i < packsize/16; ++i)
-		// {
-		// 	AES_ECB_encrypt(&ctx, packbuf + (i * 16));
-		// 		// phex(plain_text + (i * 16));
-		// }
-
 	}
 
 	MPI_Send(packbuf, position, MPI_PACKED, baseStation, 1, MPI_COMM_WORLD);
@@ -324,11 +317,9 @@ void printBanner(){
 
 void initializeNodes(){
 
-	// uint32_t packsize;
-
-	if (ENCRYPT_DEMO == 0){
-		packsize = 32 * sizeof(unsigned char);
-	}
+	// if (ENCRYPT_DEMO == 0){
+	// 	packsize = 32 * sizeof(unsigned char);
+	// }
 
 	uint8_t packbuf[packsize];
 	memset(packbuf, 0, packsize);
@@ -345,19 +336,17 @@ void initializeNodes(){
 	MPI_Pack( ip_address, 15, MPI_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
 
 
-	// if (ENCRYPT_COMM == 1){
-	// 	// printf("Length: %lu",strlen((char*)packbuf));
-	// 	AES_init_ctx_iv(&ctx, key, iv);
-	// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
-	// 	// printf("\nENC: %s\n",(char*) packbuf); // don't use this string as an input
-	// }
+	if (ENCRYPT_COMM == 1){
+		AES_init_ctx_iv(&ctx, key, iv);
+		AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+	}
 
 
 	MPI_Send(packbuf, position, MPI_PACKED, baseStation, 0, MPI_COMM_WORLD);
 
 }
 
-int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentNodes){
+int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 
 
 	int sendArrayLevel1[NUMBEROFADJACENT];
@@ -372,20 +361,20 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 	int level1match = 0;
 	int level2match = 0;
 
-	for (int i=0; i < NUMBEROFADJACENT / 2;i++){
+	for (int i=0; i < NUMBEROFADJACENT;i++){
 
 		memset(sendArrayLevel2,-1,4*sizeof(int));
 
-		int level2Count = 0;
+		int level2Count = 1;
 
 		for (int j = i + 1; j < NUMBEROFADJACENT; j++){
 
-			if (recievedNumCurrent[i] == recievedNumPast[j] && recievedNumCurrent[i] != -1){
+			if (recievedNumCurrent[i] == recievedNumPast[j] && recievedNumCurrent[i] != MAX_RANDOM && i != j){
 				sendArrayLevel2[i] = iterationCount - 1;
 				sendArrayLevel2[j] = iterationCount - 1;
 				level2match = recievedNumCurrent[i];
 				level2Count+=1;
-			}else if(recievedNumCurrent[i] == recievedNumCurrent[j] && recievedNumCurrent[i] != -1){
+			}else if(recievedNumCurrent[i] == recievedNumCurrent[j] && recievedNumCurrent[i] != MAX_RANDOM && i != j){
 				sendArrayLevel2[i] = iterationCount;
 				sendArrayLevel2[j] = iterationCount;
 				level2match = recievedNumCurrent[i];
@@ -413,7 +402,7 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 		for (k = i + 1; k < NUMBEROFADJACENT; k++){
 
 
-			if (recievedNumCurrent[i] == recievedNumCurrent[k] & recievedNumCurrent[i] != -1){
+			if (recievedNumCurrent[i] == recievedNumCurrent[k] & recievedNumCurrent[i] != MAX_RANDOM){
 				
 				sendArrayLevel1[i] = iterationCount;
 				sendArrayLevel1[k] = iterationCount;
@@ -433,7 +422,7 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 	}
 	
 
-	if (level1event == 1 || level2event == 1){
+	if (level1event == 1 || level2event == 1 ){
 
 		FILE* fp;
 		char path[20];
@@ -445,92 +434,95 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent,int* adjacentN
 
 		// uint32_t packsize;
 
-		if (ENCRYPT_DEMO == 0){
-			packsize = (sizeof(int) * 5 + sizeof(double) + (100 * sizeof(char)));
-		}
+		// if (ENCRYPT_DEMO == 0){
+		// 	packsize = (sizeof(int) * 5 + sizeof(double) + (100 * sizeof(char)));
+		// }
 
 		uint8_t packbuf[packsize];
-
 		memset(packbuf, 0, packsize);
 
 		// uint8_t* packbuf = (uint8_t*) calloc(packsize, sizeof(double));
 
 		int position = 0;
 
+		int sendFlag = 0;
+
 		if (level1event == 1){
+			sendFlag = 1;
 			MPI_Pack( &level1match, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
 			MPI_Pack( &sendArrayLevel1, 4, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
 			
 
 		}else if (level2event == 1 && level1event == 0 ){
+			sendFlag = 1;
 			MPI_Pack( &level2match, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
 			MPI_Pack( &sendArrayLevel2, 4, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
 		}
 
-		
-		double eventTime = MPI_Wtime();
-		
-		MPI_Pack( &eventTime, 1, MPI_DOUBLE, packbuf, packsize, &position, MPI_COMM_WORLD );
 
-		char timestamp[100];
-		convertToTimeStamp(timestamp, 100);
-		MPI_Pack( timestamp, 100, MPI_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
-		
-		
+		if (sendFlag) {
+			double eventTime = MPI_Wtime();
+			
+			MPI_Pack( &eventTime, 1, MPI_DOUBLE, packbuf, packsize, &position, MPI_COMM_WORLD );
 
-		// fprintf(fp, "Original Message : \n");
-
-		// printf("Length: %lu",strlen((char*)packbuf));
-
-		// fwrite(&packbuf , packsize , sizeof(double) , fp );
+			char timestamp[100];
+			convertToTimeStamp(timestamp, 100);
+			MPI_Pack( timestamp, 100, MPI_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
+			
+			fprintf(fp, "Original Message : \n");
 
 
-		double encyptStartTime = MPI_Wtime();
-		if (ENCRYPT_COMM == 1){
-			AES_init_ctx_iv(&ctx, key, iv);
-			AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
-			// AES_init_ctx(&ctx, key);
+			fwrite(&packbuf , packsize , sizeof(char) , fp );
 
-			// int i;
 
-			// // #pragma omp for private(i)
-			// for (i = 0; i < packsize/16; ++i)
-			// {
-			// 	AES_ECB_encrypt(&ctx, packbuf + (i * 16));
-			// 	// phex(plain_text + (i * 16));
-			// }
+			double encyptStartTime = MPI_Wtime();
+			if (ENCRYPT_COMM == 1){
+				AES_init_ctx_iv(&ctx, key, iv);
+				AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+			}
+
+			double encyptionTime = MPI_Wtime() - encyptStartTime;
+
+			MPI_Send(packbuf, position, MPI_PACKED, baseStation, 1, MPI_COMM_WORLD);
+			
+
+			fprintf(fp, "Encryption Time : %f\n", encyptionTime);
+
+			fprintf(fp, "Encrypted Message : \n");
+
+
+			fwrite(&packbuf , packsize , sizeof(char) , fp );
+
+			fclose(fp);
+
 
 		}
-
-		double encyptionTime = MPI_Wtime() - encyptStartTime;
-
-		MPI_Send(packbuf, position, MPI_PACKED, baseStation, 1, MPI_COMM_WORLD);
-		
-
-		fprintf(fp, "Encryption Time : %f\n", encyptionTime);
-		// fprintf(fp, "%s\n", packbuf);
-		// fprintf(fp, "Encrypted Message : \n");
-
-		// printf("\nENC: %s",(char*) packbuf);
-		// fwrite(&packbuf , packsize , sizeof(double) , fp );
-		// fprintf(fp, "%s\n", packbuf);
-		fclose(fp);
-		
-		// printf("test1\n");
-
-
-		
-
 
 	}
 	return 0;
 }
 
-int recieveTriggerFromAdjacent(int* adjacentNodes, int* recievedNumCurrent, MPI_Request* req, int* nreq){
+int recieveTriggerFromAdjacent(int* adjacentNodes, uint8_t* recievePackBuffer, MPI_Request* req, int* nreq){
 
 	for (int index = 0; index < NUMBEROFADJACENT; index++){
 		if (adjacentNodes[index] != -1){
-			MPI_Irecv(&recievedNumCurrent[index], 1, MPI_INT, adjacentNodes[index], 0, MPI_COMM_WORLD, &req[*nreq]);
+
+			
+			int position = 0;
+			
+			// MPI_Recv(packbuf, packsize, MPI_PACKED, 0 , 0, MPI_COMM_WORLD, &stat);
+			MPI_Irecv((recievePackBuffer + (packsize * index)), packsize, MPI_PACKED, adjacentNodes[index], 0, MPI_COMM_WORLD, &req[*nreq]);
+
+			// if (ENCRYPT_COMM == 1){
+			// 	AES_init_ctx_iv(&ctx, key, iv);
+			// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+			// }
+
+			
+			// MPI_Unpack(rcpackbuf, packsize, &position, &recievedNumCurrent[index], 1, MPI_INT, MPI_COMM_WORLD);
+			// printf("tt\n\n");
+
+			
 
 			// printf("Recieving %i -> %i; Value : %i \n",adjacentNodes[index],rank,recievedNumCurrent[index] );
 			*nreq = *nreq + 1;
@@ -556,13 +548,19 @@ int sendTrigger(int* adjacentNodes, MPI_Request* req, int* nreq){
 		if (adjacentNodes[index] != -1){
 			// printf("Sending %i -> %i : Value : %i; \n", rank,adjacentNodes[index], randNum);
 
+			uint8_t packbuf[packsize];
+			memset(packbuf, 0, packsize);
+
+			int position = 0;
+			MPI_Pack( &randNum, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
+
 			// if (ENCRYPT_COMM == 1){
-			// 	// printf("Length: %lu",strlen((char*)packbuf));
-			// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, strlen((char*)packbuf));
-			// 	// printf("\nENC: %s\n",(char*) packbuf); // don't use this string as an input
+			// 	AES_init_ctx_iv(&ctx, key, iv);
+			// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
 			// }
 
-			MPI_Isend(&randNum, 1, MPI_INT, adjacentNodes[index], 0, MPI_COMM_WORLD, &req[*nreq]);
+			
+			MPI_Isend(packbuf, packsize, MPI_PACKED, adjacentNodes[index], 0, MPI_COMM_WORLD, &req[*nreq]);
 			*nreq = *nreq + 1;
 		}
 		
@@ -642,9 +640,9 @@ void listenToEvents(){
 
 	// uint32_t packsize;
 
-	if (ENCRYPT_DEMO == 0){
-		packsize = (sizeof(int) * 5 + sizeof(double) + (100 * sizeof(char)));
-	}
+	// if (ENCRYPT_DEMO == 0){
+	// 	packsize = (sizeof(int) * 5 + sizeof(double) + (100 * sizeof(char)));
+	// }
 	
 	uint8_t packbuf[packsize];
 
@@ -688,8 +686,6 @@ void listenToEvents(){
 			MPI_Unpack(packbuf, packsize, &position, &temp, 1, MPI_INT, MPI_COMM_WORLD);
 			totalInnerMessages += temp;
 
-
-			
 			if (stopCount == (WIDTH * HEIGHT) - 1){
 				// printf("Incoming %i\n", incomingNode);
 				break;
@@ -747,9 +743,10 @@ void listenToEvents(){
 		int labelFlag = 0;
 
 		for (int i = 0; i < 4; i++){
+			// printf("activated Node : %i\n", activatedNodes[i]);
 			if (activatedNodes[i] != -1){
 				totalActivations+=1;
-				
+				// printf("test\n\n");
 				if (labelFlag == 0){
 					fprintf (fp, "%s", "Adjacent Nodes\n");
 					labelFlag = 1;
@@ -818,28 +815,12 @@ void listenToEvents(){
 		position = 0;
 		MPI_Recv(packbuf, packsize, MPI_PACKED, MPI_ANY_SOURCE , 0, MPI_COMM_WORLD, &stat);
 
-		// if (ENCRYPT_COMM == 1){
-		// 	// printf("\nDECDEC: %s\n",(char*) packbuf);
-		// 	// AES_init_ctx_iv(&ctx, key, iv);
-		// 	// AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
-		// 	// printf("\nDEC: %s\n",(char*) packbuf);
-
-		// 	struct AES_ctx ctx;
-		// 	AES_init_ctx(&ctx, key);
-
-		// 	for (i = 0; i < packsize/16; ++i)
-		// 	{
-		// 		AES_ECB_decrypt(&ctx, packbuf + (i * 16));
-		// 		// phex(plain_text + (i * 16));
-		// 	}
-
-		// }
-
-
-		// printf("PACK : %s\n", &packbuf[0]);
+		if (ENCRYPT_COMM == 1){
+			AES_init_ctx_iv(&ctx, key, iv);
+			AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+		}
 
 		incoming_rank = stat.MPI_SOURCE;
-		// printf("Rank : %i\n", incoming_rank);
 		MPI_Unpack(packbuf, packsize, &position, macAddressStorage + incoming_rank*sizeof(unsigned char)*17, 17, MPI_CHAR, MPI_COMM_WORLD);
 		MPI_Unpack(packbuf, packsize, &position, ipAddressStorage + incoming_rank*sizeof(unsigned char)*15, 15, MPI_CHAR, MPI_COMM_WORLD);
 

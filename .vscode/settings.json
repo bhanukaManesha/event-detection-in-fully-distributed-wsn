@@ -13,6 +13,8 @@
         "socket.h": "c",
         "__locale": "c",
         "stdio.h": "c",
-        "mpi.h": "c"
+        "mpi.h": "c",
+        "chrono": "c",
+        "cmath": "c"
     }
 }
