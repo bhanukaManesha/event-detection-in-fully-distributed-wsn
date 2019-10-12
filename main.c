@@ -11,7 +11,7 @@
 // #include "getMACAddress.c"
 #include "getIPAddress.c"
 
-#define MAX_RANDOM 5
+#define MAX_RANDOM 10
 #define NUMBEROFADJACENT 4
 
 #define ENCRYPT_COMM 1
@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 
 	// printf("test\n\n");
 
-	MPI_Barrier(MPI_COMM_WORLD);
+	// MPI_Barrier(MPI_COMM_WORLD);
 	MPI_Finalize();
 	return 0;
 
@@ -199,7 +199,7 @@ void initializeSystem(){
 		pthread_t stopThread;
 		pthread_create(&stopThread, NULL, checkStop, NULL);
 	}else if (rank == baseStation){
-		printf("Running %i iterations at %i intervals\n", iterations, refreshInteval);
+		printf("Running %i iterations at %i second intervals\n", iterations, refreshInteval);
 	}
 
 	
@@ -442,16 +442,9 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 		fprintf (fp, "%s", "------------------------------------------------------\n");
 		
 
-		// uint32_t packsize;
-
-		// if (ENCRYPT_DEMO == 0){
-		// 	packsize = (sizeof(int) * 5 + sizeof(double) + (100 * sizeof(char)));
-		// }
-
 		uint8_t packbuf[packsize];
 		memset(packbuf, 0, packsize);
 
-		// uint8_t* packbuf = (uint8_t*) calloc(packsize, sizeof(double));
 
 		int position = 0;
 
@@ -480,8 +473,6 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 			MPI_Pack( timestamp, 100, MPI_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
 			
 			// fprintf(fp, "Original Message : \n");
-
-
 			// fwrite(&packbuf , packsize , sizeof(char) , fp );
 
 
@@ -669,10 +660,15 @@ void listenToEvents(){
 
 		MPI_Recv(packbuf, packsize, MPI_PACKED, MPI_ANY_SOURCE , 1, MPI_COMM_WORLD, &stat);
 		
+		double decryptStartTime = MPI_Wtime();
+
 		if (ENCRYPT_COMM == 1){
 			AES_init_ctx_iv(&ctx, key, iv);
 			AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
 		}
+
+		double decryptionTime = MPI_Wtime() - decryptStartTime;
+
 
 		totalMessages += 1;
 
@@ -769,6 +765,7 @@ void listenToEvents(){
 
 		fprintf (fp, "Triggered Value : %i\n", matchedValue);
 		fprintf (fp, "Communication Time (seconds) : %f\n", commTime);
+		fprintf(fp, "Decyption Time (seconds) : %f\n", decryptionTime);
 		fprintf (fp, "Total Messages with server: %i\n", totalMessages);
 		fprintf (fp, "Total Activations : %d\n", totalActivations);
 
