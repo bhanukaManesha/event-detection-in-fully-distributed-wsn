@@ -1,223 +1,553 @@
 ------------------------------------------------------
-Iteration : 1
-Logged Time : 				Sat 2019-10-12 13:15:25
-Event Occured Time : 		Sat 2019-10-12 13:15:25
+Iteration : 3
+Logged Time : 				Sat 2019-10-12 18:44:46
+Event Occured Time : 		Sat 2019-10-12 18:44:46
 
 Activated Node
-3		78:4f:43:5b:c2:c3		192.168.0.10
+3		78:4f:43:5b:c2:c3		192.168.0.7
 
 Adjacent Nodes
-2		78:4f:43:5b:c2:c3		192.168.0.10		1
-4		78:4f:43:5b:c2:c3		192.168.0.10		1
-7		78:4f:43:5b:c2:c3		192.168.0.10		1
+2		78:4f:43:5b:c2:c3		192.168.0.7		3
+4		78:4f:43:5b:c2:c3		192.168.0.7		2
+7		78:4f:43:5b:c2:c3		192.168.0.7		3
 
 
 Triggered Value : 7
-Communication Time (seconds) : 0.008619
-Decyption Time (seconds) : 0.003199
+Communication Time (seconds) : 0.007331
+Decyption Time (seconds) : 0.003159
 Total Messages with server: 1
 Total Activations : 3
 ------------------------------------------------------
-Iteration : 1
-Logged Time : 				Sat 2019-10-12 13:15:25
-Event Occured Time : 		Sat 2019-10-12 13:15:25
+Iteration : 3
+Logged Time : 				Sat 2019-10-12 18:44:46
+Event Occured Time : 		Sat 2019-10-12 18:44:46
 
 Activated Node
-11		78:4f:43:5b:c2:c3		192.168.0.10
+11		78:4f:43:5b:c2:c3		192.168.0.7
 
 Adjacent Nodes
-10		78:4f:43:5b:c2:c3		192.168.0.10		1
-12		78:4f:43:5b:c2:c3		192.168.0.10		1
-15		78:4f:43:5b:c2:c3		192.168.0.10		1
+10		78:4f:43:5b:c2:c3		192.168.0.7		3
+12		78:4f:43:5b:c2:c3		192.168.0.7		2
+15		78:4f:43:5b:c2:c3		192.168.0.7		3
 
 
 Triggered Value : 2
-Communication Time (seconds) : 0.005140
-Decyption Time (seconds) : 0.001984
+Communication Time (seconds) : 0.004776
+Decyption Time (seconds) : 0.001963
+Total Messages with server: 2
+Total Activations : 6
+------------------------------------------------------
+Iteration : 5
+Logged Time : 				Sat 2019-10-12 18:44:48
+Event Occured Time : 		Sat 2019-10-12 18:44:48
+
+Activated Node
+9		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+10		78:4f:43:5b:c2:c3		192.168.0.7		5
+5		78:4f:43:5b:c2:c3		192.168.0.7		4
+13		78:4f:43:5b:c2:c3		192.168.0.7		5
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.014745
+Decyption Time (seconds) : 0.003628
+Total Messages with server: 3
+Total Activations : 9
+------------------------------------------------------
+Iteration : 5
+Logged Time : 				Sat 2019-10-12 18:44:48
+Event Occured Time : 		Sat 2019-10-12 18:44:48
+
+Activated Node
+6		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+5		78:4f:43:5b:c2:c3		192.168.0.7		4
+2		78:4f:43:5b:c2:c3		192.168.0.7		5
+10		78:4f:43:5b:c2:c3		192.168.0.7		4
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.007122
+Decyption Time (seconds) : 0.003162
+Total Messages with server: 4
+Total Activations : 12
+------------------------------------------------------
+Iteration : 5
+Logged Time : 				Sat 2019-10-12 18:44:48
+Event Occured Time : 		Sat 2019-10-12 18:44:48
+
+Activated Node
+14		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+13		78:4f:43:5b:c2:c3		192.168.0.7		4
+10		78:4f:43:5b:c2:c3		192.168.0.7		5
+18		78:4f:43:5b:c2:c3		192.168.0.7		4
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.004203
+Decyption Time (seconds) : 0.001963
+Total Messages with server: 5
+Total Activations : 15
+------------------------------------------------------
+Iteration : 8
+Logged Time : 				Sat 2019-10-12 18:44:52
+Event Occured Time : 		Sat 2019-10-12 18:44:52
+
+Activated Node
+14		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+13		78:4f:43:5b:c2:c3		192.168.0.7		8
+15		78:4f:43:5b:c2:c3		192.168.0.7		8
+10		78:4f:43:5b:c2:c3		192.168.0.7		8
+
+
+Triggered Value : 7
+Communication Time (seconds) : 0.005893
+Decyption Time (seconds) : 0.002280
+Total Messages with server: 6
+Total Activations : 18
+------------------------------------------------------
+Iteration : 8
+Logged Time : 				Sat 2019-10-12 18:44:52
+Event Occured Time : 		Sat 2019-10-12 18:44:52
+
+Activated Node
+6		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+5		78:4f:43:5b:c2:c3		192.168.0.7		8
+7		78:4f:43:5b:c2:c3		192.168.0.7		8
+2		78:4f:43:5b:c2:c3		192.168.0.7		8
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.004694
+Decyption Time (seconds) : 0.001999
+Total Messages with server: 7
+Total Activations : 21
+------------------------------------------------------
+Iteration : 11
+Logged Time : 				Sat 2019-10-12 18:44:54
+Event Occured Time : 		Sat 2019-10-12 18:44:54
+
+Activated Node
+3		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+2		78:4f:43:5b:c2:c3		192.168.0.7		11
+4		78:4f:43:5b:c2:c3		192.168.0.7		10
+7		78:4f:43:5b:c2:c3		192.168.0.7		11
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.008002
+Decyption Time (seconds) : 0.003496
+Total Messages with server: 8
+Total Activations : 24
+------------------------------------------------------
+Iteration : 11
+Logged Time : 				Sat 2019-10-12 18:44:54
+Event Occured Time : 		Sat 2019-10-12 18:44:54
+
+Activated Node
+11		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+10		78:4f:43:5b:c2:c3		192.168.0.7		11
+12		78:4f:43:5b:c2:c3		192.168.0.7		10
+15		78:4f:43:5b:c2:c3		192.168.0.7		11
+
+
+Triggered Value : 7
+Communication Time (seconds) : 0.004509
+Decyption Time (seconds) : 0.002046
+Total Messages with server: 9
+Total Activations : 27
+------------------------------------------------------
+Iteration : 13
+Logged Time : 				Sat 2019-10-12 18:44:56
+Event Occured Time : 		Sat 2019-10-12 18:44:56
+
+Activated Node
+6		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+5		78:4f:43:5b:c2:c3		192.168.0.7		12
+2		78:4f:43:5b:c2:c3		192.168.0.7		13
+10		78:4f:43:5b:c2:c3		192.168.0.7		12
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.008656
+Decyption Time (seconds) : 0.003578
+Total Messages with server: 10
+Total Activations : 30
+------------------------------------------------------
+Iteration : 13
+Logged Time : 				Sat 2019-10-12 18:44:56
+Event Occured Time : 		Sat 2019-10-12 18:44:56
+
+Activated Node
+9		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+10		78:4f:43:5b:c2:c3		192.168.0.7		13
+5		78:4f:43:5b:c2:c3		192.168.0.7		12
+13		78:4f:43:5b:c2:c3		192.168.0.7		13
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.008276
+Decyption Time (seconds) : 0.001967
+Total Messages with server: 11
+Total Activations : 33
+------------------------------------------------------
+Iteration : 13
+Logged Time : 				Sat 2019-10-12 18:44:56
+Event Occured Time : 		Sat 2019-10-12 18:44:56
+
+Activated Node
+14		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+13		78:4f:43:5b:c2:c3		192.168.0.7		12
+10		78:4f:43:5b:c2:c3		192.168.0.7		13
+18		78:4f:43:5b:c2:c3		192.168.0.7		12
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.005225
+Decyption Time (seconds) : 0.001990
+Total Messages with server: 12
+Total Activations : 36
+------------------------------------------------------
+Iteration : 16
+Logged Time : 				Sat 2019-10-12 18:45:01
+Event Occured Time : 		Sat 2019-10-12 18:45:01
+
+Activated Node
+6		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+5		78:4f:43:5b:c2:c3		192.168.0.7		16
+7		78:4f:43:5b:c2:c3		192.168.0.7		16
+2		78:4f:43:5b:c2:c3		192.168.0.7		16
+
+
+Triggered Value : 7
+Communication Time (seconds) : 0.005772
+Decyption Time (seconds) : 0.002312
+Total Messages with server: 13
+Total Activations : 39
+------------------------------------------------------
+Iteration : 16
+Logged Time : 				Sat 2019-10-12 18:45:01
+Event Occured Time : 		Sat 2019-10-12 18:45:01
+
+Activated Node
+14		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+13		78:4f:43:5b:c2:c3		192.168.0.7		16
+15		78:4f:43:5b:c2:c3		192.168.0.7		16
+10		78:4f:43:5b:c2:c3		192.168.0.7		16
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.005437
+Decyption Time (seconds) : 0.002380
+Total Messages with server: 14
+Total Activations : 42
+------------------------------------------------------
+Iteration : 20
+Logged Time : 				Sat 2019-10-12 18:45:04
+Event Occured Time : 		Sat 2019-10-12 18:45:04
+
+Activated Node
+6		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+5		78:4f:43:5b:c2:c3		192.168.0.7		19
+2		78:4f:43:5b:c2:c3		192.168.0.7		20
+10		78:4f:43:5b:c2:c3		192.168.0.7		19
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.007506
+Decyption Time (seconds) : 0.002978
+Total Messages with server: 15
+Total Activations : 45
+
+
+------------------------------------------------------
+------------------------------------------------------
+Total Simulation Time (seconds) : 23.544540
+Total Messages though the network (including termination signal): 1875
+Total Activations : 45
+------------------------------------------------------
+Iteration : 1
+Logged Time : 				Sat 2019-10-12 18:52:20
+Event Occured Time : 		Sat 2019-10-12 18:52:20
+
+Activated Node
+6		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+5		78:4f:43:5b:c2:c3		192.168.0.7		1
+7		78:4f:43:5b:c2:c3		192.168.0.7		1
+2		78:4f:43:5b:c2:c3		192.168.0.7		1
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.006275
+Decyption Time (seconds) : 0.002807
+Total Messages with server: 1
+Total Activations : 3
+------------------------------------------------------
+Iteration : 3
+Logged Time : 				Sat 2019-10-12 18:52:22
+Event Occured Time : 		Sat 2019-10-12 18:52:22
+
+Activated Node
+3		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+2		78:4f:43:5b:c2:c3		192.168.0.7		3
+4		78:4f:43:5b:c2:c3		192.168.0.7		2
+7		78:4f:43:5b:c2:c3		192.168.0.7		3
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.015962
+Decyption Time (seconds) : 0.003671
 Total Messages with server: 2
 Total Activations : 6
 ------------------------------------------------------
 Iteration : 3
-Logged Time : 				Sat 2019-10-12 13:15:26
-Event Occured Time : 		Sat 2019-10-12 13:15:26
+Logged Time : 				Sat 2019-10-12 18:52:22
+Event Occured Time : 		Sat 2019-10-12 18:52:22
 
 Activated Node
-7		78:4f:43:5b:c2:c3		192.168.0.10
+11		78:4f:43:5b:c2:c3		192.168.0.7
 
 Adjacent Nodes
-6		78:4f:43:5b:c2:c3		192.168.0.10		3
-8		78:4f:43:5b:c2:c3		192.168.0.10		2
-11		78:4f:43:5b:c2:c3		192.168.0.10		3
+10		78:4f:43:5b:c2:c3		192.168.0.7		3
+12		78:4f:43:5b:c2:c3		192.168.0.7		2
+15		78:4f:43:5b:c2:c3		192.168.0.7		3
 
 
-Triggered Value : 1
-Communication Time (seconds) : 0.004450
-Decyption Time (seconds) : 0.002077
+Triggered Value : 6
+Communication Time (seconds) : 0.008185
+Decyption Time (seconds) : 0.003238
 Total Messages with server: 3
 Total Activations : 9
 ------------------------------------------------------
 Iteration : 5
-Logged Time : 				Sat 2019-10-12 13:15:28
-Event Occured Time : 		Sat 2019-10-12 13:15:28
+Logged Time : 				Sat 2019-10-12 18:52:24
+Event Occured Time : 		Sat 2019-10-12 18:52:24
 
 Activated Node
-9		78:4f:43:5b:c2:c3		192.168.0.10
+14		78:4f:43:5b:c2:c3		192.168.0.7
 
 Adjacent Nodes
-10		78:4f:43:5b:c2:c3		192.168.0.10		5
-5		78:4f:43:5b:c2:c3		192.168.0.10		4
-13		78:4f:43:5b:c2:c3		192.168.0.10		5
+13		78:4f:43:5b:c2:c3		192.168.0.7		4
+10		78:4f:43:5b:c2:c3		192.168.0.7		5
+18		78:4f:43:5b:c2:c3		192.168.0.7		4
 
 
-Triggered Value : 9
-Communication Time (seconds) : 0.007601
-Decyption Time (seconds) : 0.002524
+Triggered Value : 0
+Communication Time (seconds) : 0.007399
+Decyption Time (seconds) : 0.002837
 Total Messages with server: 4
 Total Activations : 12
 ------------------------------------------------------
 Iteration : 5
-Logged Time : 				Sat 2019-10-12 13:15:28
-Event Occured Time : 		Sat 2019-10-12 13:15:28
+Logged Time : 				Sat 2019-10-12 18:52:24
+Event Occured Time : 		Sat 2019-10-12 18:52:24
 
 Activated Node
-14		78:4f:43:5b:c2:c3		192.168.0.10
+9		78:4f:43:5b:c2:c3		192.168.0.7
 
 Adjacent Nodes
-13		78:4f:43:5b:c2:c3		192.168.0.10		4
-10		78:4f:43:5b:c2:c3		192.168.0.10		5
-18		78:4f:43:5b:c2:c3		192.168.0.10		4
+10		78:4f:43:5b:c2:c3		192.168.0.7		5
+5		78:4f:43:5b:c2:c3		192.168.0.7		4
+13		78:4f:43:5b:c2:c3		192.168.0.7		5
 
 
-Triggered Value : 9
-Communication Time (seconds) : 0.004315
-Decyption Time (seconds) : 0.002026
+Triggered Value : 0
+Communication Time (seconds) : 0.008710
+Decyption Time (seconds) : 0.002076
 Total Messages with server: 5
 Total Activations : 15
-
-
 ------------------------------------------------------
-------------------------------------------------------
-Total Simulation Time (seconds) : 9.732193
-Total Messages though the network (including termination signal): 825
-Total Activations : 15
-------------------------------------------------------
-Iteration : 1
-Logged Time : 				Sat 2019-10-12 13:17:44
-Event Occured Time : 		Sat 2019-10-12 13:17:44
+Iteration : 5
+Logged Time : 				Sat 2019-10-12 18:52:24
+Event Occured Time : 		Sat 2019-10-12 18:52:24
 
 Activated Node
-6		78:4f:43:5b:c2:c3		192.168.0.10
+6		78:4f:43:5b:c2:c3		192.168.0.7
 
 Adjacent Nodes
-5		78:4f:43:5b:c2:c3		192.168.0.10		1
-7		78:4f:43:5b:c2:c3		192.168.0.10		1
-10		78:4f:43:5b:c2:c3		192.168.0.10		1
+5		78:4f:43:5b:c2:c3		192.168.0.7		4
+2		78:4f:43:5b:c2:c3		192.168.0.7		5
+10		78:4f:43:5b:c2:c3		192.168.0.7		4
 
 
-Triggered Value : 9
-Communication Time (seconds) : 0.006792
-Decyption Time (seconds) : 0.002607
+Triggered Value : 5
+Communication Time (seconds) : 0.004070
+Decyption Time (seconds) : 0.002082
+Total Messages with server: 6
+Total Activations : 18
+------------------------------------------------------
+Iteration : 8
+Logged Time : 				Sat 2019-10-12 18:52:28
+Event Occured Time : 		Sat 2019-10-12 18:52:28
+
+Activated Node
+14		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+13		78:4f:43:5b:c2:c3		192.168.0.7		8
+15		78:4f:43:5b:c2:c3		192.168.0.7		8
+10		78:4f:43:5b:c2:c3		192.168.0.7		8
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.004905
+Decyption Time (seconds) : 0.001976
+Total Messages with server: 7
+Total Activations : 21
+------------------------------------------------------
+Iteration : 8
+Logged Time : 				Sat 2019-10-12 18:52:28
+Event Occured Time : 		Sat 2019-10-12 18:52:28
+
+Activated Node
+6		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+5		78:4f:43:5b:c2:c3		192.168.0.7		8
+7		78:4f:43:5b:c2:c3		192.168.0.7		8
+2		78:4f:43:5b:c2:c3		192.168.0.7		8
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.004584
+Decyption Time (seconds) : 0.001988
+Total Messages with server: 8
+Total Activations : 24
+
+
+------------------------------------------------------
+------------------------------------------------------
+Total Simulation Time (seconds) : 9.684078
+Total Messages though the network (including termination signal): 828
+Total Activations : 24
+------------------------------------------------------
+Iteration : 1
+Logged Time : 				Sat 2019-10-12 18:54:33
+Event Occured Time : 		Sat 2019-10-12 18:54:33
+
+Activated Node
+7		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+6		78:4f:43:5b:c2:c3		192.168.0.7		1
+8		78:4f:43:5b:c2:c3		192.168.0.7		1
+11		78:4f:43:5b:c2:c3		192.168.0.7		1
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.006393
+Decyption Time (seconds) : 0.002527
 Total Messages with server: 1
 Total Activations : 3
 ------------------------------------------------------
 Iteration : 1
-Logged Time : 				Sat 2019-10-12 13:17:44
-Event Occured Time : 		Sat 2019-10-12 13:17:44
+Logged Time : 				Sat 2019-10-12 18:54:33
+Event Occured Time : 		Sat 2019-10-12 18:54:33
 
 Activated Node
-14		78:4f:43:5b:c2:c3		192.168.0.10
+15		78:4f:43:5b:c2:c3		192.168.0.7
 
 Adjacent Nodes
-13		78:4f:43:5b:c2:c3		192.168.0.10		1
-15		78:4f:43:5b:c2:c3		192.168.0.10		1
-18		78:4f:43:5b:c2:c3		192.168.0.10		1
-
-
-Triggered Value : 4
-Communication Time (seconds) : 0.008238
-Decyption Time (seconds) : 0.002062
-Total Messages with server: 2
-Total Activations : 6
-------------------------------------------------------
-Iteration : 6
-Logged Time : 				Sat 2019-10-12 13:17:49
-Event Occured Time : 		Sat 2019-10-12 13:17:49
-
-Activated Node
-14		78:4f:43:5b:c2:c3		192.168.0.10
-
-Adjacent Nodes
-13		78:4f:43:5b:c2:c3		192.168.0.10		6
-10		78:4f:43:5b:c2:c3		192.168.0.10		5
-18		78:4f:43:5b:c2:c3		192.168.0.10		6
-
-
-Triggered Value : 8
-Communication Time (seconds) : 0.005367
-Decyption Time (seconds) : 0.001994
-Total Messages with server: 3
-Total Activations : 9
-------------------------------------------------------
-Iteration : 6
-Logged Time : 				Sat 2019-10-12 13:17:50
-Event Occured Time : 		Sat 2019-10-12 13:17:50
-
-Activated Node
-6		78:4f:43:5b:c2:c3		192.168.0.10
-
-Adjacent Nodes
-5		78:4f:43:5b:c2:c3		192.168.0.10		6
-7		78:4f:43:5b:c2:c3		192.168.0.10		6
-2		78:4f:43:5b:c2:c3		192.168.0.10		6
+14		78:4f:43:5b:c2:c3		192.168.0.7		1
+16		78:4f:43:5b:c2:c3		192.168.0.7		1
+19		78:4f:43:5b:c2:c3		192.168.0.7		1
 
 
 Triggered Value : 1
-Communication Time (seconds) : 0.004892
-Decyption Time (seconds) : 0.002170
+Communication Time (seconds) : 0.007930
+Decyption Time (seconds) : 0.002285
+Total Messages with server: 2
+Total Activations : 6
+------------------------------------------------------
+Iteration : 9
+Logged Time : 				Sat 2019-10-12 18:54:40
+Event Occured Time : 		Sat 2019-10-12 18:54:40
+
+Activated Node
+9		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+10		78:4f:43:5b:c2:c3		192.168.0.7		9
+5		78:4f:43:5b:c2:c3		192.168.0.7		8
+13		78:4f:43:5b:c2:c3		192.168.0.7		9
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.016574
+Decyption Time (seconds) : 0.003532
+Total Messages with server: 3
+Total Activations : 9
+------------------------------------------------------
+Iteration : 9
+Logged Time : 				Sat 2019-10-12 18:54:40
+Event Occured Time : 		Sat 2019-10-12 18:54:40
+
+Activated Node
+6		78:4f:43:5b:c2:c3		192.168.0.7
+
+Adjacent Nodes
+5		78:4f:43:5b:c2:c3		192.168.0.7		8
+2		78:4f:43:5b:c2:c3		192.168.0.7		9
+10		78:4f:43:5b:c2:c3		192.168.0.7		8
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.016201
+Decyption Time (seconds) : 0.002854
 Total Messages with server: 4
 Total Activations : 12
 ------------------------------------------------------
-Iteration : 6
-Logged Time : 				Sat 2019-10-12 13:17:50
-Event Occured Time : 		Sat 2019-10-12 13:17:50
+Iteration : 9
+Logged Time : 				Sat 2019-10-12 18:54:40
+Event Occured Time : 		Sat 2019-10-12 18:54:40
 
 Activated Node
-14		78:4f:43:5b:c2:c3		192.168.0.10
+14		78:4f:43:5b:c2:c3		192.168.0.7
 
 Adjacent Nodes
-13		78:4f:43:5b:c2:c3		192.168.0.10		6
-15		78:4f:43:5b:c2:c3		192.168.0.10		6
-10		78:4f:43:5b:c2:c3		192.168.0.10		6
+13		78:4f:43:5b:c2:c3		192.168.0.7		8
+10		78:4f:43:5b:c2:c3		192.168.0.7		9
+18		78:4f:43:5b:c2:c3		192.168.0.7		8
 
 
-Triggered Value : 6
-Communication Time (seconds) : 0.004101
-Decyption Time (seconds) : 0.002010
+Triggered Value : 8
+Communication Time (seconds) : 0.004803
+Decyption Time (seconds) : 0.002356
 Total Messages with server: 5
 Total Activations : 15
-------------------------------------------------------
-Iteration : 9
-Logged Time : 				Sat 2019-10-12 13:17:52
-Event Occured Time : 		Sat 2019-10-12 13:17:52
-
-Activated Node
-9		78:4f:43:5b:c2:c3		192.168.0.10
-
-Adjacent Nodes
-10		78:4f:43:5b:c2:c3		192.168.0.10		9
-5		78:4f:43:5b:c2:c3		192.168.0.10		8
-13		78:4f:43:5b:c2:c3		192.168.0.10		9
-
-
-Triggered Value : 2
-Communication Time (seconds) : 0.015392
-Decyption Time (seconds) : 0.004634
-Total Messages with server: 6
-Total Activations : 18
 
 
 ------------------------------------------------------
 ------------------------------------------------------
-Total Simulation Time (seconds) : 9.882526
-Total Messages though the network (including termination signal): 826
-Total Activations : 18
+Total Simulation Time (seconds) : 9.879618
+Total Messages though the network (including termination signal): 825
+Total Activations : 15

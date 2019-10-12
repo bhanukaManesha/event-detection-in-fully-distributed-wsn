@@ -15,6 +15,7 @@
         "stdio.h": "c",
         "mpi.h": "c",
         "chrono": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "aes.h": "c"
     }
 }

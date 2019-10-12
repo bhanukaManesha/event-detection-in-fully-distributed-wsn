@@ -1,10 +1,10 @@
-ALL: main
+ALL: init
 
-main : main.c
-	~/opt/usr/local/bin/mpicc -fopenmp main.c -o main
+init : init.c
+	~/opt/usr/local/bin/mpicc -fopenmp init.c node.c base.c AES/aes.c -o program
 
 run:
-	~/opt/usr/local/bin/mpirun -np 21 main
+	~/opt/usr/local/bin/mpirun -np 21 program
 
 clean :
-	/bin/rm -f main *.o
+	/bin/rm -f init *.o
