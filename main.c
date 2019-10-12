@@ -259,10 +259,16 @@ void printBanner(){
 		for (int index = 0; index < NUMBEROFADJACENT; index++){
 			int position = 0;
 			if (adjacentNodes[index] != -1){
+
+			if (ENCRYPT_COMM == 1){
+				AES_init_ctx_iv(&ctx, key, iv);
+				AES_CTR_xcrypt_buffer(&ctx, recievePackBuffer + (packsize * index), packsize);
+			}
+
+
 				MPI_Unpack((recievePackBuffer + (packsize * index)), packsize, &position, &recievedNumCurrent[index], 1, MPI_INT, MPI_COMM_WORLD);
 			}
 			
-
 			// printf("Recieving %i; Value : %i \n",rank,recievedNumCurrent[index] );
 		}
 
@@ -554,10 +560,10 @@ int sendTrigger(int* adjacentNodes, MPI_Request* req, int* nreq){
 			int position = 0;
 			MPI_Pack( &randNum, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
 
-			// if (ENCRYPT_COMM == 1){
-			// 	AES_init_ctx_iv(&ctx, key, iv);
-			// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
-			// }
+			if (ENCRYPT_COMM == 1){
+				AES_init_ctx_iv(&ctx, key, iv);
+				AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+			}
 
 			
 			MPI_Isend(packbuf, packsize, MPI_PACKED, adjacentNodes[index], 0, MPI_COMM_WORLD, &req[*nreq]);
