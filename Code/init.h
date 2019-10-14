@@ -1,0 +1,28 @@
+/* 
+File: init.h
+Author: Bhanuka Gamage
+Date: 14th October 2019
+StudentID - 28993373
+Assignment 2
+*/
+
+// Define the macros
+#define MAX_RANDOM 4
+#define NUMBEROFADJACENT 4
+#define packsize 320
+#define ENCRYPT_COMM 1
+
+// Define the Encryption type
+#define CBC 1
+#define CTR 1
+#define ECB 1
+
+// Functions Definitions for the node.c file
+void convertToTimeStamp(char* buf, int size);
+int getAdjacentNodes(int *ajacentNodesArr, int currentRank);
+void* checkStop(void * arg);
+void printBanner();
+void initializeSystem();
+
+// Include the AES encyption file
+#include "aes.h"

@@ -1,0 +1,49 @@
+------------------------------------------------------
+Iteration : 98
+Logged Time : 				Mon 2019-10-14 05:56:56
+Event Occured Time : 		Mon 2019-10-14 05:56:56
+
+Activated Node
+14		78:4f:43:5b:c2:c3		192.168.0.10
+
+Adjacent Nodes
+13		78:4f:43:5b:c2:c3		192.168.0.10		98
+15		78:4f:43:5b:c2:c3		192.168.0.10		98
+18		78:4f:43:5b:c2:c3		192.168.0.10		98
+
+
+Triggered Value : 5
+Communication Time (seconds) : 0.005933
+Decryption Time (seconds) : 0.002693
+Total Messages with server: 64
+Total Activations : 192
+
+
+------------------------------------------------------
+------------------------------------------------------
+Total Simulation Time (seconds) : 105.645036
+Total Messages with the base station (including termination signal): 84
+Total Messages between sensor nodes : 8000
+Total Messages though the network (including termination signal): 8084
+Total Activations : 192
+
+Total Activations per Node: 
+	Rank 1 : 0
+	Rank 2 : 0
+	Rank 3 : 8
+	Rank 4 : 0
+	Rank 5 : 0
+	Rank 6 : 18
+	Rank 7 : 3
+	Rank 8 : 0
+	Rank 9 : 7
+	Rank 10 : 0
+	Rank 11 : 8
+	Rank 12 : 0
+	Rank 13 : 0
+	Rank 14 : 17
+	Rank 15 : 3
+	Rank 16 : 0
+	Rank 17 : 0
+	Rank 18 : 0
+	Rank 19 : 0

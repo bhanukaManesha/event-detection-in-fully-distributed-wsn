@@ -1,0 +1,46 @@
+ __          _______ _   _   ________      ________ _   _ _______   _____  ______ _______ ______ _____ _______ _____ ____  _   _ 
+ \ \        / / ____| \ | | |  ____\ \    / /  ____| \ | |__   __| |  __ \|  ____|__   __|  ____/ ____|__   __|_   _/ __ \| \ | |
+  \ \  /\  / / (___ |  \| | | |__   \ \  / /| |__  |  \| |  | |    | |  | | |__     | |  | |__ | |       | |    | || |  | |  \| |
+   \ \/  \/ / \___ \| . ` | |  __|   \ \/ / |  __| | . ` |  | |    | |  | |  __|    | |  |  __|| |       | |    | || |  | | . ` |
+    \  /\  /  ____) | |\  | | |____   \  /  | |____| |\  |  | |    | |__| | |____   | |  | |___| |____   | |   _| || |__| | |\  |
+     \/  \/  |_____/|_| \_| |______|   \/   |______|_| \_|  |_|    |_____/|______|  |_|  |______\_____|  |_|  |_____\____/|_| \_|
+
+What is the shape of the 20 node grid ? (width height) : 
+4 5
+Creating node grid of size (4,5) and base station using 21 nodes
+
+How many iterations does the nodes search for (integer value, -1 for until "stop" is entered)? : 
+100
+How often does each iteration happen (seconds) ? : 
+1
+Running 10 iterations at 1 second intervals
+
+
+
+
+
+
+
+
+
+ __          _______ _   _   ________      ________ _   _ _______   _____  ______ _______ ______ _____ _______ _____ ____  _   _ 
+ \ \        / / ____| \ | | |  ____\ \    / /  ____| \ | |__   __| |  __ \|  ____|__   __|  ____/ ____|__   __|_   _/ __ \| \ | |
+  \ \  /\  / / (___ |  \| | | |__   \ \  / /| |__  |  \| |  | |    | |  | | |__     | |  | |__ | |       | |    | || |  | |  \| |
+   \ \/  \/ / \___ \| . ` | |  __|   \ \/ / |  __| | . ` |  | |    | |  | |  __|    | |  |  __|| |       | |    | || |  | | . ` |
+    \  /\  /  ____) | |\  | | |____   \  /  | |____| |\  |  | |    | |__| | |____   | |  | |___| |____   | |   _| || |__| | |\  |
+     \/  \/  |_____/|_| \_| |______|   \/   |______|_| \_|  |_|    |_____/|______|  |_|  |______\_____|  |_|  |_____\____/|_| \_|
+
+What is the shape of the 20 node grid ? (width height) : 
+4 5
+Creating node grid of size (4,5) and base station using 21 nodes
+
+How many iterations does the nodes search for (integer value, -1 for until "stop" is entered)? : 
+-1
+How often does each iteration happen (seconds) ? : 
+1
+
+
+Please enter "stop" to end the simulation.....
+stop
+
+Stopping the simulation.

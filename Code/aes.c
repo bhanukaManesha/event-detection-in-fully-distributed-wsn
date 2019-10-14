@@ -1,4 +1,10 @@
-
+/* 
+File: aes.h
+Author: kokke
+Date: 14th October 2019
+Purpose: Header file for AES encryption
+Link: https://github.com/kokke/tiny-AES-c
+*/
 
 /*
 
