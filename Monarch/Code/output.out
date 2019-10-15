@@ -1,0 +1,20 @@
+Running : 32 cores
+Run 1
+Running 10 iterations at 1 second intervals
+[mi02:6707 :0] Caught signal 11 (Segmentation fault)
+==== backtrace ====
+ 2 0x000000000006ba2c mxm_handle_error()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3111/src/mxm/util/debug/debug.c:641
+ 3 0x000000000006bf7c mxm_error_signal_handler()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3111/src/mxm/util/debug/debug.c:616
+ 4 0x0000000000036280 killpg()  ??:0
+ 5 0x00000000000a87bb opal_memory_ptmalloc2_int_free()  ??:0
+ 6 0x00000000000a8cc3 opal_memory_ptmalloc2_free()  ??:0
+ 7 0x000000000040366e listenToEvents()  ??:0
+ 8 0x0000000000402c13 base()  ??:0
+ 9 0x00000000004014ea main()  ??:0
+10 0x00000000000223d5 __libc_start_main()  ??:0
+11 0x00000000004013b9 _start()  ??:0
+===================
+srun: error: mi02: task 0: Segmentation fault
+srun: Job step aborted: Waiting up to 12 seconds for job step to finish.
+slurmstepd: error: *** STEP 4840007.0 ON mi02 CANCELLED AT 2019-10-15T23:50:45 ***
+slurmstepd: error: *** JOB 4840007 ON mi02 CANCELLED AT 2019-10-15T23:50:45 ***

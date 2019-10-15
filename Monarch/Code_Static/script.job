@@ -8,7 +8,6 @@
 #SBATCH --account=fit3143
 #SBATCH --output=output.out
 #SBATCH --qos=fit3143
-#SBATCH --constraint=Xeon-Gold-6150
 module load openmpi/1.10.7-mlx
 
 echo "Running : 32 cores"

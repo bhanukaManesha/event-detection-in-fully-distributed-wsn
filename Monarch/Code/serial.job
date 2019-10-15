@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH --job-name=serial
+#SBATCH --time=00:30:00
+#SBATCH --mem=32G
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --account=fit3143
+#SBATCH --constraint=Xeon-Gold-6150
+#SBATCH --output=serial.out
+echo "Serial"
+
+echo "Run 1"
+./mandelbrot_serial
+
+echo "Run 2"
+./mandelbrot_serial
+
+echo "Run 3"
+./mandelbrot_serial
+
+echo "Run 4"
+./mandelbrot_serial
+
+echo "Run 5"
+./mandelbrot_serial

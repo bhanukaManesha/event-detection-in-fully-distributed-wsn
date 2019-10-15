@@ -20,7 +20,6 @@ Assignment 2
 #include "./init.h"
 #include "./node.h"
 #include "getIPAddress.c"
-#include "getMACAddress.c"
 
 
 // Import the global variables
@@ -211,13 +210,11 @@ void initializeNodes(){
 	char* ip_address = getIPAddress();
 
 	// Hard code the mac address, since MAC doesnot support accessing the mac address
-	// char mac_address[17] = "78:4f:43:5b:c2:c3";
-
-	char mac_address[17];
-	getMACAddress(mac_address);
-
+	char mac_address[17] = "78:4f:43:5b:c2:c3";
+	// char* mac_address = getMACAddress();
+	
 	// Pack the mac address and the ipaddress to the buffer
-	MPI_Pack( mac_address, 17, MPI_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
+	MPI_Pack( &mac_address, 17, MPI_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
 	MPI_Pack( ip_address, 15, MPI_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
 
 	// Encrypt the buffer

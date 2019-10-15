@@ -17,6 +17,7 @@
         "chrono": "c",
         "cmath": "c",
         "aes.h": "c",
-        "omp.h": "c"
+        "omp.h": "c",
+        "stdint.h": "c"
     }
 }
