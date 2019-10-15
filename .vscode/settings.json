@@ -16,6 +16,7 @@
         "mpi.h": "c",
         "chrono": "c",
         "cmath": "c",
-        "aes.h": "c"
+        "aes.h": "c",
+        "omp.h": "c"
     }
 }

@@ -16,6 +16,8 @@ Assignment 2
 #include <time.h> 
 #include <unistd.h>
 #include <pthread.h>
+#include "omp.h"
+#include "stdint.h"
 
 #include "./init.h"
 #include "./node.h"
@@ -86,30 +88,35 @@ void initializeSystem(){
 	baseStation = 0;
 
 	// Base station get the input from the user
-	if (rank == baseStation){
+	// if (rank == baseStation){
 
-		// Print the banner
-		printBanner();
+	// 	// Print the banner
+	// 	printBanner();
 
-		// Get grid width and height
-		printf("What is the shape of the %i node grid ? (width height) : \n", numtasks - 1);
-		fflush(stdin);
-		scanf("%d%d", &WIDTH, &HEIGHT);
+	// 	// Get grid width and height
+	// 	printf("What is the shape of the %i node grid ? (width height) : \n", numtasks - 1);
+	// 	fflush(stdin);
+	// 	scanf("%d%d", &WIDTH, &HEIGHT);
 
-		printf("Creating node grid of size (%i,%i) and base station using %i nodes\n\n", WIDTH, HEIGHT, numtasks);
+	// 	printf("Creating node grid of size (%i,%i) and base station using %i nodes\n\n", WIDTH, HEIGHT, numtasks);
 
-		// Get the iteration count
-		printf("How many iterations does the nodes search for (integer value, -1 for until \"stop\" is entered)? : \n");
-		fflush(stdin);
-		scanf("%i", &iterationMax);
+	// 	// Get the iteration count
+	// 	printf("How many iterations does the nodes search for (integer value, -1 for until \"stop\" is entered)? : \n");
+	// 	fflush(stdin);
+	// 	scanf("%i", &iterationMax);
 
-		// Get the interval
-		printf("How often does each iteration happen (seconds) ? : \n");
-		fflush(stdin);
-		scanf("%i", &refreshInteval);
+	// 	// Get the interval
+	// 	printf("How often does each iteration happen (seconds) ? : \n");
+	// 	fflush(stdin);
+	// 	scanf("%i", &refreshInteval);
 
 
-	}
+	// }
+
+	WIDTH = 4;
+	HEIGHT = 5;
+	iterationMax = 10;
+	refreshInteval = 10;
 	
 	// Get the current time
 	simStartTime = MPI_Wtime();
@@ -294,6 +301,22 @@ void* checkStop(void * arg){
 	MPI_Waitall(numberOfReq , temp_r, temp_s);
 	
 	return NULL;
+}
+
+void encrypt_decrypt(uint8_t* buffer, uint32_t size){
+
+	uint32_t block_size = size/16;
+
+	int i;
+
+	#pragma omp for schedule(static) private(i)
+	for (i = 0; i < block_size; i++){
+		AES_init_ctx_iv(&ctx, key, iv);
+		for (int j = 0; j < 1000; j++){
+			AES_CTR_xcrypt_buffer(&ctx, buffer + (block_size * i), block_size);
+		}
+	}
+
 }
 
 

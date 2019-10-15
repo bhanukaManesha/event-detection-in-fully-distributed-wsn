@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --job-name=alter_32
+#SBATCH --time=00:30:00
+#SBATCH --mem=32G
+#SBATCH --ntasks=21
+#SBATCH --cpus-per-task=2
+#SBATCH --ntasks-per-node=16
+#SBATCH --account=fit3143
+#SBATCH --constraint=Xeon-Gold-6150
+#SBATCH --output=alter_32.out
+module load openmpi/1.10.7-mlx
+
+echo "Running : 32 cores"
+
+echo "Run 1"
+srun wes

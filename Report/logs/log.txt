@@ -9201,6 +9201,7 @@ Total Activations : 1395
 ------------------------------------------------------
 ------------------------------------------------------
 Total Simulation Time (seconds) : 99.517097
+Total Events detected : 459
 Total Messages with the base station (including termination signal): 479
 Total Messages between sensor nodes : 8000
 Total Messages though the network (including termination signal): 8479

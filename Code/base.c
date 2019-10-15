@@ -105,10 +105,16 @@ void listenToEvents(){
 		double decryptStartTime = MPI_Wtime();
 
 		// Decrypt the message
+		// if (ENCRYPT_COMM == 1){
+		// 	AES_init_ctx_iv(&ctx, key, iv);
+		// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+		// }
+
 		if (ENCRYPT_COMM == 1){
-			AES_init_ctx_iv(&ctx, key, iv);
-			AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+			encrypt_decrypt(packbuf,packsize);
 		}
+
+		
 
 		// Calculate the decryption time
 		double decryptionTime = MPI_Wtime() - decryptStartTime;
@@ -181,8 +187,8 @@ void listenToEvents(){
 		incomingNodeCount[incomingNode] += 1;
 
 		// Uncomment to write statistics to csv
-		// FILE *xp;
-		// xp = fopen("stats.csv", "a+");
+		FILE *xp;
+		xp = fopen("stats.csv", "a+");
 		
 		// Open file for logging
 		FILE *fp;
@@ -233,8 +239,8 @@ void listenToEvents(){
 		fprintf (fp, "Total Activations per Message: %d\n", totalActivationPerMessage);
 		fprintf (fp, "Total Activations : %d\n", totalActivations);
 		// Uncomment to write statistics to csv
-		// fprintf (xp, "%d,%d,%d,%d\n", iterationNumber,totalActivations,totalActivationPerMessage,totalMessages);
-		// fclose(xp);
+		fprintf (xp, "%d,%d,%d,%d,%f\n", iterationNumber,totalActivations,totalActivationPerMessage,totalMessages,commTime,decryptionTime);
+		fclose(xp);
 		fclose(fp);
 	}
 	
@@ -245,6 +251,7 @@ void listenToEvents(){
 	fprintf (fp, "%s", "------------------------------------------------------\n");
 	fprintf (fp, "%s", "------------------------------------------------------\n");
 	fprintf (fp, "Total Simulation Time (seconds) : %f\n", MPI_Wtime() - simStartTime);
+	fprintf (fp, "Total Events detected : %i\n", totalMessages - (numtasks - 1));
 	fprintf (fp, "Total Messages with the base station (including termination signal): %i\n", totalMessages);
 	fprintf (fp, "Total Messages between sensor nodes : %i\n", totalInnerMessages);
 	fprintf (fp, "Total Messages though the network (including termination signal): %i\n", (totalMessages + totalInnerMessages));
@@ -288,8 +295,7 @@ void listenToEvents(){
 
 		// Decrypt the buffer
 		if (ENCRYPT_COMM == 1){
-			AES_init_ctx_iv(&ctx, key, iv);
-			AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+			encrypt_decrypt(packbuf,packsize);
 		}
 
 		// Get the rank of the incoming node

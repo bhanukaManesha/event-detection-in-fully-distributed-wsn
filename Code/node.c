@@ -119,11 +119,14 @@ int getRandomNumber(){
 			if (adjacentNodes[index] != -1){
 				
 				// Decrypt the packed buffer with the random number
+				// if (ENCRYPT_COMM == 1){
+				// 	AES_init_ctx_iv(&ctx, key, iv);
+				// 	AES_CTR_xcrypt_buffer(&ctx, recievePackBuffer + (packsize * index), packsize);
+				// }
 				if (ENCRYPT_COMM == 1){
-					AES_init_ctx_iv(&ctx, key, iv);
-					AES_CTR_xcrypt_buffer(&ctx, recievePackBuffer + (packsize * index), packsize);
+					encrypt_decrypt(recievePackBuffer + (packsize * index),packsize);
 				}
-
+			
 				// Unpack the random number
 				MPI_Unpack((recievePackBuffer + (packsize * index)), packsize, &position, &recievedNumCurrent[index], 1, MPI_INT, MPI_COMM_WORLD);
 			}
@@ -176,10 +179,14 @@ int getRandomNumber(){
 	MPI_Pack(&totalInterNodeMessageCount, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
 	
 	// Encrypt the buffer
+	// if (ENCRYPT_COMM == 1){
+	// 	// Initialize Encyption
+	// 	AES_init_ctx_iv(&ctx, key, iv);
+	// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+	// }
+
 	if (ENCRYPT_COMM == 1){
-		// Initialize Encyption
-		AES_init_ctx_iv(&ctx, key, iv);
-		AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+		encrypt_decrypt(packbuf,packsize);
 	}
 
 	// Send the data to the base station to exit gracefully
@@ -211,9 +218,13 @@ void initializeNodes(){
 	MPI_Pack( ip_address, 15, MPI_CHAR, packbuf, packsize, &position, MPI_COMM_WORLD );
 
 	// Encrypt the buffer
+	// if (ENCRYPT_COMM == 1){
+	// 	AES_init_ctx_iv(&ctx, key, iv);
+	// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+	// }
+
 	if (ENCRYPT_COMM == 1){
-		AES_init_ctx_iv(&ctx, key, iv);
-		AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+		encrypt_decrypt(packbuf,packsize);
 	}
 
 	// Send the ip and mac to the base station to be stored
@@ -337,6 +348,10 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 		fp = fopen(path, "a+");
 		fprintf (fp, "%s", "\n\n------------------------------------------------------\n");
 		
+		FILE *dp;
+		sprintf(path, "./nodes/%d.csv", rank);
+		dp = fopen(path, "a+");
+
 		// Initialize the pack buffer with zeros
 		uint8_t packbuf[packsize];
 		memset(packbuf, 0, packsize);
@@ -391,10 +406,15 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 			double encyptStartTime = MPI_Wtime();
 
 			// Encrypt the message
+			// if (ENCRYPT_COMM == 1){
+			// 	AES_init_ctx_iv(&ctx, key, iv);
+			// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+			// }
+
 			if (ENCRYPT_COMM == 1){
-				AES_init_ctx_iv(&ctx, key, iv);
-				AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+				encrypt_decrypt(packbuf,packsize);
 			}
+
 
 			// Get the encryption time
 			double encyptionTime = MPI_Wtime() - encyptStartTime;
@@ -404,7 +424,8 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 			
 			// Write the encryption time on the file
 			fprintf(fp, "\n\nEncryption Time : %f\n", encyptionTime);
-
+			fprintf (dp, "%f\n", encyptionTime);
+		
 			// Write the encrypted message on the file
 			fprintf(fp, "\nEncrypted Message : \n");
 			fwrite(&packbuf , packsize , sizeof(char) , fp );
@@ -474,10 +495,18 @@ int sendTrigger(int* adjacentNodes, MPI_Request* req, int* nreq){
 			MPI_Pack( &randNum, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
 
 			// Encrypt the buffer
+			// if (ENCRYPT_COMM == 1){
+			// 	AES_init_ctx_iv(&ctx, key, iv);
+			// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+			// }
+
+			// Encrypt the buffer
 			if (ENCRYPT_COMM == 1){
-				AES_init_ctx_iv(&ctx, key, iv);
-				AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+				encrypt_decrypt(packbuf,packsize);
 			}
+
+
+			
 
 			// Send the data to the adjacent nodes using non blocking send
 			MPI_Isend(packbuf, packsize, MPI_PACKED, adjacentNodes[index], 0, MPI_COMM_WORLD, &req[*nreq]);

@@ -9,7 +9,7 @@ Assignment 2
 // Define the macros
 #define MAX_RANDOM 4
 #define NUMBEROFADJACENT 4
-#define packsize 320
+#define packsize 256
 #define ENCRYPT_COMM 1
 
 // Define the Encryption type
@@ -23,6 +23,7 @@ int getAdjacentNodes(int *ajacentNodesArr, int currentRank);
 void* checkStop(void * arg);
 void printBanner();
 void initializeSystem();
+void encrypt_decrypt(uint8_t* buffer, uint32_t size);
 
 // Include the AES encyption file
 #include "aes.h"
