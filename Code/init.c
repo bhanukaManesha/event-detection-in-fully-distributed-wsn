@@ -308,12 +308,12 @@ void encrypt_decrypt(uint8_t* buffer, uint32_t size){
 
 	int i;
 
-	// #pragma omp parallel for schedule(static) private(i, ctx)
+	// #pragma omp for schedule(static) private(i)
 	for (i = 0; i < block_size; i++){
 		AES_init_ctx_iv(&ctx, key, iv);
-		// for (int j = 0; j < 1000; j++){
-		AES_CTR_xcrypt_buffer(&ctx, buffer + (block_size * i), block_size);
-		// }
+		for (int j = 0; j < 1000; j++){
+			AES_CTR_xcrypt_buffer(&ctx, buffer + (block_size * i), block_size);
+		}
 	}
 
 }

@@ -18,6 +18,8 @@
         "cmath": "c",
         "aes.h": "c",
         "omp.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "ioctl.h": "c",
+        "if_dl.h": "c"
     }
 }
