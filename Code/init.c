@@ -22,8 +22,6 @@ Assignment 2
 #include "./node.h"
 #include "./base.h"
 
-// #include "getMACAddress.c"
-
 // initialize the global varaibles
 int numtasks, rank;
 int baseStation;
@@ -40,7 +38,6 @@ int userstop = 0;
 
 // initialize the variables needed for encryption
 struct AES_ctx ctx;
-// uint8_t key[] = "6Ghen2kCseQms8t3";
 uint8_t key[16] = { (uint8_t) 0x2b, (uint8_t) 0x7e, (uint8_t) 0x15, (uint8_t) 0x16, (uint8_t) 0x28, (uint8_t) 0xae, (uint8_t) 0xd2, (uint8_t) 0xa6, (uint8_t) 0xab, (uint8_t) 0xf7, (uint8_t) 0x15, (uint8_t) 0x88, (uint8_t) 0x09, (uint8_t) 0xcf, (uint8_t) 0x4f, (uint8_t) 0x3c };
 uint8_t iv[]  = { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
 
@@ -88,36 +85,37 @@ void initializeSystem(){
 	// Initialize base station
 	baseStation = 0;
 
-	// // Base station get the input from the user
-	// if (rank == baseStation){
+	// Base station get the input from the user
+	if (rank == baseStation){
 
-	// 	// Print the banner
-	// 	printBanner();
+		// Print the banner
+		printBanner();
 
-	// 	// Get grid width and height
-	// 	printf("What is the shape of the %i node grid ? (width height) : \n", numtasks - 1);
-	// 	fflush(stdin);
-	// 	scanf("%d%d", &WIDTH, &HEIGHT);
+		// Get grid width and height
+		printf("What is the shape of the %i node grid ? (width height) : \n", numtasks - 1);
+		fflush(stdin);
+		scanf("%d%d", &WIDTH, &HEIGHT);
 
-	// 	printf("Creating node grid of size (%i,%i) and base station using %i nodes\n\n", WIDTH, HEIGHT, numtasks);
+		printf("Creating node grid of size (%i,%i) and base station using %i nodes\n\n", WIDTH, HEIGHT, numtasks);
 
-	// 	// Get the iteration count
-	// 	printf("How many iterations does the nodes search for (integer value, -1 for until \"stop\" is entered)? : \n");
-	// 	fflush(stdin);
-	// 	scanf("%i", &iterationMax);
+		// Get the iteration count
+		printf("How many iterations does the nodes search for (integer value, -1 for until \"stop\" is entered)? : \n");
+		fflush(stdin);
+		scanf("%i", &iterationMax);
 
-	// 	// Get the interval
-	// 	printf("How often does each iteration happen (seconds) ? : \n");
-	// 	fflush(stdin);
-	// 	scanf("%i", &refreshInteval);
+		// Get the interval
+		printf("How often does each iteration happen (seconds) ? : \n");
+		fflush(stdin);
+		scanf("%i", &refreshInteval);
 
 
-	// }
+	}
 
-	WIDTH = 4;
-	HEIGHT = 5;
-	iterationMax = 100;
-	refreshInteval = 1;
+	// Uncomment to run without user input
+	// WIDTH = 4;
+	// HEIGHT = 5;
+	// iterationMax = 100;
+	// refreshInteval = 1;
 	
 	// Get the current time
 	simStartTime = MPI_Wtime();
@@ -136,16 +134,13 @@ void initializeSystem(){
 		MPI_Pack( &iterationMax, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
 		MPI_Pack( &refreshInteval, 1, MPI_INT, packbuf, packsize, &position, MPI_COMM_WORLD );
 
-
-		// Encrypt the data
+		// Encrypt the buffer
 		if (ENCRYPT_COMM == 1){
-			AES_init_ctx_iv(&ctx, key, iv);
-			AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+			encrypt_decrypt(packbuf,packsize);
 		}
 
 		// Send the data to all the nodes
 		for (int i = 1; i < numtasks; i++){
-			// MPI_Send(packbuf, position, MPI_PACKED, i, 0, MPI_COMM_WORLD);
 			MPI_Send(packbuf, packsize, MPI_PACKED, i, 0, MPI_COMM_WORLD);
 		}
 		
@@ -166,8 +161,7 @@ void initializeSystem(){
 
 		// Decrypt the pack buffer
 		if (ENCRYPT_COMM == 1){
-			AES_init_ctx_iv(&ctx, key, iv);
-			AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
+			encrypt_decrypt(packbuf,packsize);
 		}
 
 		// Unpack the user inputs and assign them
@@ -306,11 +300,17 @@ void* checkStop(void * arg){
 }
 
 void encrypt_decrypt(uint8_t* buffer, uint32_t size){
+	/*
+	 * Method used to encrypt and decrypt the message buffer
+	 */ 
 
+	// Calculate the blocksize
 	uint32_t block_size = size/16;
 
+	// Initialize i
 	int i;
 
+	// Encrypt or Decrypt using OpenMP
 	#pragma omp parallel for schedule(dynamic) private(i, ctx) num_threads(4)
 	for (i = 0; i < block_size; i++){
 		AES_init_ctx_iv(&ctx, key, iv);

@@ -108,17 +108,11 @@ void listenToEvents(){
 		double decryptStartTime = MPI_Wtime();
 
 		// Decrypt the message
-		// if (ENCRYPT_COMM == 1){
-		// 	AES_init_ctx_iv(&ctx, key, iv);
-		// 	AES_CTR_xcrypt_buffer(&ctx, packbuf, packsize);
-		// }
-
 		if (ENCRYPT_COMM == 1){
 			encrypt_decrypt(packbuf,packsize);
 		}
 
 		
-
 		// Calculate the decryption time
 		double decryptionTime = MPI_Wtime() - decryptStartTime;
 
@@ -190,8 +184,8 @@ void listenToEvents(){
 		incomingNodeCount[incomingNode] += 1;
 
 		// Uncomment to write statistics to csv
-		FILE *xp;
-		xp = fopen("stats.csv", "a+");
+		// FILE *xp;
+		// xp = fopen("stats.csv", "a+");
 		
 		// Open file for logging
 		FILE *fp;
@@ -207,14 +201,8 @@ void listenToEvents(){
 		fprintf (fp, "%i", incomingNode);
 		fprintf (fp, "%s", "\t\t");
 		fwrite(macAddressStorage + incomingNode*sizeof(char)*17 , 17 , sizeof(char) , fp );
-		// fprintf (fp, "%s",macAddressStorage + incomingNode*sizeof(unsigned char)*20);
-		// fprintf (fp, "%s",&macAddressStorage[incomingNode * 17]);
-		// fwrite (&macAddressStorage[incomingNode], 17, sizeof(unsigned char),fp);
 		fprintf (fp, "%s", "\t\t");
-		// fwrite(ipAddressStorage + incomingNode*sizeof(unsigned char)*15 , 15 , sizeof(unsigned char) , fp );
 		fprintf (fp, "%s", ipAddressStorage + incomingNode*sizeof(unsigned char)*15);
-		// fprintf (fp, "%s", &ipAddressStorage[incomingNode * 15]);
-		// fwrite (&ipAddressStorage[incomingNode], 15, sizeof(unsigned char),fp);
 		fprintf (fp, "%s", "\n\n");
 		int labelFlag = 0;
 		int totalActivationPerMessage = 0;
@@ -229,13 +217,8 @@ void listenToEvents(){
 				fprintf (fp, "%i", adjacentNodes[i]);
 				fprintf (fp, "%s", "\t\t");
 				fwrite(macAddressStorage + adjacentNodes[i]*sizeof(unsigned char)*17, 17 , sizeof(unsigned char) , fp );
-				// fprintf (fp, "%s", macAddressStorage + adjacentNodes[i]*sizeof(unsigned char)*20);
-				// fprintf (fp, "%s",&macAddressStorage[incomingNode]);
-				// fwrite (&macAddressStorage[incomingNode], 17, sizeof(unsigned char),fp);
 				fprintf (fp, "%s", "\t\t");
-				// fwrite(ipAddressStorage + adjacentNodes[i]*sizeof(unsigned char)*15 , 15 , sizeof(unsigned char) , fp );
 				fprintf (fp, "%s", ipAddressStorage + adjacentNodes[i]*sizeof(unsigned char)*15);
-				// fwrite (&ipAddressStorage[incomingNode], 15, sizeof(unsigned char),fp);
 				fprintf (fp, "%s", "\t\t");
 				fprintf (fp, "%i", activatedNodes[i]);
 				fprintf (fp, "%s", "\n");
@@ -248,10 +231,12 @@ void listenToEvents(){
 		fprintf (fp, "Total Messages with server: %i\n", totalMessages);
 		fprintf (fp, "Total Activations per Message: %d\n", totalActivationPerMessage);
 		fprintf (fp, "Total Activations : %d\n", totalActivations);
-		// Uncomment to write statistics to csv
-		fprintf (xp, "%d,%d,%d,%d,%f,%f\n", iterationNumber,totalActivations,totalActivationPerMessage,totalMessages,commTime,decryptionTime);
-		fclose(xp);
 		fclose(fp);
+
+		// Uncomment to write statistics to csv
+		// fprintf (xp, "%d,%d,%d,%d,%f,%f\n", iterationNumber,totalActivations,totalActivationPerMessage,totalMessages,commTime,decryptionTime);
+		// fclose(xp);
+		
 	}
 	
 	// Log the total statistics of of the simulation
@@ -308,9 +293,6 @@ void listenToEvents(){
 		incoming_rank = stat.MPI_SOURCE;
 
 		// Unpack the buffer straight into the dynamic array
-		// MPI_Unpack(packbuf, packsize, &position, macAddressStorage + incoming_rank*20, 20, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
-		// MPI_Unpack(packbuf, packsize, &position, ipAddressStorage + incoming_rank*20, 20, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
-		
 		MPI_Unpack(packbuf, packsize, &position, &macAddressStorage[incoming_rank * 17 * sizeof(unsigned char)], 17, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
 		MPI_Unpack(packbuf, packsize, &position, &ipAddressStorage[incoming_rank * 15 * sizeof(unsigned char)], 15, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
 

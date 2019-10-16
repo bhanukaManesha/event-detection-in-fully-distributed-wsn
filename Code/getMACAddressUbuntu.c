@@ -1,3 +1,11 @@
+/* 
+File: getMACAddress.c
+Author: Charles Salvia
+Date: 22nd November 2009
+Purpose: Get the MAC address from the system
+Link: https://stackoverflow.com/questions/1779715/how-to-get-mac-address-of-your-machine-using-a-c-program
+*/
+
 #include <sys/ioctl.h>
 #include <net/if.h> 
 #include <unistd.h>
@@ -38,10 +46,6 @@ int getMACAddress(unsigned char* macaddress)
     unsigned char mac_address[6];
 
     if (success) memcpy(mac_address, ifr.ifr_hwaddr.sa_data, 6);
-
-    // printf("%x\n", mac_address);
-    // printf("%02x:%02x:%02x:%02x:%02x:%02x\n", *mac_address, *(mac_address+1), *(mac_address+2),
-            //    *(mac_address+3), *(mac_address+4), *(mac_address+5));
 
     sprintf(macaddress, "%02x:%02x:%02x:%02x:%02x:%02x", *mac_address, *(mac_address+1), *(mac_address+2),
                *(mac_address+3), *(mac_address+4), *(mac_address+5));

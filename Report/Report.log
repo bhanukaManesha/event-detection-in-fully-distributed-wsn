@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.21)  17 OCT 2019 05:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.21)  17 OCT 2019 05:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -772,16 +772,16 @@ Package pdftex.def Info: fig/en.png  used on input line 314.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/chart1.png, id=42, 1242.6425pt x 739.76375pt>
+<fig/chart1.png, id=42, 1625.07124pt x 573.14125pt>
 File: fig/chart1.png Graphic file (type png)
 <use fig/chart1.png>
 Package pdftex.def Info: fig/chart1.png  used on input line 333.
-(pdftex.def)             Requested size: 325.215pt x 193.59827pt.
-<fig/chart2.png, id=43, 1252.68pt x 739.76375pt>
+(pdftex.def)             Requested size: 433.62pt x 152.93115pt.
+<fig/chart2.png, id=43, 1632.0975pt x 583.17876pt>
 File: fig/chart2.png Graphic file (type png)
 <use fig/chart2.png>
 Package pdftex.def Info: fig/chart2.png  used on input line 340.
-(pdftex.def)             Requested size: 325.215pt x 192.05183pt.
+(pdftex.def)             Requested size: 433.62pt x 154.94206pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -802,23 +802,18 @@ File: fig/speed.png Graphic file (type png)
 <use fig/speed.png>
 Package pdftex.def Info: fig/speed.png  used on input line 365.
 (pdftex.def)             Requested size: 216.81pt x 115.05847pt.
+ [7 <./fig/chart1.png> <./fig/chart2.png> <./fig/gridsum.png> <./fig/speed.png>
+]
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 374.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `enTIme' on page 8 undefined on input line 374.
 
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 374.
+LaTeX Warning: Reference `deTime' on page 8 undefined on input line 374.
 
-
-LaTeX Warning: Reference `enTIme' on page 7 undefined on input line 374.
-
-
-LaTeX Warning: Reference `deTime' on page 7 undefined on input line 374.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./fig/chart1.png> <./fig/chart2.png>] (./Report.bbl
+(./Report.bbl
 Underfull \hbox (badness 2027) in paragraph at lines 45--49
 []\OT1/ptm/m/n/8 A. On-s-man, ``What is in-ter-pro-cess com-mu-ni-ca-tion?''
  []
@@ -837,7 +832,9 @@ Underfull \hbox (badness 2103) in paragraph at lines 72--75
 []\OT1/ptm/m/n/8 K. Meghna, ``Block ci-pher modes of op-er-a-tion,''
  []
 
-) [8 <./fig/gridsum.png> <./fig/speed.png>]
+) [8
+
+]
 <fig/console1.png, id=62, 922.44624pt x 221.82875pt>
 File: fig/console1.png Graphic file (type png)
 <use fig/console1.png>
@@ -885,7 +882,7 @@ e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/ur
 w/times/utmri8a.pfb>
-Output written on Report.pdf (9 pages, 1853303 bytes).
+Output written on Report.pdf (9 pages, 1784535 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream

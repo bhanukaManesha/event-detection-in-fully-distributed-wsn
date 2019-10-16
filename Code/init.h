@@ -6,9 +6,6 @@ StudentID - 28993373
 Assignment 2
 */
 
-#include "stdint.h"
-#include "inttypes.h"
-
 // Define the macros
 #define MAX_RANDOM 12
 #define NUMBEROFADJACENT 4
@@ -30,3 +27,7 @@ void encrypt_decrypt(uint8_t* buffer, uint32_t size);
 
 // Include the AES encyption file
 #include "aes.h"
+
+// Include standard interger types
+#include "stdint.h"
+#include "inttypes.h"
