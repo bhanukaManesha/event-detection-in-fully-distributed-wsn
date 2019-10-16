@@ -308,7 +308,7 @@ void encrypt_decrypt(uint8_t* buffer, uint32_t size){
 
 	int i;
 
-	// #pragma omp for schedule(static) private(i)
+	#pragma omp parallel for schedule(dynamic) private(i, ctx) num_threads(4)
 	for (i = 0; i < block_size; i++){
 		AES_init_ctx_iv(&ctx, key, iv);
 		for (int j = 0; j < 1000; j++){

@@ -239,7 +239,7 @@ void listenToEvents(){
 		fprintf (fp, "Total Activations per Message: %d\n", totalActivationPerMessage);
 		fprintf (fp, "Total Activations : %d\n", totalActivations);
 		// Uncomment to write statistics to csv
-		fprintf (xp, "%d,%d,%d,%d,%f\n", iterationNumber,totalActivations,totalActivationPerMessage,totalMessages,commTime,decryptionTime);
+		fprintf (xp, "%d,%d,%d,%d,%f,%f\n", iterationNumber,totalActivations,totalActivationPerMessage,totalMessages,commTime,decryptionTime);
 		fclose(xp);
 		fclose(fp);
 	}

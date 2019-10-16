@@ -432,6 +432,7 @@ int checkForTrigger(int* recievedNumPast, int* recievedNumCurrent){
 
 			// Close the file
 			fclose(fp);
+			fclose(dp);
 
 		}
 
