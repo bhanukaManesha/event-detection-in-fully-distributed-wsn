@@ -1,0 +1,2273 @@
+------------------------------------------------------
+Iteration : 5
+Logged Time : 				Wed 2019-10-16 19:10:37
+Event Occured Time : 		Wed 2019-10-16 19:10:37
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		5
+10		54:bf:64:91:f8:8a		118.139.135.57		4
+18		54:bf:64:91:f8:8a		118.139.135.57		5
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.047863
+Decryption Time (seconds) : 0.024079
+Total Messages with server: 1
+Total Activations per Message: 3
+Total Activations : 3
+------------------------------------------------------
+Iteration : 4
+Logged Time : 				Wed 2019-10-16 19:10:37
+Event Occured Time : 		Wed 2019-10-16 19:10:37
+
+Activated Node
+6		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+5		54:bf:64:91:f8:8a		118.139.135.57		4
+7		54:bf:64:91:f8:8a		118.139.135.57		4
+2		54:bf:64:91:f8:8a		118.139.135.57		4
+
+
+Triggered Value : 10
+Communication Time (seconds) : 0.045798
+Decryption Time (seconds) : 0.022882
+Total Messages with server: 2
+Total Activations per Message: 3
+Total Activations : 6
+------------------------------------------------------
+Iteration : 5
+Logged Time : 				Wed 2019-10-16 19:10:37
+Event Occured Time : 		Wed 2019-10-16 19:10:37
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		5
+12		54:bf:64:91:f8:8a		118.139.135.57		4
+15		54:bf:64:91:f8:8a		118.139.135.57		5
+
+
+Triggered Value : 5
+Communication Time (seconds) : 0.045221
+Decryption Time (seconds) : 0.022319
+Total Messages with server: 3
+Total Activations per Message: 3
+Total Activations : 9
+------------------------------------------------------
+Iteration : 7
+Logged Time : 				Wed 2019-10-16 19:10:40
+Event Occured Time : 		Wed 2019-10-16 19:10:40
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		6
+3		54:bf:64:91:f8:8a		118.139.135.57		7
+11		54:bf:64:91:f8:8a		118.139.135.57		6
+
+
+Triggered Value : 10
+Communication Time (seconds) : 0.045432
+Decryption Time (seconds) : 0.022514
+Total Messages with server: 4
+Total Activations per Message: 3
+Total Activations : 12
+------------------------------------------------------
+Iteration : 8
+Logged Time : 				Wed 2019-10-16 19:10:42
+Event Occured Time : 		Wed 2019-10-16 19:10:42
+
+Activated Node
+16		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+15		54:bf:64:91:f8:8a		118.139.135.57		8
+12		54:bf:64:91:f8:8a		118.139.135.57		8
+20		54:bf:64:91:f8:8a		118.139.135.57		8
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.045810
+Decryption Time (seconds) : 0.022919
+Total Messages with server: 5
+Total Activations per Message: 3
+Total Activations : 15
+------------------------------------------------------
+Iteration : 14
+Logged Time : 				Wed 2019-10-16 19:10:50
+Event Occured Time : 		Wed 2019-10-16 19:10:50
+
+Activated Node
+16		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+15		54:bf:64:91:f8:8a		118.139.135.57		14
+12		54:bf:64:91:f8:8a		118.139.135.57		14
+20		54:bf:64:91:f8:8a		118.139.135.57		14
+
+
+Triggered Value : 4
+Communication Time (seconds) : 0.064957
+Decryption Time (seconds) : 0.022848
+Total Messages with server: 6
+Total Activations per Message: 3
+Total Activations : 18
+------------------------------------------------------
+Iteration : 17
+Logged Time : 				Wed 2019-10-16 19:10:54
+Event Occured Time : 		Wed 2019-10-16 19:10:54
+
+Activated Node
+12		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+11		54:bf:64:91:f8:8a		118.139.135.57		17
+8		54:bf:64:91:f8:8a		118.139.135.57		17
+16		54:bf:64:91:f8:8a		118.139.135.57		17
+
+
+Triggered Value : 4
+Communication Time (seconds) : 0.060997
+Decryption Time (seconds) : 0.022856
+Total Messages with server: 7
+Total Activations per Message: 3
+Total Activations : 21
+------------------------------------------------------
+Iteration : 18
+Logged Time : 				Wed 2019-10-16 19:10:55
+Event Occured Time : 		Wed 2019-10-16 19:10:54
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+14		54:bf:64:91:f8:8a		118.139.135.57		17
+16		54:bf:64:91:f8:8a		118.139.135.57		18
+19		54:bf:64:91:f8:8a		118.139.135.57		17
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.046466
+Decryption Time (seconds) : 0.023563
+Total Messages with server: 8
+Total Activations per Message: 3
+Total Activations : 24
+------------------------------------------------------
+Iteration : 18
+Logged Time : 				Wed 2019-10-16 19:10:55
+Event Occured Time : 		Wed 2019-10-16 19:10:54
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		18
+8		54:bf:64:91:f8:8a		118.139.135.57		17
+11		54:bf:64:91:f8:8a		118.139.135.57		18
+
+
+Triggered Value : 4
+Communication Time (seconds) : 0.051711
+Decryption Time (seconds) : 0.022843
+Total Messages with server: 9
+Total Activations per Message: 3
+Total Activations : 27
+------------------------------------------------------
+Iteration : 21
+Logged Time : 				Wed 2019-10-16 19:10:58
+Event Occured Time : 		Wed 2019-10-16 19:10:58
+
+Activated Node
+16		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+15		54:bf:64:91:f8:8a		118.139.135.57		21
+12		54:bf:64:91:f8:8a		118.139.135.57		20
+20		54:bf:64:91:f8:8a		118.139.135.57		21
+
+
+Triggered Value : 4
+Communication Time (seconds) : 0.072072
+Decryption Time (seconds) : 0.029168
+Total Messages with server: 10
+Total Activations per Message: 3
+Total Activations : 30
+------------------------------------------------------
+Iteration : 20
+Logged Time : 				Wed 2019-10-16 19:10:58
+Event Occured Time : 		Wed 2019-10-16 19:10:58
+
+Activated Node
+12		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+11		54:bf:64:91:f8:8a		118.139.135.57		20
+8		54:bf:64:91:f8:8a		118.139.135.57		20
+16		54:bf:64:91:f8:8a		118.139.135.57		20
+
+
+Triggered Value : 11
+Communication Time (seconds) : 0.078547
+Decryption Time (seconds) : 0.022870
+Total Messages with server: 11
+Total Activations per Message: 3
+Total Activations : 33
+------------------------------------------------------
+Iteration : 20
+Logged Time : 				Wed 2019-10-16 19:10:59
+Event Occured Time : 		Wed 2019-10-16 19:10:58
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+8		54:bf:64:91:f8:8a		118.139.135.57		20
+3		54:bf:64:91:f8:8a		118.139.135.57		20
+11		54:bf:64:91:f8:8a		118.139.135.57		20
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.045917
+Decryption Time (seconds) : 0.022409
+Total Messages with server: 12
+Total Activations per Message: 3
+Total Activations : 36
+------------------------------------------------------
+Iteration : 23
+Logged Time : 				Wed 2019-10-16 19:11:01
+Event Occured Time : 		Wed 2019-10-16 19:11:01
+
+Activated Node
+19		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+18		54:bf:64:91:f8:8a		118.139.135.57		23
+20		54:bf:64:91:f8:8a		118.139.135.57		22
+15		54:bf:64:91:f8:8a		118.139.135.57		23
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.045747
+Decryption Time (seconds) : 0.022853
+Total Messages with server: 13
+Total Activations per Message: 3
+Total Activations : 39
+------------------------------------------------------
+Iteration : 23
+Logged Time : 				Wed 2019-10-16 19:11:03
+Event Occured Time : 		Wed 2019-10-16 19:11:02
+
+Activated Node
+16		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+15		54:bf:64:91:f8:8a		118.139.135.57		23
+12		54:bf:64:91:f8:8a		118.139.135.57		23
+20		54:bf:64:91:f8:8a		118.139.135.57		23
+
+
+Triggered Value : 11
+Communication Time (seconds) : 0.081119
+Decryption Time (seconds) : 0.038982
+Total Messages with server: 14
+Total Activations per Message: 3
+Total Activations : 42
+------------------------------------------------------
+Iteration : 23
+Logged Time : 				Wed 2019-10-16 19:11:03
+Event Occured Time : 		Wed 2019-10-16 19:11:02
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		23
+15		54:bf:64:91:f8:8a		118.139.135.57		23
+18		54:bf:64:91:f8:8a		118.139.135.57		23
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.061671
+Decryption Time (seconds) : 0.022852
+Total Messages with server: 15
+Total Activations per Message: 3
+Total Activations : 45
+------------------------------------------------------
+Iteration : 24
+Logged Time : 				Wed 2019-10-16 19:11:03
+Event Occured Time : 		Wed 2019-10-16 19:11:02
+
+Activated Node
+12		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+11		54:bf:64:91:f8:8a		118.139.135.57		24
+8		54:bf:64:91:f8:8a		118.139.135.57		23
+16		54:bf:64:91:f8:8a		118.139.135.57		24
+
+
+Triggered Value : 4
+Communication Time (seconds) : 0.090897
+Decryption Time (seconds) : 0.022859
+Total Messages with server: 16
+Total Activations per Message: 3
+Total Activations : 48
+------------------------------------------------------
+Iteration : 23
+Logged Time : 				Wed 2019-10-16 19:11:03
+Event Occured Time : 		Wed 2019-10-16 19:11:03
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+12		54:bf:64:91:f8:8a		118.139.135.57		23
+7		54:bf:64:91:f8:8a		118.139.135.57		23
+15		54:bf:64:91:f8:8a		118.139.135.57		23
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.079842
+Decryption Time (seconds) : 0.022702
+Total Messages with server: 17
+Total Activations per Message: 3
+Total Activations : 51
+------------------------------------------------------
+Iteration : 24
+Logged Time : 				Wed 2019-10-16 19:11:03
+Event Occured Time : 		Wed 2019-10-16 19:11:03
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+16		54:bf:64:91:f8:8a		118.139.135.57		23
+11		54:bf:64:91:f8:8a		118.139.135.57		24
+19		54:bf:64:91:f8:8a		118.139.135.57		23
+
+
+Triggered Value : 4
+Communication Time (seconds) : 0.073393
+Decryption Time (seconds) : 0.022584
+Total Messages with server: 18
+Total Activations per Message: 3
+Total Activations : 54
+------------------------------------------------------
+Iteration : 24
+Logged Time : 				Wed 2019-10-16 19:11:03
+Event Occured Time : 		Wed 2019-10-16 19:11:03
+
+Activated Node
+18		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+17		54:bf:64:91:f8:8a		118.139.135.57		23
+19		54:bf:64:91:f8:8a		118.139.135.57		24
+14		54:bf:64:91:f8:8a		118.139.135.57		23
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.119131
+Decryption Time (seconds) : 0.022539
+Total Messages with server: 19
+Total Activations per Message: 3
+Total Activations : 57
+------------------------------------------------------
+Iteration : 25
+Logged Time : 				Wed 2019-10-16 19:11:04
+Event Occured Time : 		Wed 2019-10-16 19:11:04
+
+Activated Node
+9		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		25
+5		54:bf:64:91:f8:8a		118.139.135.57		25
+13		54:bf:64:91:f8:8a		118.139.135.57		25
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.076904
+Decryption Time (seconds) : 0.042070
+Total Messages with server: 20
+Total Activations per Message: 3
+Total Activations : 60
+------------------------------------------------------
+Iteration : 25
+Logged Time : 				Wed 2019-10-16 19:11:04
+Event Occured Time : 		Wed 2019-10-16 19:11:04
+
+Activated Node
+19		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+18		54:bf:64:91:f8:8a		118.139.135.57		25
+20		54:bf:64:91:f8:8a		118.139.135.57		25
+15		54:bf:64:91:f8:8a		118.139.135.57		25
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.045757
+Decryption Time (seconds) : 0.022849
+Total Messages with server: 21
+Total Activations per Message: 3
+Total Activations : 63
+------------------------------------------------------
+Iteration : 27
+Logged Time : 				Wed 2019-10-16 19:11:07
+Event Occured Time : 		Wed 2019-10-16 19:11:06
+
+Activated Node
+12		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+11		54:bf:64:91:f8:8a		118.139.135.57		27
+8		54:bf:64:91:f8:8a		118.139.135.57		26
+16		54:bf:64:91:f8:8a		118.139.135.57		27
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.056001
+Decryption Time (seconds) : 0.023824
+Total Messages with server: 22
+Total Activations per Message: 3
+Total Activations : 66
+------------------------------------------------------
+Iteration : 27
+Logged Time : 				Wed 2019-10-16 19:11:07
+Event Occured Time : 		Wed 2019-10-16 19:11:07
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+16		54:bf:64:91:f8:8a		118.139.135.57		26
+11		54:bf:64:91:f8:8a		118.139.135.57		27
+19		54:bf:64:91:f8:8a		118.139.135.57		26
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.045715
+Decryption Time (seconds) : 0.022851
+Total Messages with server: 23
+Total Activations per Message: 3
+Total Activations : 69
+------------------------------------------------------
+Iteration : 26
+Logged Time : 				Wed 2019-10-16 19:11:07
+Event Occured Time : 		Wed 2019-10-16 19:11:07
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+8		54:bf:64:91:f8:8a		118.139.135.57		26
+3		54:bf:64:91:f8:8a		118.139.135.57		26
+11		54:bf:64:91:f8:8a		118.139.135.57		26
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.049890
+Decryption Time (seconds) : 0.022845
+Total Messages with server: 24
+Total Activations per Message: 3
+Total Activations : 72
+------------------------------------------------------
+Iteration : 28
+Logged Time : 				Wed 2019-10-16 19:11:08
+Event Occured Time : 		Wed 2019-10-16 19:11:08
+
+Activated Node
+5		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		28
+1		54:bf:64:91:f8:8a		118.139.135.57		28
+9		54:bf:64:91:f8:8a		118.139.135.57		28
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.083819
+Decryption Time (seconds) : 0.042123
+Total Messages with server: 25
+Total Activations per Message: 3
+Total Activations : 75
+------------------------------------------------------
+Iteration : 28
+Logged Time : 				Wed 2019-10-16 19:11:08
+Event Occured Time : 		Wed 2019-10-16 19:11:08
+
+Activated Node
+19		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+18		54:bf:64:91:f8:8a		118.139.135.57		28
+20		54:bf:64:91:f8:8a		118.139.135.57		27
+15		54:bf:64:91:f8:8a		118.139.135.57		28
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.045695
+Decryption Time (seconds) : 0.022845
+Total Messages with server: 26
+Total Activations per Message: 3
+Total Activations : 78
+------------------------------------------------------
+Iteration : 28
+Logged Time : 				Wed 2019-10-16 19:11:08
+Event Occured Time : 		Wed 2019-10-16 19:11:08
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+9		54:bf:64:91:f8:8a		118.139.135.57		28
+6		54:bf:64:91:f8:8a		118.139.135.57		28
+14		54:bf:64:91:f8:8a		118.139.135.57		28
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.045726
+Decryption Time (seconds) : 0.022841
+Total Messages with server: 27
+Total Activations per Message: 3
+Total Activations : 81
+------------------------------------------------------
+Iteration : 28
+Logged Time : 				Wed 2019-10-16 19:11:09
+Event Occured Time : 		Wed 2019-10-16 19:11:09
+
+Activated Node
+5		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		28
+1		54:bf:64:91:f8:8a		118.139.135.57		28
+9		54:bf:64:91:f8:8a		118.139.135.57		28
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.084119
+Decryption Time (seconds) : 0.042073
+Total Messages with server: 28
+Total Activations per Message: 3
+Total Activations : 84
+------------------------------------------------------
+Iteration : 30
+Logged Time : 				Wed 2019-10-16 19:11:11
+Event Occured Time : 		Wed 2019-10-16 19:11:10
+
+Activated Node
+16		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+15		54:bf:64:91:f8:8a		118.139.135.57		30
+12		54:bf:64:91:f8:8a		118.139.135.57		29
+20		54:bf:64:91:f8:8a		118.139.135.57		30
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.061097
+Decryption Time (seconds) : 0.022863
+Total Messages with server: 29
+Total Activations per Message: 3
+Total Activations : 87
+------------------------------------------------------
+Iteration : 29
+Logged Time : 				Wed 2019-10-16 19:11:11
+Event Occured Time : 		Wed 2019-10-16 19:11:11
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+12		54:bf:64:91:f8:8a		118.139.135.57		29
+7		54:bf:64:91:f8:8a		118.139.135.57		29
+15		54:bf:64:91:f8:8a		118.139.135.57		29
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.045711
+Decryption Time (seconds) : 0.022847
+Total Messages with server: 30
+Total Activations per Message: 3
+Total Activations : 90
+------------------------------------------------------
+Iteration : 30
+Logged Time : 				Wed 2019-10-16 19:11:12
+Event Occured Time : 		Wed 2019-10-16 19:11:12
+
+Activated Node
+8		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+7		54:bf:64:91:f8:8a		118.139.135.57		30
+4		54:bf:64:91:f8:8a		118.139.135.57		30
+12		54:bf:64:91:f8:8a		118.139.135.57		30
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.067926
+Decryption Time (seconds) : 0.044827
+Total Messages with server: 31
+Total Activations per Message: 3
+Total Activations : 93
+------------------------------------------------------
+Iteration : 31
+Logged Time : 				Wed 2019-10-16 19:11:12
+Event Occured Time : 		Wed 2019-10-16 19:11:12
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+14		54:bf:64:91:f8:8a		118.139.135.57		31
+11		54:bf:64:91:f8:8a		118.139.135.57		31
+19		54:bf:64:91:f8:8a		118.139.135.57		31
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.052504
+Decryption Time (seconds) : 0.029339
+Total Messages with server: 32
+Total Activations per Message: 3
+Total Activations : 96
+------------------------------------------------------
+Iteration : 31
+Logged Time : 				Wed 2019-10-16 19:11:12
+Event Occured Time : 		Wed 2019-10-16 19:11:12
+
+Activated Node
+18		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+17		54:bf:64:91:f8:8a		118.139.135.57		31
+19		54:bf:64:91:f8:8a		118.139.135.57		31
+14		54:bf:64:91:f8:8a		118.139.135.57		31
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.071840
+Decryption Time (seconds) : 0.022659
+Total Messages with server: 33
+Total Activations per Message: 3
+Total Activations : 99
+------------------------------------------------------
+Iteration : 32
+Logged Time : 				Wed 2019-10-16 19:11:13
+Event Occured Time : 		Wed 2019-10-16 19:11:13
+
+Activated Node
+19		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+18		54:bf:64:91:f8:8a		118.139.135.57		32
+20		54:bf:64:91:f8:8a		118.139.135.57		31
+15		54:bf:64:91:f8:8a		118.139.135.57		32
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.047195
+Decryption Time (seconds) : 0.022972
+Total Messages with server: 34
+Total Activations per Message: 3
+Total Activations : 102
+------------------------------------------------------
+Iteration : 32
+Logged Time : 				Wed 2019-10-16 19:11:13
+Event Occured Time : 		Wed 2019-10-16 19:11:13
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+15		54:bf:64:91:f8:8a		118.139.135.57		32
+10		54:bf:64:91:f8:8a		118.139.135.57		32
+18		54:bf:64:91:f8:8a		118.139.135.57		32
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.045831
+Decryption Time (seconds) : 0.022958
+Total Messages with server: 35
+Total Activations per Message: 3
+Total Activations : 105
+------------------------------------------------------
+Iteration : 33
+Logged Time : 				Wed 2019-10-16 19:11:15
+Event Occured Time : 		Wed 2019-10-16 19:11:15
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		33
+12		54:bf:64:91:f8:8a		118.139.135.57		32
+15		54:bf:64:91:f8:8a		118.139.135.57		33
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.045743
+Decryption Time (seconds) : 0.022858
+Total Messages with server: 36
+Total Activations per Message: 3
+Total Activations : 108
+------------------------------------------------------
+Iteration : 32
+Logged Time : 				Wed 2019-10-16 19:11:15
+Event Occured Time : 		Wed 2019-10-16 19:11:15
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+8		54:bf:64:91:f8:8a		118.139.135.57		32
+3		54:bf:64:91:f8:8a		118.139.135.57		32
+11		54:bf:64:91:f8:8a		118.139.135.57		32
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.052159
+Decryption Time (seconds) : 0.022849
+Total Messages with server: 37
+Total Activations per Message: 3
+Total Activations : 111
+------------------------------------------------------
+Iteration : 33
+Logged Time : 				Wed 2019-10-16 19:11:15
+Event Occured Time : 		Wed 2019-10-16 19:11:15
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		33
+15		54:bf:64:91:f8:8a		118.139.135.57		33
+10		54:bf:64:91:f8:8a		118.139.135.57		33
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.045715
+Decryption Time (seconds) : 0.022853
+Total Messages with server: 38
+Total Activations per Message: 3
+Total Activations : 114
+------------------------------------------------------
+Iteration : 34
+Logged Time : 				Wed 2019-10-16 19:11:16
+Event Occured Time : 		Wed 2019-10-16 19:11:16
+
+Activated Node
+5		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		34
+1		54:bf:64:91:f8:8a		118.139.135.57		34
+9		54:bf:64:91:f8:8a		118.139.135.57		34
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.084652
+Decryption Time (seconds) : 0.042094
+Total Messages with server: 39
+Total Activations per Message: 3
+Total Activations : 117
+------------------------------------------------------
+Iteration : 34
+Logged Time : 				Wed 2019-10-16 19:11:16
+Event Occured Time : 		Wed 2019-10-16 19:11:16
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		34
+12		54:bf:64:91:f8:8a		118.139.135.57		33
+15		54:bf:64:91:f8:8a		118.139.135.57		34
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.046543
+Decryption Time (seconds) : 0.022838
+Total Messages with server: 40
+Total Activations per Message: 3
+Total Activations : 120
+------------------------------------------------------
+Iteration : 34
+Logged Time : 				Wed 2019-10-16 19:11:16
+Event Occured Time : 		Wed 2019-10-16 19:11:16
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+9		54:bf:64:91:f8:8a		118.139.135.57		34
+6		54:bf:64:91:f8:8a		118.139.135.57		34
+14		54:bf:64:91:f8:8a		118.139.135.57		34
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.045724
+Decryption Time (seconds) : 0.022853
+Total Messages with server: 41
+Total Activations per Message: 3
+Total Activations : 123
+------------------------------------------------------
+Iteration : 34
+Logged Time : 				Wed 2019-10-16 19:11:17
+Event Occured Time : 		Wed 2019-10-16 19:11:17
+
+Activated Node
+5		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		34
+1		54:bf:64:91:f8:8a		118.139.135.57		34
+9		54:bf:64:91:f8:8a		118.139.135.57		34
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.082919
+Decryption Time (seconds) : 0.042074
+Total Messages with server: 42
+Total Activations per Message: 3
+Total Activations : 126
+------------------------------------------------------
+Iteration : 35
+Logged Time : 				Wed 2019-10-16 19:11:17
+Event Occured Time : 		Wed 2019-10-16 19:11:17
+
+Activated Node
+19		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+18		54:bf:64:91:f8:8a		118.139.135.57		35
+20		54:bf:64:91:f8:8a		118.139.135.57		35
+15		54:bf:64:91:f8:8a		118.139.135.57		35
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.069409
+Decryption Time (seconds) : 0.027338
+Total Messages with server: 43
+Total Activations per Message: 3
+Total Activations : 129
+------------------------------------------------------
+Iteration : 36
+Logged Time : 				Wed 2019-10-16 19:11:19
+Event Occured Time : 		Wed 2019-10-16 19:11:19
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+9		54:bf:64:91:f8:8a		118.139.135.57		36
+11		54:bf:64:91:f8:8a		118.139.135.57		36
+14		54:bf:64:91:f8:8a		118.139.135.57		36
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.046208
+Decryption Time (seconds) : 0.023324
+Total Messages with server: 44
+Total Activations per Message: 3
+Total Activations : 132
+------------------------------------------------------
+Iteration : 35
+Logged Time : 				Wed 2019-10-16 19:11:19
+Event Occured Time : 		Wed 2019-10-16 19:11:19
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+12		54:bf:64:91:f8:8a		118.139.135.57		35
+7		54:bf:64:91:f8:8a		118.139.135.57		35
+15		54:bf:64:91:f8:8a		118.139.135.57		35
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.045581
+Decryption Time (seconds) : 0.022910
+Total Messages with server: 45
+Total Activations per Message: 3
+Total Activations : 135
+------------------------------------------------------
+Iteration : 37
+Logged Time : 				Wed 2019-10-16 19:11:20
+Event Occured Time : 		Wed 2019-10-16 19:11:20
+
+Activated Node
+19		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+18		54:bf:64:91:f8:8a		118.139.135.57		37
+20		54:bf:64:91:f8:8a		118.139.135.57		36
+15		54:bf:64:91:f8:8a		118.139.135.57		37
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.064960
+Decryption Time (seconds) : 0.042074
+Total Messages with server: 46
+Total Activations per Message: 3
+Total Activations : 138
+------------------------------------------------------
+Iteration : 37
+Logged Time : 				Wed 2019-10-16 19:11:20
+Event Occured Time : 		Wed 2019-10-16 19:11:20
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		37
+8		54:bf:64:91:f8:8a		118.139.135.57		36
+3		54:bf:64:91:f8:8a		118.139.135.57		37
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.046097
+Decryption Time (seconds) : 0.023221
+Total Messages with server: 47
+Total Activations per Message: 3
+Total Activations : 141
+------------------------------------------------------
+Iteration : 37
+Logged Time : 				Wed 2019-10-16 19:11:20
+Event Occured Time : 		Wed 2019-10-16 19:11:20
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		37
+15		54:bf:64:91:f8:8a		118.139.135.57		37
+18		54:bf:64:91:f8:8a		118.139.135.57		37
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.045352
+Decryption Time (seconds) : 0.022488
+Total Messages with server: 48
+Total Activations per Message: 3
+Total Activations : 144
+------------------------------------------------------
+Iteration : 38
+Logged Time : 				Wed 2019-10-16 19:11:23
+Event Occured Time : 		Wed 2019-10-16 19:11:23
+
+Activated Node
+12		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+11		54:bf:64:91:f8:8a		118.139.135.57		38
+8		54:bf:64:91:f8:8a		118.139.135.57		38
+16		54:bf:64:91:f8:8a		118.139.135.57		38
+
+
+Triggered Value : 11
+Communication Time (seconds) : 0.046348
+Decryption Time (seconds) : 0.022911
+Total Messages with server: 49
+Total Activations per Message: 3
+Total Activations : 147
+------------------------------------------------------
+Iteration : 39
+Logged Time : 				Wed 2019-10-16 19:11:23
+Event Occured Time : 		Wed 2019-10-16 19:11:23
+
+Activated Node
+3		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+2		54:bf:64:91:f8:8a		118.139.135.57		39
+4		54:bf:64:91:f8:8a		118.139.135.57		38
+7		54:bf:64:91:f8:8a		118.139.135.57		39
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.064989
+Decryption Time (seconds) : 0.022884
+Total Messages with server: 50
+Total Activations per Message: 3
+Total Activations : 150
+------------------------------------------------------
+Iteration : 38
+Logged Time : 				Wed 2019-10-16 19:11:23
+Event Occured Time : 		Wed 2019-10-16 19:11:23
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+8		54:bf:64:91:f8:8a		118.139.135.57		38
+3		54:bf:64:91:f8:8a		118.139.135.57		38
+11		54:bf:64:91:f8:8a		118.139.135.57		38
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.045780
+Decryption Time (seconds) : 0.022894
+Total Messages with server: 51
+Total Activations per Message: 3
+Total Activations : 153
+------------------------------------------------------
+Iteration : 39
+Logged Time : 				Wed 2019-10-16 19:11:23
+Event Occured Time : 		Wed 2019-10-16 19:11:23
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		38
+15		54:bf:64:91:f8:8a		118.139.135.57		39
+18		54:bf:64:91:f8:8a		118.139.135.57		38
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.045767
+Decryption Time (seconds) : 0.022885
+Total Messages with server: 52
+Total Activations per Message: 3
+Total Activations : 156
+------------------------------------------------------
+Iteration : 39
+Logged Time : 				Wed 2019-10-16 19:11:23
+Event Occured Time : 		Wed 2019-10-16 19:11:23
+
+Activated Node
+6		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+5		54:bf:64:91:f8:8a		118.139.135.57		39
+7		54:bf:64:91:f8:8a		118.139.135.57		39
+2		54:bf:64:91:f8:8a		118.139.135.57		39
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.045840
+Decryption Time (seconds) : 0.022806
+Total Messages with server: 53
+Total Activations per Message: 3
+Total Activations : 159
+------------------------------------------------------
+Iteration : 38
+Logged Time : 				Wed 2019-10-16 19:11:23
+Event Occured Time : 		Wed 2019-10-16 19:11:23
+
+Activated Node
+18		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+17		54:bf:64:91:f8:8a		118.139.135.57		38
+19		54:bf:64:91:f8:8a		118.139.135.57		38
+14		54:bf:64:91:f8:8a		118.139.135.57		38
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.059184
+Decryption Time (seconds) : 0.022179
+Total Messages with server: 54
+Total Activations per Message: 3
+Total Activations : 162
+------------------------------------------------------
+Iteration : 40
+Logged Time : 				Wed 2019-10-16 19:11:24
+Event Occured Time : 		Wed 2019-10-16 19:11:24
+
+Activated Node
+3		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+2		54:bf:64:91:f8:8a		118.139.135.57		40
+4		54:bf:64:91:f8:8a		118.139.135.57		39
+7		54:bf:64:91:f8:8a		118.139.135.57		40
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.061497
+Decryption Time (seconds) : 0.023105
+Total Messages with server: 55
+Total Activations per Message: 3
+Total Activations : 165
+------------------------------------------------------
+Iteration : 40
+Logged Time : 				Wed 2019-10-16 19:11:24
+Event Occured Time : 		Wed 2019-10-16 19:11:24
+
+Activated Node
+5		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		39
+1		54:bf:64:91:f8:8a		118.139.135.57		40
+9		54:bf:64:91:f8:8a		118.139.135.57		39
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.075357
+Decryption Time (seconds) : 0.022975
+Total Messages with server: 56
+Total Activations per Message: 3
+Total Activations : 168
+------------------------------------------------------
+Iteration : 41
+Logged Time : 				Wed 2019-10-16 19:11:26
+Event Occured Time : 		Wed 2019-10-16 19:11:25
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+16		54:bf:64:91:f8:8a		118.139.135.57		40
+11		54:bf:64:91:f8:8a		118.139.135.57		41
+19		54:bf:64:91:f8:8a		118.139.135.57		40
+
+
+Triggered Value : 4
+Communication Time (seconds) : 0.046376
+Decryption Time (seconds) : 0.022611
+Total Messages with server: 57
+Total Activations per Message: 3
+Total Activations : 171
+------------------------------------------------------
+Iteration : 42
+Logged Time : 				Wed 2019-10-16 19:11:27
+Event Occured Time : 		Wed 2019-10-16 19:11:27
+
+Activated Node
+2		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+1		54:bf:64:91:f8:8a		118.139.135.57		42
+3		54:bf:64:91:f8:8a		118.139.135.57		42
+6		54:bf:64:91:f8:8a		118.139.135.57		42
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.065463
+Decryption Time (seconds) : 0.023248
+Total Messages with server: 58
+Total Activations per Message: 3
+Total Activations : 174
+------------------------------------------------------
+Iteration : 42
+Logged Time : 				Wed 2019-10-16 19:11:27
+Event Occured Time : 		Wed 2019-10-16 19:11:27
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+16		54:bf:64:91:f8:8a		118.139.135.57		41
+11		54:bf:64:91:f8:8a		118.139.135.57		42
+19		54:bf:64:91:f8:8a		118.139.135.57		41
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.046694
+Decryption Time (seconds) : 0.023742
+Total Messages with server: 59
+Total Activations per Message: 3
+Total Activations : 177
+------------------------------------------------------
+Iteration : 41
+Logged Time : 				Wed 2019-10-16 19:11:27
+Event Occured Time : 		Wed 2019-10-16 19:11:27
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+12		54:bf:64:91:f8:8a		118.139.135.57		41
+7		54:bf:64:91:f8:8a		118.139.135.57		41
+15		54:bf:64:91:f8:8a		118.139.135.57		41
+
+
+Triggered Value : 2
+Communication Time (seconds) : 0.059524
+Decryption Time (seconds) : 0.023123
+Total Messages with server: 60
+Total Activations per Message: 3
+Total Activations : 180
+------------------------------------------------------
+Iteration : 42
+Logged Time : 				Wed 2019-10-16 19:11:28
+Event Occured Time : 		Wed 2019-10-16 19:11:28
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+14		54:bf:64:91:f8:8a		118.139.135.57		42
+16		54:bf:64:91:f8:8a		118.139.135.57		42
+11		54:bf:64:91:f8:8a		118.139.135.57		42
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.046154
+Decryption Time (seconds) : 0.023345
+Total Messages with server: 61
+Total Activations per Message: 3
+Total Activations : 183
+------------------------------------------------------
+Iteration : 44
+Logged Time : 				Wed 2019-10-16 19:11:29
+Event Occured Time : 		Wed 2019-10-16 19:11:29
+
+Activated Node
+9		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		44
+5		54:bf:64:91:f8:8a		118.139.135.57		43
+13		54:bf:64:91:f8:8a		118.139.135.57		44
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.085456
+Decryption Time (seconds) : 0.042515
+Total Messages with server: 62
+Total Activations per Message: 3
+Total Activations : 186
+------------------------------------------------------
+Iteration : 45
+Logged Time : 				Wed 2019-10-16 19:11:31
+Event Occured Time : 		Wed 2019-10-16 19:11:31
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+12		54:bf:64:91:f8:8a		118.139.135.57		44
+7		54:bf:64:91:f8:8a		118.139.135.57		45
+15		54:bf:64:91:f8:8a		118.139.135.57		44
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.045707
+Decryption Time (seconds) : 0.022849
+Total Messages with server: 63
+Total Activations per Message: 3
+Total Activations : 189
+------------------------------------------------------
+Iteration : 45
+Logged Time : 				Wed 2019-10-16 19:11:31
+Event Occured Time : 		Wed 2019-10-16 19:11:31
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+11		54:bf:64:91:f8:8a		118.139.135.57		45
+6		54:bf:64:91:f8:8a		118.139.135.57		44
+14		54:bf:64:91:f8:8a		118.139.135.57		45
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.045723
+Decryption Time (seconds) : 0.022854
+Total Messages with server: 64
+Total Activations per Message: 3
+Total Activations : 192
+------------------------------------------------------
+Iteration : 45
+Logged Time : 				Wed 2019-10-16 19:11:32
+Event Occured Time : 		Wed 2019-10-16 19:11:32
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		45
+12		54:bf:64:91:f8:8a		118.139.135.57		45
+7		54:bf:64:91:f8:8a		118.139.135.57		45
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.045724
+Decryption Time (seconds) : 0.022852
+Total Messages with server: 65
+Total Activations per Message: 3
+Total Activations : 195
+------------------------------------------------------
+Iteration : 45
+Logged Time : 				Wed 2019-10-16 19:11:32
+Event Occured Time : 		Wed 2019-10-16 19:11:32
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+9		54:bf:64:91:f8:8a		118.139.135.57		45
+11		54:bf:64:91:f8:8a		118.139.135.57		45
+14		54:bf:64:91:f8:8a		118.139.135.57		45
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.045216
+Decryption Time (seconds) : 0.022849
+Total Messages with server: 66
+Total Activations per Message: 3
+Total Activations : 198
+------------------------------------------------------
+Iteration : 48
+Logged Time : 				Wed 2019-10-16 19:11:35
+Event Occured Time : 		Wed 2019-10-16 19:11:35
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		48
+12		54:bf:64:91:f8:8a		118.139.135.57		47
+15		54:bf:64:91:f8:8a		118.139.135.57		48
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.045744
+Decryption Time (seconds) : 0.022852
+Total Messages with server: 67
+Total Activations per Message: 3
+Total Activations : 201
+------------------------------------------------------
+Iteration : 48
+Logged Time : 				Wed 2019-10-16 19:11:35
+Event Occured Time : 		Wed 2019-10-16 19:11:35
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+8		54:bf:64:91:f8:8a		118.139.135.57		47
+3		54:bf:64:91:f8:8a		118.139.135.57		48
+11		54:bf:64:91:f8:8a		118.139.135.57		47
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.046829
+Decryption Time (seconds) : 0.022863
+Total Messages with server: 68
+Total Activations per Message: 3
+Total Activations : 204
+------------------------------------------------------
+Iteration : 48
+Logged Time : 				Wed 2019-10-16 19:11:36
+Event Occured Time : 		Wed 2019-10-16 19:11:36
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		48
+8		54:bf:64:91:f8:8a		118.139.135.57		48
+3		54:bf:64:91:f8:8a		118.139.135.57		48
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.045704
+Decryption Time (seconds) : 0.022840
+Total Messages with server: 69
+Total Activations per Message: 3
+Total Activations : 207
+------------------------------------------------------
+Iteration : 51
+Logged Time : 				Wed 2019-10-16 19:11:40
+Event Occured Time : 		Wed 2019-10-16 19:11:40
+
+Activated Node
+2		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+1		54:bf:64:91:f8:8a		118.139.135.57		51
+3		54:bf:64:91:f8:8a		118.139.135.57		51
+6		54:bf:64:91:f8:8a		118.139.135.57		51
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.045746
+Decryption Time (seconds) : 0.022849
+Total Messages with server: 70
+Total Activations per Message: 3
+Total Activations : 210
+------------------------------------------------------
+Iteration : 51
+Logged Time : 				Wed 2019-10-16 19:11:40
+Event Occured Time : 		Wed 2019-10-16 19:11:40
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		51
+10		54:bf:64:91:f8:8a		118.139.135.57		51
+18		54:bf:64:91:f8:8a		118.139.135.57		51
+
+
+Triggered Value : 9
+Communication Time (seconds) : 0.045872
+Decryption Time (seconds) : 0.022845
+Total Messages with server: 71
+Total Activations per Message: 3
+Total Activations : 213
+------------------------------------------------------
+Iteration : 53
+Logged Time : 				Wed 2019-10-16 19:11:42
+Event Occured Time : 		Wed 2019-10-16 19:11:42
+
+Activated Node
+5		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		52
+1		54:bf:64:91:f8:8a		118.139.135.57		53
+9		54:bf:64:91:f8:8a		118.139.135.57		52
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.084234
+Decryption Time (seconds) : 0.042120
+Total Messages with server: 72
+Total Activations per Message: 3
+Total Activations : 216
+------------------------------------------------------
+Iteration : 54
+Logged Time : 				Wed 2019-10-16 19:11:43
+Event Occured Time : 		Wed 2019-10-16 19:11:43
+
+Activated Node
+3		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+2		54:bf:64:91:f8:8a		118.139.135.57		54
+4		54:bf:64:91:f8:8a		118.139.135.57		53
+7		54:bf:64:91:f8:8a		118.139.135.57		54
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.064965
+Decryption Time (seconds) : 0.022853
+Total Messages with server: 73
+Total Activations per Message: 3
+Total Activations : 219
+------------------------------------------------------
+Iteration : 54
+Logged Time : 				Wed 2019-10-16 19:11:43
+Event Occured Time : 		Wed 2019-10-16 19:11:43
+
+Activated Node
+6		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+7		54:bf:64:91:f8:8a		118.139.135.57		53
+2		54:bf:64:91:f8:8a		118.139.135.57		54
+10		54:bf:64:91:f8:8a		118.139.135.57		53
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.050673
+Decryption Time (seconds) : 0.023664
+Total Messages with server: 74
+Total Activations per Message: 3
+Total Activations : 222
+------------------------------------------------------
+Iteration : 56
+Logged Time : 				Wed 2019-10-16 19:11:46
+Event Occured Time : 		Wed 2019-10-16 19:11:46
+
+Activated Node
+16		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+15		54:bf:64:91:f8:8a		118.139.135.57		56
+12		54:bf:64:91:f8:8a		118.139.135.57		55
+20		54:bf:64:91:f8:8a		118.139.135.57		56
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.062150
+Decryption Time (seconds) : 0.023651
+Total Messages with server: 75
+Total Activations per Message: 3
+Total Activations : 225
+------------------------------------------------------
+Iteration : 57
+Logged Time : 				Wed 2019-10-16 19:11:47
+Event Occured Time : 		Wed 2019-10-16 19:11:47
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+9		54:bf:64:91:f8:8a		118.139.135.57		57
+11		54:bf:64:91:f8:8a		118.139.135.57		57
+6		54:bf:64:91:f8:8a		118.139.135.57		57
+
+
+Triggered Value : 10
+Communication Time (seconds) : 0.045813
+Decryption Time (seconds) : 0.022901
+Total Messages with server: 76
+Total Activations per Message: 3
+Total Activations : 228
+------------------------------------------------------
+Iteration : 57
+Logged Time : 				Wed 2019-10-16 19:11:49
+Event Occured Time : 		Wed 2019-10-16 19:11:49
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		57
+10		54:bf:64:91:f8:8a		118.139.135.57		57
+18		54:bf:64:91:f8:8a		118.139.135.57		57
+
+
+Triggered Value : 9
+Communication Time (seconds) : 0.044751
+Decryption Time (seconds) : 0.022336
+Total Messages with server: 77
+Total Activations per Message: 3
+Total Activations : 231
+------------------------------------------------------
+Iteration : 59
+Logged Time : 				Wed 2019-10-16 19:11:50
+Event Occured Time : 		Wed 2019-10-16 19:11:50
+
+Activated Node
+12		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+11		54:bf:64:91:f8:8a		118.139.135.57		59
+8		54:bf:64:91:f8:8a		118.139.135.57		58
+16		54:bf:64:91:f8:8a		118.139.135.57		59
+
+
+Triggered Value : 1
+Communication Time (seconds) : 0.046245
+Decryption Time (seconds) : 0.023300
+Total Messages with server: 78
+Total Activations per Message: 3
+Total Activations : 234
+------------------------------------------------------
+Iteration : 64
+Logged Time : 				Wed 2019-10-16 19:11:56
+Event Occured Time : 		Wed 2019-10-16 19:11:56
+
+Activated Node
+5		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		64
+1		54:bf:64:91:f8:8a		118.139.135.57		63
+9		54:bf:64:91:f8:8a		118.139.135.57		64
+
+
+Triggered Value : 10
+Communication Time (seconds) : 0.081610
+Decryption Time (seconds) : 0.040330
+Total Messages with server: 79
+Total Activations per Message: 3
+Total Activations : 237
+------------------------------------------------------
+Iteration : 64
+Logged Time : 				Wed 2019-10-16 19:11:57
+Event Occured Time : 		Wed 2019-10-16 19:11:57
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+9		54:bf:64:91:f8:8a		118.139.135.57		63
+6		54:bf:64:91:f8:8a		118.139.135.57		64
+14		54:bf:64:91:f8:8a		118.139.135.57		63
+
+
+Triggered Value : 10
+Communication Time (seconds) : 0.046518
+Decryption Time (seconds) : 0.023236
+Total Messages with server: 80
+Total Activations per Message: 3
+Total Activations : 240
+------------------------------------------------------
+Iteration : 65
+Logged Time : 				Wed 2019-10-16 19:11:58
+Event Occured Time : 		Wed 2019-10-16 19:11:58
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		65
+8		54:bf:64:91:f8:8a		118.139.135.57		65
+11		54:bf:64:91:f8:8a		118.139.135.57		65
+
+
+Triggered Value : 10
+Communication Time (seconds) : 0.046140
+Decryption Time (seconds) : 0.022913
+Total Messages with server: 81
+Total Activations per Message: 3
+Total Activations : 243
+------------------------------------------------------
+Iteration : 66
+Logged Time : 				Wed 2019-10-16 19:11:59
+Event Occured Time : 		Wed 2019-10-16 19:11:59
+
+Activated Node
+6		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+5		54:bf:64:91:f8:8a		118.139.135.57		66
+7		54:bf:64:91:f8:8a		118.139.135.57		66
+10		54:bf:64:91:f8:8a		118.139.135.57		66
+
+
+Triggered Value : 10
+Communication Time (seconds) : 0.046350
+Decryption Time (seconds) : 0.023439
+Total Messages with server: 82
+Total Activations per Message: 3
+Total Activations : 246
+------------------------------------------------------
+Iteration : 66
+Logged Time : 				Wed 2019-10-16 19:12:01
+Event Occured Time : 		Wed 2019-10-16 19:12:01
+
+Activated Node
+6		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+5		54:bf:64:91:f8:8a		118.139.135.57		66
+7		54:bf:64:91:f8:8a		118.139.135.57		66
+10		54:bf:64:91:f8:8a		118.139.135.57		66
+
+
+Triggered Value : 10
+Communication Time (seconds) : 0.051613
+Decryption Time (seconds) : 0.028473
+Total Messages with server: 83
+Total Activations per Message: 3
+Total Activations : 249
+------------------------------------------------------
+Iteration : 67
+Logged Time : 				Wed 2019-10-16 19:12:01
+Event Occured Time : 		Wed 2019-10-16 19:12:01
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+12		54:bf:64:91:f8:8a		118.139.135.57		66
+7		54:bf:64:91:f8:8a		118.139.135.57		67
+15		54:bf:64:91:f8:8a		118.139.135.57		66
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.045952
+Decryption Time (seconds) : 0.023070
+Total Messages with server: 84
+Total Activations per Message: 3
+Total Activations : 252
+------------------------------------------------------
+Iteration : 67
+Logged Time : 				Wed 2019-10-16 19:12:01
+Event Occured Time : 		Wed 2019-10-16 19:12:01
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+15		54:bf:64:91:f8:8a		118.139.135.57		66
+10		54:bf:64:91:f8:8a		118.139.135.57		67
+18		54:bf:64:91:f8:8a		118.139.135.57		66
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.059260
+Decryption Time (seconds) : 0.022790
+Total Messages with server: 85
+Total Activations per Message: 3
+Total Activations : 255
+------------------------------------------------------
+Iteration : 74
+Logged Time : 				Wed 2019-10-16 19:12:10
+Event Occured Time : 		Wed 2019-10-16 19:12:10
+
+Activated Node
+3		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+2		54:bf:64:91:f8:8a		118.139.135.57		74
+4		54:bf:64:91:f8:8a		118.139.135.57		74
+7		54:bf:64:91:f8:8a		118.139.135.57		74
+
+
+Triggered Value : 7
+Communication Time (seconds) : 0.045738
+Decryption Time (seconds) : 0.022842
+Total Messages with server: 86
+Total Activations per Message: 3
+Total Activations : 258
+------------------------------------------------------
+Iteration : 75
+Logged Time : 				Wed 2019-10-16 19:12:13
+Event Occured Time : 		Wed 2019-10-16 19:12:13
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		75
+10		54:bf:64:91:f8:8a		118.139.135.57		75
+18		54:bf:64:91:f8:8a		118.139.135.57		75
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.045822
+Decryption Time (seconds) : 0.022860
+Total Messages with server: 87
+Total Activations per Message: 3
+Total Activations : 261
+------------------------------------------------------
+Iteration : 75
+Logged Time : 				Wed 2019-10-16 19:12:13
+Event Occured Time : 		Wed 2019-10-16 19:12:13
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		75
+3		54:bf:64:91:f8:8a		118.139.135.57		75
+11		54:bf:64:91:f8:8a		118.139.135.57		75
+
+
+Triggered Value : 6
+Communication Time (seconds) : 0.045426
+Decryption Time (seconds) : 0.022867
+Total Messages with server: 88
+Total Activations per Message: 3
+Total Activations : 264
+------------------------------------------------------
+Iteration : 79
+Logged Time : 				Wed 2019-10-16 19:12:17
+Event Occured Time : 		Wed 2019-10-16 19:12:17
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		78
+10		54:bf:64:91:f8:8a		118.139.135.57		79
+18		54:bf:64:91:f8:8a		118.139.135.57		78
+
+
+Triggered Value : 11
+Communication Time (seconds) : 0.045710
+Decryption Time (seconds) : 0.022847
+Total Messages with server: 89
+Total Activations per Message: 3
+Total Activations : 267
+------------------------------------------------------
+Iteration : 82
+Logged Time : 				Wed 2019-10-16 19:12:21
+Event Occured Time : 		Wed 2019-10-16 19:12:21
+
+Activated Node
+9		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		81
+5		54:bf:64:91:f8:8a		118.139.135.57		82
+13		54:bf:64:91:f8:8a		118.139.135.57		81
+
+
+Triggered Value : 5
+Communication Time (seconds) : 0.064954
+Decryption Time (seconds) : 0.022852
+Total Messages with server: 90
+Total Activations per Message: 3
+Total Activations : 270
+------------------------------------------------------
+Iteration : 82
+Logged Time : 				Wed 2019-10-16 19:12:21
+Event Occured Time : 		Wed 2019-10-16 19:12:21
+
+Activated Node
+6		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+5		54:bf:64:91:f8:8a		118.139.135.57		82
+2		54:bf:64:91:f8:8a		118.139.135.57		81
+10		54:bf:64:91:f8:8a		118.139.135.57		82
+
+
+Triggered Value : 5
+Communication Time (seconds) : 0.045870
+Decryption Time (seconds) : 0.022879
+Total Messages with server: 91
+Total Activations per Message: 3
+Total Activations : 273
+------------------------------------------------------
+Iteration : 81
+Logged Time : 				Wed 2019-10-16 19:12:21
+Event Occured Time : 		Wed 2019-10-16 19:12:21
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		81
+10		54:bf:64:91:f8:8a		118.139.135.57		81
+18		54:bf:64:91:f8:8a		118.139.135.57		81
+
+
+Triggered Value : 0
+Communication Time (seconds) : 0.045502
+Decryption Time (seconds) : 0.022789
+Total Messages with server: 92
+Total Activations per Message: 3
+Total Activations : 276
+------------------------------------------------------
+Iteration : 83
+Logged Time : 				Wed 2019-10-16 19:12:22
+Event Occured Time : 		Wed 2019-10-16 19:12:22
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		83
+15		54:bf:64:91:f8:8a		118.139.135.57		82
+18		54:bf:64:91:f8:8a		118.139.135.57		83
+
+
+Triggered Value : 9
+Communication Time (seconds) : 0.046552
+Decryption Time (seconds) : 0.022841
+Total Messages with server: 93
+Total Activations per Message: 3
+Total Activations : 279
+------------------------------------------------------
+Iteration : 85
+Logged Time : 				Wed 2019-10-16 19:12:25
+Event Occured Time : 		Wed 2019-10-16 19:12:25
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+14		54:bf:64:91:f8:8a		118.139.135.57		84
+11		54:bf:64:91:f8:8a		118.139.135.57		85
+19		54:bf:64:91:f8:8a		118.139.135.57		84
+
+
+Triggered Value : 9
+Communication Time (seconds) : 0.045851
+Decryption Time (seconds) : 0.022852
+Total Messages with server: 94
+Total Activations per Message: 3
+Total Activations : 282
+------------------------------------------------------
+Iteration : 85
+Logged Time : 				Wed 2019-10-16 19:12:25
+Event Occured Time : 		Wed 2019-10-16 19:12:25
+
+Activated Node
+6		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+5		54:bf:64:91:f8:8a		118.139.135.57		84
+2		54:bf:64:91:f8:8a		118.139.135.57		85
+10		54:bf:64:91:f8:8a		118.139.135.57		84
+
+
+Triggered Value : 11
+Communication Time (seconds) : 0.060948
+Decryption Time (seconds) : 0.022852
+Total Messages with server: 95
+Total Activations per Message: 3
+Total Activations : 285
+------------------------------------------------------
+Iteration : 85
+Logged Time : 				Wed 2019-10-16 19:12:26
+Event Occured Time : 		Wed 2019-10-16 19:12:26
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+9		54:bf:64:91:f8:8a		118.139.135.57		85
+11		54:bf:64:91:f8:8a		118.139.135.57		85
+14		54:bf:64:91:f8:8a		118.139.135.57		85
+
+
+Triggered Value : 9
+Communication Time (seconds) : 0.069348
+Decryption Time (seconds) : 0.022788
+Total Messages with server: 96
+Total Activations per Message: 3
+Total Activations : 288
+------------------------------------------------------
+Iteration : 89
+Logged Time : 				Wed 2019-10-16 19:12:30
+Event Occured Time : 		Wed 2019-10-16 19:12:30
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+14		54:bf:64:91:f8:8a		118.139.135.57		88
+16		54:bf:64:91:f8:8a		118.139.135.57		89
+11		54:bf:64:91:f8:8a		118.139.135.57		88
+19		54:bf:64:91:f8:8a		118.139.135.57		88
+
+
+Triggered Value : 4
+Communication Time (seconds) : 0.046650
+Decryption Time (seconds) : 0.023635
+Total Messages with server: 97
+Total Activations per Message: 4
+Total Activations : 292
+------------------------------------------------------
+Iteration : 88
+Logged Time : 				Wed 2019-10-16 19:12:30
+Event Occured Time : 		Wed 2019-10-16 19:12:30
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+9		54:bf:64:91:f8:8a		118.139.135.57		88
+6		54:bf:64:91:f8:8a		118.139.135.57		88
+14		54:bf:64:91:f8:8a		118.139.135.57		88
+
+
+Triggered Value : 9
+Communication Time (seconds) : 0.059322
+Decryption Time (seconds) : 0.023084
+Total Messages with server: 98
+Total Activations per Message: 3
+Total Activations : 295
+------------------------------------------------------
+Iteration : 90
+Logged Time : 				Wed 2019-10-16 19:12:33
+Event Occured Time : 		Wed 2019-10-16 19:12:33
+
+Activated Node
+13		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+14		54:bf:64:91:f8:8a		118.139.135.57		90
+9		54:bf:64:91:f8:8a		118.139.135.57		90
+17		54:bf:64:91:f8:8a		118.139.135.57		90
+
+
+Triggered Value : 4
+Communication Time (seconds) : 0.061494
+Decryption Time (seconds) : 0.025149
+Total Messages with server: 99
+Total Activations per Message: 3
+Total Activations : 298
+------------------------------------------------------
+Iteration : 91
+Logged Time : 				Wed 2019-10-16 19:12:33
+Event Occured Time : 		Wed 2019-10-16 19:12:33
+
+Activated Node
+6		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+7		54:bf:64:91:f8:8a		118.139.135.57		90
+2		54:bf:64:91:f8:8a		118.139.135.57		91
+10		54:bf:64:91:f8:8a		118.139.135.57		90
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.045946
+Decryption Time (seconds) : 0.022991
+Total Messages with server: 100
+Total Activations per Message: 3
+Total Activations : 301
+------------------------------------------------------
+Iteration : 91
+Logged Time : 				Wed 2019-10-16 19:12:34
+Event Occured Time : 		Wed 2019-10-16 19:12:34
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+12		54:bf:64:91:f8:8a		118.139.135.57		91
+7		54:bf:64:91:f8:8a		118.139.135.57		91
+15		54:bf:64:91:f8:8a		118.139.135.57		91
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.047678
+Decryption Time (seconds) : 0.024449
+Total Messages with server: 101
+Total Activations per Message: 3
+Total Activations : 304
+------------------------------------------------------
+Iteration : 91
+Logged Time : 				Wed 2019-10-16 19:12:34
+Event Occured Time : 		Wed 2019-10-16 19:12:34
+
+Activated Node
+15		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+16		54:bf:64:91:f8:8a		118.139.135.57		91
+11		54:bf:64:91:f8:8a		118.139.135.57		91
+19		54:bf:64:91:f8:8a		118.139.135.57		91
+
+
+Triggered Value : 3
+Communication Time (seconds) : 0.048818
+Decryption Time (seconds) : 0.025726
+Total Messages with server: 102
+Total Activations per Message: 3
+Total Activations : 307
+------------------------------------------------------
+Iteration : 94
+Logged Time : 				Wed 2019-10-16 19:12:37
+Event Occured Time : 		Wed 2019-10-16 19:12:37
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		94
+3		54:bf:64:91:f8:8a		118.139.135.57		94
+11		54:bf:64:91:f8:8a		118.139.135.57		94
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.067327
+Decryption Time (seconds) : 0.022908
+Total Messages with server: 103
+Total Activations per Message: 3
+Total Activations : 310
+------------------------------------------------------
+Iteration : 94
+Logged Time : 				Wed 2019-10-16 19:12:38
+Event Occured Time : 		Wed 2019-10-16 19:12:38
+
+Activated Node
+7		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+8		54:bf:64:91:f8:8a		118.139.135.57		94
+3		54:bf:64:91:f8:8a		118.139.135.57		94
+11		54:bf:64:91:f8:8a		118.139.135.57		94
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.047291
+Decryption Time (seconds) : 0.023034
+Total Messages with server: 104
+Total Activations per Message: 3
+Total Activations : 313
+------------------------------------------------------
+Iteration : 96
+Logged Time : 				Wed 2019-10-16 19:12:40
+Event Occured Time : 		Wed 2019-10-16 19:12:40
+
+Activated Node
+5		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+6		54:bf:64:91:f8:8a		118.139.135.57		96
+1		54:bf:64:91:f8:8a		118.139.135.57		96
+9		54:bf:64:91:f8:8a		118.139.135.57		96
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.065732
+Decryption Time (seconds) : 0.023007
+Total Messages with server: 105
+Total Activations per Message: 3
+Total Activations : 316
+------------------------------------------------------
+Iteration : 97
+Logged Time : 				Wed 2019-10-16 19:12:41
+Event Occured Time : 		Wed 2019-10-16 19:12:41
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		97
+7		54:bf:64:91:f8:8a		118.139.135.57		97
+15		54:bf:64:91:f8:8a		118.139.135.57		97
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.047194
+Decryption Time (seconds) : 0.023745
+Total Messages with server: 106
+Total Activations per Message: 3
+Total Activations : 319
+------------------------------------------------------
+Iteration : 97
+Logged Time : 				Wed 2019-10-16 19:12:42
+Event Occured Time : 		Wed 2019-10-16 19:12:42
+
+Activated Node
+8		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+7		54:bf:64:91:f8:8a		118.139.135.57		97
+4		54:bf:64:91:f8:8a		118.139.135.57		97
+12		54:bf:64:91:f8:8a		118.139.135.57		97
+
+
+Triggered Value : 10
+Communication Time (seconds) : 0.065537
+Decryption Time (seconds) : 0.023438
+Total Messages with server: 107
+Total Activations per Message: 3
+Total Activations : 322
+------------------------------------------------------
+Iteration : 97
+Logged Time : 				Wed 2019-10-16 19:12:43
+Event Occured Time : 		Wed 2019-10-16 19:12:42
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+12		54:bf:64:91:f8:8a		118.139.135.57		97
+7		54:bf:64:91:f8:8a		118.139.135.57		97
+15		54:bf:64:91:f8:8a		118.139.135.57		97
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.045354
+Decryption Time (seconds) : 0.022496
+Total Messages with server: 108
+Total Activations per Message: 3
+Total Activations : 325
+------------------------------------------------------
+Iteration : 99
+Logged Time : 				Wed 2019-10-16 19:12:44
+Event Occured Time : 		Wed 2019-10-16 19:12:44
+
+Activated Node
+9		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		99
+5		54:bf:64:91:f8:8a		118.139.135.57		99
+13		54:bf:64:91:f8:8a		118.139.135.57		99
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.080763
+Decryption Time (seconds) : 0.042072
+Total Messages with server: 109
+Total Activations per Message: 3
+Total Activations : 328
+------------------------------------------------------
+Iteration : 99
+Logged Time : 				Wed 2019-10-16 19:12:44
+Event Occured Time : 		Wed 2019-10-16 19:12:44
+
+Activated Node
+10		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+9		54:bf:64:91:f8:8a		118.139.135.57		99
+11		54:bf:64:91:f8:8a		118.139.135.57		98
+14		54:bf:64:91:f8:8a		118.139.135.57		99
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.045785
+Decryption Time (seconds) : 0.022863
+Total Messages with server: 110
+Total Activations per Message: 3
+Total Activations : 331
+------------------------------------------------------
+Iteration : 99
+Logged Time : 				Wed 2019-10-16 19:12:44
+Event Occured Time : 		Wed 2019-10-16 19:12:44
+
+Activated Node
+11		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+10		54:bf:64:91:f8:8a		118.139.135.57		99
+12		54:bf:64:91:f8:8a		118.139.135.57		98
+15		54:bf:64:91:f8:8a		118.139.135.57		99
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.061635
+Decryption Time (seconds) : 0.023630
+Total Messages with server: 111
+Total Activations per Message: 3
+Total Activations : 334
+------------------------------------------------------
+Iteration : 99
+Logged Time : 				Wed 2019-10-16 19:12:44
+Event Occured Time : 		Wed 2019-10-16 19:12:44
+
+Activated Node
+14		54:bf:64:91:f8:8a		118.139.135.57
+
+Adjacent Nodes
+13		54:bf:64:91:f8:8a		118.139.135.57		99
+15		54:bf:64:91:f8:8a		118.139.135.57		99
+10		54:bf:64:91:f8:8a		118.139.135.57		99
+
+
+Triggered Value : 8
+Communication Time (seconds) : 0.046239
+Decryption Time (seconds) : 0.022681
+Total Messages with server: 112
+Total Activations per Message: 3
+Total Activations : 337
+
+
+------------------------------------------------------
+------------------------------------------------------
+Total Simulation Time (seconds) : 134.450544
+Total Events detected : 112
+Total Messages with the base station (including termination signal): 132
+Total Messages between sensor nodes : 8000
+Total Messages though the network (including termination signal): 8132
+Total Activations : 337
+
+Total Activations per Node: 
+	Rank 1 : 0
+	Rank 2 : 2
+	Rank 3 : 4
+	Rank 4 : 0
+	Rank 5 : 8
+	Rank 6 : 8
+	Rank 7 : 13
+	Rank 8 : 2
+	Rank 9 : 4
+	Rank 10 : 10
+	Rank 11 : 15
+	Rank 12 : 6
+	Rank 13 : 1
+	Rank 14 : 14
+	Rank 15 : 10
+	Rank 16 : 6
+	Rank 17 : 0
+	Rank 18 : 3
+	Rank 19 : 6
+	Rank 20 : 0

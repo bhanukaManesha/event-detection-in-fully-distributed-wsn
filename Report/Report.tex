@@ -60,7 +60,7 @@
 
 \begin{document}
 	
-	\title{Simulation and Analysis of Wireless Sensor Network using Message Passing Interface }
+	\title{Simulation and Analysis of a Wireless Sensor Network using Message Passing Interface }
 	
 	\author{
 		\IEEEauthorblockN{Samarasekara Vitharana Gamage, Bhanuka Manesha}
@@ -222,6 +222,10 @@
 	
 	Figure \ref{arc} breaks down the algorithm of the whole system in to a technical flowchart. Then Figure \ref{inWSN} explains how the system initializes the WSN, based on the dynamic user inputs.
 	
+	
+	Blocking and Non Blocking Send
+	
+	
 	\subsection{ Encrypting communication and its effects }\label{encryption}
 	
 	Due to the increase risk of cyber attacks, all wireless networks needs to be encrypted as its is easier to attack and steal unencypted data. So, all the messages are encrypted throughout the wireless sensor network. After comparing multiple encryption standards, Advanced Encryption Standard (AES) was used to encrypt the messages.
@@ -254,8 +258,8 @@
 				\emph{Height}    &  5   & \makecell{The height of the sensor \\ node grid }   \\ \hline
 				\emph{Iterations}    &  100   & \makecell{Total number of iteration \\ performed by the system }   \\ \hline
 				\emph{Interval}    &  1   & \makecell{Wait time between \\ each iteration }   \\ \hline
-				\emph{MaxRandom}    &  4   & \makecell{Limit the random numbers \\ generated to between 0 - 3 }   \\ \hline
-				\emph{Packsize}    &  320  & \makecell{Size of the buffer for sending\\ and receiving data }   \\ \hline
+				\emph{MaxRandom}    &  12   & \makecell{Limit the random numbers \\ generated to between 0 - 11}   \\ \hline
+				\emph{Packsize}    &  256  & \makecell{Size of the buffer for sending\\ and receiving data }   \\ \hline
 			\end{tabular}
 			\label{params}
 		\end{center}
@@ -328,11 +332,11 @@
 			\label{me}
 		}
 		\\
-		\subfloat[Total Activations per Iteration]
+		\subfloat[Average Communication Time per Iteration]
 		{
 			
 			\includegraphics[width=4.5in]{chart2}
-			\label{act}
+			\label{com}
 		}
 	\end{figure*}	
 
@@ -351,25 +355,17 @@
 	
 	\subsubsection{Communication time}
 	
-	The communication time includes the time for encrypting the message, sending the message, receiving the message and decrypting the message. Since the tests case is run on a single computer, the communication time from node to node is the same. But if one part of the network is in a separate geographical location to the base station, the communication time will increase. The issue that arises with this is that the nodes with high communication time will take longer to finish the iterations. So the base station will wait until all the nodes have sent the termination signal to avoid any issue. One way to improve the communication time is by parallelizing the encryption and decryption algorithms which we will look into in the next section.
+	The communication time includes the time for encrypting the message, sending the message, receiving the message and decrypting the message. Since the tests case is run on a single computer, the communication time from node to node is similar except between iteration 55-70. This can be observed by Figure \ref{com}, where the is a peak in the average communication time. But if one part of the network is in a separate geographical location to the base station, the communication time will increase. The issue that arises with this is that the nodes with high communication time will take longer to finish the iterations. So the base station will wait until all the nodes have sent the termination signal to avoid any issue. One way to improve the communication time is by parallelizing the encryption and decryption algorithms which we will look into in the next section.
 
 	\subsection{Encryption Analysis}	\label{encry}
 	
 		
-	\begin{figure*}[!h]
-		\centering
-		\caption{Analysis of speed up using OpenMP}
-		\subfloat[Speed up of the encryption process]
-		{
-			\includegraphics[width=3in]{enTime}
-			\label{enTIme}
-		}
-		\subfloat[Speed up of the decryption process]
-		{
-			\includegraphics[width=3in]{dcTime}
-			\label{deTime}
-		}
-	\end{figure*}	
+	 \begin{figure}[!h]
+	\centering
+	\includegraphics[width=3in,keepaspectratio]{speed}
+	\caption{Analysis of the OpenMP speed up for encryption and decryption}
+	\label{speedup}
+	\end{figure}
 	
 	In this section we will analyze how OpenMP helps improve encryption and decryption time of the AES algorithm. Since we are using the CTR mode operation of the AES algorithm, the algorithm is parallelizable. 	The buffer size of the messages used for testing the encryption is different from the actual buffer size which was used to get the results. The reason for this is the smaller buffer size is insignificant to see any speed up when parallelizing the code as they are in microseconds. So for testing the speed up of the encryption and decryption we used a buffer size of 160000 initialized with zeros.
 	

@@ -28,9 +28,6 @@ extern int baseStation;
 extern int WIDTH;
 extern int HEIGHT;
 
-extern char* macAddressStorage;
-extern char* ipAddressStorage;
-
 extern int userstop;
 extern double simStartTime;
 
@@ -39,8 +36,8 @@ extern uint8_t key[];
 extern uint8_t iv[];
 
 // Initialize global variables
-char* macAddressStorage;
-char* ipAddressStorage;
+unsigned char* macAddressStorage;
+unsigned char* ipAddressStorage;
 
 
 // --------------------------------------------------------------------------------------------------------------------
@@ -50,14 +47,20 @@ void base(){
 	 */ 
 
 	// Create two dynamic arrays to store the mac and ip addresses
-	macAddressStorage = (char*)  malloc(WIDTH * HEIGHT * 17 * sizeof(char));
-	ipAddressStorage = (char*) malloc(WIDTH * HEIGHT * 15 * sizeof(char));
+	macAddressStorage = (unsigned char*) malloc((WIDTH * HEIGHT + 1) * 17 * sizeof(unsigned char));
+	ipAddressStorage =  (unsigned char*) malloc((WIDTH * HEIGHT + 1) * 15 * sizeof(unsigned char));
+
 
 	// Initialize the base station
 	initializeBaseStation();
 
 	// Start listening to events
 	listenToEvents();
+
+	// Free the dynamic array
+	free(macAddressStorage);
+	free(ipAddressStorage);
+	
 
 }
 
@@ -71,14 +74,14 @@ void listenToEvents(){
 	
 	// Initialize the pack buffer with zeros
 	uint8_t packbuf[packsize];
-	memset(packbuf, 0, packsize);
+	memset(packbuf, 0, sizeof(uint8_t) * packsize);
 
 	// Initialize the local variables
 	int activatedNodes[4];
 	int incomingNode;
 	int matchedValue;
 	
-	char eventDateTime[100];
+	char eventDateTime[128];
 	int position;
 	double eventT;
 	int stopCount = 0;
@@ -156,11 +159,11 @@ void listenToEvents(){
 		// Unpack the event information
 		MPI_Unpack(packbuf, packsize, &position, &activatedNodes, 4, MPI_INT, MPI_COMM_WORLD);
 		MPI_Unpack(packbuf, packsize, &position, &eventT, 1, MPI_DOUBLE, MPI_COMM_WORLD);
-		MPI_Unpack(packbuf, packsize, &position, &eventDateTime, 100, MPI_CHAR, MPI_COMM_WORLD);
+		MPI_Unpack(packbuf, packsize, &position, &eventDateTime, 128, MPI_CHAR, MPI_COMM_WORLD);
 		
 		// Get the current time as a date time string
-		char timeInDateTime[100];
-		convertToTimeStamp(timeInDateTime, 100);
+		char timeInDateTime[128];
+		convertToTimeStamp(timeInDateTime, 128);
 
 		// Get the adjacent nodes of the recieved node
 		getAdjacentNodes(adjacentNodes, incomingNode);
@@ -203,11 +206,15 @@ void listenToEvents(){
 		fprintf (fp, "%s", "Activated Node\n");
 		fprintf (fp, "%i", incomingNode);
 		fprintf (fp, "%s", "\t\t");
-		fwrite(macAddressStorage + incomingNode*sizeof(unsigned char)*17 , 17 , sizeof(unsigned char) , fp );
-		// fprintf (fp, "%s",macAddressStorage + incomingNode*sizeof(unsigned char)*17);
+		fwrite(macAddressStorage + incomingNode*sizeof(char)*17 , 17 , sizeof(char) , fp );
+		// fprintf (fp, "%s",macAddressStorage + incomingNode*sizeof(unsigned char)*20);
+		// fprintf (fp, "%s",&macAddressStorage[incomingNode * 17]);
+		// fwrite (&macAddressStorage[incomingNode], 17, sizeof(unsigned char),fp);
 		fprintf (fp, "%s", "\t\t");
 		// fwrite(ipAddressStorage + incomingNode*sizeof(unsigned char)*15 , 15 , sizeof(unsigned char) , fp );
-		fprintf (fp, "%s", ipAddressStorage + incomingNode*sizeof(char)*15);
+		fprintf (fp, "%s", ipAddressStorage + incomingNode*sizeof(unsigned char)*15);
+		// fprintf (fp, "%s", &ipAddressStorage[incomingNode * 15]);
+		// fwrite (&ipAddressStorage[incomingNode], 15, sizeof(unsigned char),fp);
 		fprintf (fp, "%s", "\n\n");
 		int labelFlag = 0;
 		int totalActivationPerMessage = 0;
@@ -221,11 +228,14 @@ void listenToEvents(){
 				}
 				fprintf (fp, "%i", adjacentNodes[i]);
 				fprintf (fp, "%s", "\t\t");
-				fwrite(macAddressStorage + adjacentNodes[i]*sizeof(unsigned char)*17 , 17 , sizeof(unsigned char) , fp );
-				// fprintf (fp, "%s", macAddressStorage + adjacentNodes[i]*sizeof(char)*17);
+				fwrite(macAddressStorage + adjacentNodes[i]*sizeof(unsigned char)*17, 17 , sizeof(unsigned char) , fp );
+				// fprintf (fp, "%s", macAddressStorage + adjacentNodes[i]*sizeof(unsigned char)*20);
+				// fprintf (fp, "%s",&macAddressStorage[incomingNode]);
+				// fwrite (&macAddressStorage[incomingNode], 17, sizeof(unsigned char),fp);
 				fprintf (fp, "%s", "\t\t");
-				// fwrite(ipAddressStorage + activatedNodes[i]*sizeof(unsigned char)*15 , 15 , sizeof(unsigned char) , fp );
-				fprintf (fp, "%s", ipAddressStorage + adjacentNodes[i]*sizeof(char)*15);
+				// fwrite(ipAddressStorage + adjacentNodes[i]*sizeof(unsigned char)*15 , 15 , sizeof(unsigned char) , fp );
+				fprintf (fp, "%s", ipAddressStorage + adjacentNodes[i]*sizeof(unsigned char)*15);
+				// fwrite (&ipAddressStorage[incomingNode], 15, sizeof(unsigned char),fp);
 				fprintf (fp, "%s", "\t\t");
 				fprintf (fp, "%i", activatedNodes[i]);
 				fprintf (fp, "%s", "\n");
@@ -262,10 +272,6 @@ void listenToEvents(){
 			fprintf (fp, "\tRank %i : %d\n", b, incomingNodeCount[b]);
 	} 
 	fclose(fp);
-
-	// Free the dynamic array
-	free(ipAddressStorage);
-	free(macAddressStorage);
 }
 
 
@@ -279,7 +285,7 @@ void listenToEvents(){
 
 	// Initialize a pack bufffer with zeros
 	uint8_t packbuf[packsize];
-	memset(packbuf, 0, packsize);
+	memset(packbuf, 0, sizeof(uint8_t) * packsize);
 
 	int incoming_rank;
 	int position = 0;
@@ -302,9 +308,13 @@ void listenToEvents(){
 		incoming_rank = stat.MPI_SOURCE;
 
 		// Unpack the buffer straight into the dynamic array
-		MPI_Unpack(packbuf, packsize, &position, macAddressStorage + incoming_rank*sizeof(unsigned char)*17, 17, MPI_CHAR, MPI_COMM_WORLD);
-		MPI_Unpack(packbuf, packsize, &position, ipAddressStorage + incoming_rank*sizeof(unsigned char)*15, 15, MPI_CHAR, MPI_COMM_WORLD);
+		// MPI_Unpack(packbuf, packsize, &position, macAddressStorage + incoming_rank*20, 20, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
+		// MPI_Unpack(packbuf, packsize, &position, ipAddressStorage + incoming_rank*20, 20, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
+		
+		MPI_Unpack(packbuf, packsize, &position, &macAddressStorage[incoming_rank * 17 * sizeof(unsigned char)], 17, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
+		MPI_Unpack(packbuf, packsize, &position, &ipAddressStorage[incoming_rank * 15 * sizeof(unsigned char)], 15, MPI_UNSIGNED_CHAR, MPI_COMM_WORLD);
 
+		
 		// Increase the count 
 		count += 1;
 

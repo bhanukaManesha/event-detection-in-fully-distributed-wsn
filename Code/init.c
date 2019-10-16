@@ -55,9 +55,11 @@ int main(int argc, char *argv[])
     MPI_Comm_size(MPI_COMM_WORLD,&numtasks);
     MPI_Comm_rank(MPI_COMM_WORLD,&rank);
 
+	
 	// Initialize the system
 	initializeSystem();
-
+	
+	
 	// Running the specific methods based on the rank
 	if (rank == baseStation){
 		base();
@@ -86,7 +88,7 @@ void initializeSystem(){
 	// Initialize base station
 	baseStation = 0;
 
-	// Base station get the input from the user
+	// // Base station get the input from the user
 	// if (rank == baseStation){
 
 	// 	// Print the banner
@@ -114,7 +116,7 @@ void initializeSystem(){
 
 	WIDTH = 4;
 	HEIGHT = 5;
-	iterationMax = 10;
+	iterationMax = 100;
 	refreshInteval = 1;
 	
 	// Get the current time
@@ -125,7 +127,7 @@ void initializeSystem(){
 
 		// Initialize the packbuffer to zeros
 		uint8_t packbuf[packsize];
-		memset(packbuf, 0, packsize);
+		memset(packbuf, 0, sizeof(uint8_t) *packsize);
 
 		// Pack the data to be encypted and sent
 		int position = 0;
@@ -143,7 +145,8 @@ void initializeSystem(){
 
 		// Send the data to all the nodes
 		for (int i = 1; i < numtasks; i++){
-			MPI_Send(packbuf, position, MPI_PACKED, i, 0, MPI_COMM_WORLD);
+			// MPI_Send(packbuf, position, MPI_PACKED, i, 0, MPI_COMM_WORLD);
+			MPI_Send(packbuf, packsize, MPI_PACKED, i, 0, MPI_COMM_WORLD);
 		}
 		
 	}
@@ -153,7 +156,7 @@ void initializeSystem(){
 
 		// Initialize the packbuffer
 		uint8_t packbuf[packsize];
-		memset(packbuf, 0, packsize);
+		memset(packbuf, 0, sizeof(uint8_t) *packsize);
 
 		// Initialize the position
 		int position = 0;

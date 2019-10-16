@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --job-name=WSN_No
+#SBATCH --time=00:03:00
+#SBATCH --mem=32G
+#SBATCH --ntasks=21
+#SBATCH --cpus-per-task=2
+#SBATCH --ntasks-per-node=16
+#SBATCH --account=fit3143
+#SBATCH --output=output.out
+#SBATCH --qos=fit3143
+#SBATCH --constraint=Xeon-Gold-6150
+
+module load gcc
+module load openmpi/1.10.7-mlx
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+echo "Running : 21 cores"
+
+echo "Run 1"
+srun wes
+
+echo "Done"

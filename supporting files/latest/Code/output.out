@@ -1,0 +1,7 @@
+Running : 21 cores
+Run 1
+srun: Warning: can't honor --ntasks-per-node set to 16 which doesn't match the requested tasks 21 with the number of requested nodes 2. Ignoring --ntasks-per-node.
+Running 10 iterations at 1 second intervals
+srun: Job step aborted: Waiting up to 12 seconds for job step to finish.
+slurmstepd: error: *** JOB 4842827 ON mi04 CANCELLED AT 2019-10-16T18:10:44 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 4842827.0 ON mi04 CANCELLED AT 2019-10-16T18:10:44 DUE TO TIME LIMIT ***
