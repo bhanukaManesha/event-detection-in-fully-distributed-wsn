@@ -1,10 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2019)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Report.aux
-White space in argument---line 31 of file Report.aux
- : \citation{rf
- :              wireless world}
-I'm skipping whatever remains of this command
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -15,47 +11,48 @@ Database file #1: ref.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in daemen1999aes
 
 Done.
-You've used 9 entries,
+You've used 18 entries,
             4087 wiz_defined-function locations,
-            877 strings with 9053 characters,
-and the built_in function-call counts, 4469 in all, are:
-= -- 353
-> -- 73
-< -- 14
-+ -- 38
-- -- 15
-* -- 207
-:= -- 770
-add.period$ -- 19
-call.type$ -- 9
-change.case$ -- 10
-chr.to.int$ -- 30
-cite$ -- 9
-duplicate$ -- 350
-empty$ -- 396
-format.name$ -- 18
-if$ -- 987
+            925 strings with 10456 characters,
+and the built_in function-call counts, 9295 in all, are:
+= -- 718
+> -- 180
+< -- 39
++ -- 93
+- -- 35
+* -- 419
+:= -- 1530
+add.period$ -- 39
+call.type$ -- 18
+change.case$ -- 18
+chr.to.int$ -- 90
+cite$ -- 19
+duplicate$ -- 724
+empty$ -- 845
+format.name$ -- 44
+if$ -- 2099
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 70
-newline$ -- 64
-num.names$ -- 9
-pop$ -- 196
+int.to.str$ -- 18
+missing$ -- 140
+newline$ -- 97
+num.names$ -- 17
+pop$ -- 397
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 336
+skip$ -- 703
 stack$ -- 0
-substring$ -- 93
-swap$ -- 237
-text.length$ -- 4
+substring$ -- 239
+swap$ -- 493
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 9
-warning$ -- 0
-while$ -- 14
-width$ -- 10
-write$ -- 112
-(There was 1 error message)
+type$ -- 18
+warning$ -- 1
+while$ -- 34
+width$ -- 20
+write$ -- 191
+(There was 1 warning)
