@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.21)  20 OCT 2019 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.9)  24 JUN 2020 11:53
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**Report.tex
-(./Report.tex
+**/Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/Report.tex
+(/Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/Report.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
@@ -17,7 +18,6 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmpcountC=\count82
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
-
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -32,52 +32,42 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 \IEEEquantizedlength=\dimen109
 \IEEEquantizedlengthdiff=\dimen110
 \IEEEquantizedtextheightdiff=\dimen111
@@ -118,25 +108,21 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen126
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen127
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count95
@@ -176,24 +162,19 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/algorithms/algorithmic.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
@@ -203,28 +184,22 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \c@ALC@depth=\count110
 \ALC@tlm=\skip47
 \algorithmicindent=\skip48
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -238,13 +213,11 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
 File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -342,7 +315,6 @@ Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
 Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
 Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
 Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
-
 Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
 Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
 Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
@@ -380,11 +352,9 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -397,35 +367,22 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/csvsimple/csvsimple.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/csvsimple/csvsimple.sty
 Package: csvsimple 2019/04/09 version 1.21 LaTeX CSV file processing
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks21
 \pgfutil@tempdima=\dimen137
 \pgfutil@tempdimb=\dimen138
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
-sts.tex))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box31
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ms/everyshi.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+)) (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2019/04/04 v3.1.2 (3.1.2)
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks22
 \pgfkeys@temptoks=\toks23
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
-ode.tex
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks24
 ))) (/usr/local/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
@@ -439,22 +396,18 @@ Package shellesc Info: Restricted shell escape enabled on input line 69.
 \c@csvrow=\count113
 \c@csvcol=\count114
 \csv@out=\write3
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/rotating.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \c@r@tfl@t=\count115
 \rotFPtop=\skip49
 \rotFPbot=\skip50
 \rot@float@box=\box32
 \rot@mess@toks=\toks25
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/subfig/subfig.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen139
@@ -472,17 +425,7 @@ Package caption Warning: Unsupported document class (or package) detected,
 (caption)                usage of the caption package is not recommended.
 See the caption package documentation for explanation.
 
-Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
-blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
-lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
- {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
-nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
-e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
-malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
-ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
-ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
-\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
-\fi .
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi \fi .
 \c@caption@flags=\count116
 \c@ContinuedFloat=\count117
 Package caption Info: rotating package is loaded.
@@ -507,124 +450,66 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box33
 \@float@everytoks=\toks27
 \@floatcapt=\box34
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/appendix/appendix.sty
-Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count126
-\c@@ppsavesec=\count127
-\c@@ppsaveapp=\count128
-
-
-! LaTeX Error: Command \appendices already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.233   \@ppsaveapp\@pprestoresec}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/floatrow/floatrow.sty
-Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
-
-
-! Package floatrow Error: Do not use float package with floatrow.
-(floatrow)                The latter will be skipped.
-
-See the floatrow package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33   \@namedef{opt@floatrow.sty}{}\endinput}
-                                              
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count129
+\lst@mode=\count126
 \lst@gtempboxa=\box35
 \lst@token=\toks28
-\lst@length=\count130
+\lst@length=\count127
 \lst@currlwidth=\dimen147
-\lst@column=\count131
-\lst@pos=\count132
+\lst@column=\count128
+\lst@pos=\count129
 \lst@lostspace=\dimen148
 \lst@width=\dimen149
-\lst@newlines=\count133
-\lst@lineno=\count134
+\lst@newlines=\count130
+\lst@lineno=\count131
 \lst@maxwidth=\dimen150
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count135
-\lst@skipnumbers=\count136
+\c@lstnumber=\count132
+\lst@skipnumbers=\count133
 \lst@framebox=\box36
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
 Package: listings 2019/02/27 1.8b (Carsten Heinz)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen151
 \WF@size=\dimen152
-\c@WF@wrappedlines=\count137
+\c@WF@wrappedlines=\count134
 \WF@box=\box37
 \WF@everypar=\toks29
 Package: wrapfig 2003/01/31  v 3.6
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/lscape.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+))) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-))))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+)))) (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -632,18 +517,13 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-)))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/array.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen153
 \ar@mcellbox=\box38
@@ -652,98 +532,95 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \extratabsurround=\skip56
 \backup@length=\skip57
 \ar@cellbox=\box39
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/makecell/makecell.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen155
-\c@nlinenum=\count138
+\c@nlinenum=\count135
 \TeXr@lab=\toks31
-)
-(./Report.aux)
+) (/Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 59.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    ... okay on input line 59.
 
 -- Lines per column: 56 (exact).
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
+\scratchcounter=\count136
 \scratchdimen=\dimen156
 \scratchbox=\box40
-\nofMPsegments=\count140
-\nofMParguments=\count141
+\nofMPsegments=\count137
+\nofMParguments=\count138
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count142
+\MPscratchCnt=\count139
 \MPscratchDim=\dimen157
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
 \everyMPtoPDFconversion=\toks33
 ) ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
-Package caption Info: floatrow package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count145
+\c@lstlisting=\count142
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 70.
+LaTeX Font Info:    Try loading font information for U+msa on input line 70.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 70.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 <fig/grid1.png, id=1, 1092.08pt x 1769.61125pt>
 File: fig/grid1.png Graphic file (type png)
 <use fig/grid1.png>
-Package pdftex.def Info: fig/grid1.png  used on input line 104.
+Package pdftex.def Info: fig/grid1.png  used on input line 102.
 (pdftex.def)             Requested size: 166.2212pt x 269.34554pt.
 <fig/grid2.png, id=3, 2672.98625pt x 941.5175pt>
 File: fig/grid2.png Graphic file (type png)
 <use fig/grid2.png>
-Package pdftex.def Info: fig/grid2.png  used on input line 111.
+Package pdftex.def Info: fig/grid2.png  used on input line 109.
 (pdftex.def)             Requested size: 433.62pt x 152.729pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 121.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 121.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./fig/grid1.png> <./fig/grid2.png>]
-<fig/arc.png, id=20, 3890.535pt x 4667.4375pt>
+ [2 </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/grid1.png> </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/grid2.png>]
+<fig/arc.png, id=21, 3890.535pt x 4667.4375pt>
 File: fig/arc.png Graphic file (type png)
 <use fig/arc.png>
-Package pdftex.def Info: fig/arc.png  used on input line 171.
+Package pdftex.def Info: fig/arc.png  used on input line 169.
 (pdftex.def)             Requested size: 469.75499pt x 563.55809pt.
-<fig/inWSN.png, id=21, 1806.75pt x 3312.375pt>
+<fig/inWSN.png, id=22, 1806.75pt x 3312.375pt>
 File: fig/inWSN.png Graphic file (type png)
 <use fig/inWSN.png>
-Package pdftex.def Info: fig/inWSN.png  used on input line 183.
+Package pdftex.def Info: fig/inWSN.png  used on input line 181.
 (pdftex.def)             Requested size: 195.12877pt x 357.69075pt.
-<fig/encdec.png, id=22, 1505.625pt x 2522.42375pt>
+<fig/encdec.png, id=23, 1505.625pt x 2522.42375pt>
 File: fig/encdec.png Graphic file (type png)
 <use fig/encdec.png>
-Package pdftex.def Info: fig/encdec.png  used on input line 189.
+Package pdftex.def Info: fig/encdec.png  used on input line 187.
 (pdftex.def)             Requested size: 195.12877pt x 326.88739pt.
 
 
@@ -758,77 +635,74 @@ Underfull \vbox (badness 1137) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4 <./fig/arc.png>]
+ [4 </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/arc.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 247.
-
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 245.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [5 <./fig/inWSN.png> <./fig/encdec.png>]
-<fig/logE.png, id=38, 479.7925pt x 445.665pt>
+) [5 </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/inWSN.png> </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/encdec.png>]
+<fig/logE.png, id=39, 479.7925pt x 445.665pt>
 File: fig/logE.png Graphic file (type png)
 <use fig/logE.png>
-Package pdftex.def Info: fig/logE.png  used on input line 292.
+Package pdftex.def Info: fig/logE.png  used on input line 290.
 (pdftex.def)             Requested size: 238.49121pt x 221.52629pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./fig/logE.png>]
-<fig/logS.png, id=43, 639.38875pt x 626.34pt>
+[6 </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/logE.png>]
+<fig/logS.png, id=44, 639.38875pt x 626.34pt>
 File: fig/logS.png Graphic file (type png)
 <use fig/logS.png>
-Package pdftex.def Info: fig/logS.png  used on input line 305.
+Package pdftex.def Info: fig/logS.png  used on input line 303.
 (pdftex.def)             Requested size: 238.49121pt x 233.62492pt.
-<fig/en.png, id=44, 478.78876pt x 381.425pt>
+<fig/en.png, id=45, 478.78876pt x 381.425pt>
 File: fig/en.png Graphic file (type png)
 <use fig/en.png>
-Package pdftex.def Info: fig/en.png  used on input line 316.
+Package pdftex.def Info: fig/en.png  used on input line 314.
 (pdftex.def)             Requested size: 216.81pt x 172.72218pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/chart1.png, id=45, 1643.13875pt x 584.1825pt>
+<fig/chart1.png, id=46, 1643.13875pt x 584.1825pt>
 File: fig/chart1.png Graphic file (type png)
 <use fig/chart1.png>
-Package pdftex.def Info: fig/chart1.png  used on input line 334.
+Package pdftex.def Info: fig/chart1.png  used on input line 332.
 (pdftex.def)             Requested size: 433.62pt x 154.1569pt.
-<fig/chart2.png, id=46, 1632.0975pt x 583.17876pt>
+<fig/chart2.png, id=47, 1632.0975pt x 583.17876pt>
 File: fig/chart2.png Graphic file (type png)
 <use fig/chart2.png>
-Package pdftex.def Info: fig/chart2.png  used on input line 341.
+Package pdftex.def Info: fig/chart2.png  used on input line 339.
 (pdftex.def)             Requested size: 433.62pt x 154.94206pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<fig/gridsum.png, id=47, 1552.80125pt x 1357.07pt>
+<fig/gridsum.png, id=48, 1552.80125pt x 1357.07pt>
 File: fig/gridsum.png Graphic file (type png)
 <use fig/gridsum.png>
-Package pdftex.def Info: fig/gridsum.png  used on input line 348.
+Package pdftex.def Info: fig/gridsum.png  used on input line 346.
 (pdftex.def)             Requested size: 267.39877pt x 233.68068pt.
 
-Overfull \hbox (15.39877pt too wide) in paragraph at lines 348--349
+Overfull \hbox (15.39877pt too wide) in paragraph at lines 346--347
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./fig/logS.png> <./fig/en.png>]
+[7 </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/logS.png> </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/en.png>]
 
 LaTeX Warning: Text page 8 contains only floats.
 
-[8 <./fig/chart1.png> <./fig/chart2.png> <./fig/gridsum.png>]
-<fig/speed.png, id=60, 605.26125pt x 321.2pt>
+[8 </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/chart1.png> </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/chart2.png> </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/gridsum.png>]
+<fig/speed.png, id=61, 605.26125pt x 321.2pt>
 File: fig/speed.png Graphic file (type png)
 <use fig/speed.png>
-Package pdftex.def Info: fig/speed.png  used on input line 408.
+Package pdftex.def Info: fig/speed.png  used on input line 406.
 (pdftex.def)             Requested size: 216.81pt x 115.05847pt.
- (./Report.bbl
-[9 <./fig/speed.png>]
+ (/Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/Report.bbl [9 </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/speed.png>]
 Underfull \hbox (badness 1675) in paragraph at lines 62--66
 []\OT1/ptm/m/n/8 A. On-s-man, ``What is in-ter-pro-cess com-mu-ni-ca-tion?''
  []
@@ -846,8 +720,7 @@ Underfull \hbox (badness 4366) in paragraph at lines 113--116
 
 
 Underfull \hbox (badness 1389) in paragraph at lines 113--116
-\OT1/ptm/m/n/8 line]. Avail-able: $https : / / www . rfwireless-[]world . com /
- Terminology /
+\OT1/ptm/m/n/8 line]. Avail-able: $https : / / www . rfwireless-[]world . com / Terminology /
  []
 
 
@@ -855,28 +728,18 @@ Underfull \hbox (badness 1803) in paragraph at lines 119--122
 []\OT1/ptm/m/n/8 K. Meghna, ``Block ci-pher modes of op-er-a-tion,''
  []
 
-! Misplaced alignment tab character &.
-l.131 J.~Corner, ``Openmp: For &
-                                 scheduling,'' Jun 2016. [Online]. Available:
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
 ) [10
 
 ]
-<fig/console1.png, id=68, 922.44624pt x 221.82875pt>
+<fig/console1.png, id=69, 922.44624pt x 221.82875pt>
 File: fig/console1.png Graphic file (type png)
 <use fig/console1.png>
-Package pdftex.def Info: fig/console1.png  used on input line 450.
+Package pdftex.def Info: fig/console1.png  used on input line 448.
 (pdftex.def)             Requested size: 433.62pt x 104.27643pt.
-<fig/console2.png, id=69, 924.45375pt x 272.01625pt>
+<fig/console2.png, id=70, 924.45375pt x 272.01625pt>
 File: fig/console2.png Graphic file (type png)
 <use fig/console2.png>
-Package pdftex.def Info: fig/console2.png  used on input line 457.
+Package pdftex.def Info: fig/console2.png  used on input line 455.
 (pdftex.def)             Requested size: 433.62pt x 127.5903pt.
 
 
@@ -892,29 +755,20 @@ Before submitting the final camera ready copy, remember to:
 
 [11
 
- <./fig/console1.png> <./fig/console2.png>] (./Report.aux) ) 
+ </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/console1.png> </Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/fig/console2.png>] (/Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/Report.aux) ) 
 Here is how much of TeX's memory you used:
- 9186 strings out of 492616
- 148632 string characters out of 6129481
- 410691 words of memory out of 5000000
- 12912 multiletter control sequences out of 15000+600000
- 41755 words of font info for 87 fonts, out of 8000000 for 9000
+ 9112 strings out of 492616
+ 148194 string characters out of 6129482
+ 409356 words of memory out of 5000000
+ 12844 multiletter control sequences out of 15000+600000
+ 45097 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,16n,49p,1377b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive
-/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/
-times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utm
-r8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (11 pages, 1806743 bytes).
+ 44i,16n,49p,1450b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/bhanuka/Downloads/event-detection-in-fully-distributed-wsn/Report/Report.pdf (11 pages, 1814884 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 110 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
